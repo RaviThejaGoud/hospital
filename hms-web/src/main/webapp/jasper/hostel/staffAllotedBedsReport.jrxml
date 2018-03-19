@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="staffAllotedBedsReport" pageWidth="500" pageHeight="500" orientation="Landscape" columnWidth="420" leftMargin="40" rightMargin="40" topMargin="20" bottomMargin="40">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<style name="Title" fontName="Droid Sans" fontSize="50" isBold="true" pdfFontName="Times-Bold"/>
+	<style name="SubTitle" forecolor="#736343" fontName="Droid Sans" fontSize="18"/>
+	<style name="Column header" forecolor="#666666" fontName="Droid Sans" fontSize="12" isBold="true"/>
+	<style name="Detail" fontName="Droid Sans" fontSize="12"/>
+	<style name="Row" mode="Transparent">
+		<conditionalStyle>
+			<conditionExpression><![CDATA[$V{REPORT_COUNT}%2 == 0]]></conditionExpression>
+			<style backcolor="#E6DAC3"/>
+		</conditionalStyle>
+	</style>
+	<queryString>
+		<![CDATA[]]>
+	</queryString>
+	<field name="hostelName" class="java.lang.String"/>
+	<field name="hostelAddress" class="java.lang.String"/>
+	<field name="personFullName" class="java.lang.String"/>
+	<field name="staffBedName" class="java.lang.String"/>
+	<field name="staffFloorName" class="java.lang.String"/>
+	<field name="staffRoomName" class="java.lang.String"/>
+	<field name="buildingName" class="java.lang.String"/>
+	<group name="buildingName">
+		<groupExpression><![CDATA[$F{buildingName}]]></groupExpression>
+		<groupHeader>
+			<band height="30">
+				<frame>
+					<reportElement mode="Opaque" x="1" y="0" width="400" height="13" forecolor="#B89F7D" backcolor="#3399FF"/>
+					<textField>
+						<reportElement style="SubTitle" x="0" y="0" width="399" height="13" forecolor="#FFFFFF"/>
+						<textElement textAlignment="Center" verticalAlignment="Middle">
+							<font size="8" isBold="true"/>
+						</textElement>
+						<textFieldExpression class="java.lang.String"><![CDATA[$F{buildingName}]]></textFieldExpression>
+					</textField>
+				</frame>
+				<frame>
+					<reportElement style="SubTitle" mode="Opaque" x="0" y="13" width="400" height="15" forecolor="#B89F7D" backcolor="#FFFFFF"/>
+					<staticText>
+						<reportElement x="133" y="0" width="95" height="15"/>
+						<textElement verticalAlignment="Middle">
+							<font fontName="Droid Sans" size="8" isBold="true"/>
+						</textElement>
+						<text><![CDATA[Floor Name]]></text>
+					</staticText>
+					<staticText>
+						<reportElement style="SubTitle" x="0" y="0" width="133" height="15"/>
+						<textElement verticalAlignment="Middle">
+							<font fontName="Droid Sans" size="8" isBold="true"/>
+						</textElement>
+						<text><![CDATA[Staff Name]]></text>
+					</staticText>
+					<staticText>
+						<reportElement style="SubTitle" x="325" y="0" width="75" height="15"/>
+						<textElement verticalAlignment="Middle">
+							<font fontName="Droid Sans" size="8" isBold="true"/>
+						</textElement>
+						<text><![CDATA[Bed Name]]></text>
+					</staticText>
+					<staticText>
+						<reportElement style="SubTitle" x="228" y="0" width="97" height="15"/>
+						<textElement verticalAlignment="Middle">
+							<font fontName="Droid Sans" size="8" isBold="true"/>
+						</textElement>
+						<text><![CDATA[Room Name]]></text>
+					</staticText>
+				</frame>
+				<line>
+					<reportElement positionType="FixRelativeToBottom" mode="Opaque" x="0" y="27" width="400" height="2"/>
+					<graphicElement>
+						<pen lineWidth="0.5" lineColor="#999999"/>
+					</graphicElement>
+				</line>
+			</band>
+		</groupHeader>
+		<groupFooter>
+			<band/>
+		</groupFooter>
+	</group>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="47" splitType="Prevent">
+			<textField>
+				<reportElement x="1" y="2" width="399" height="15" forecolor="#0000FF"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Droid Sans" size="12" isBold="true"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{hostelName}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="0" y="17" width="400" height="14" forecolor="#0000FF"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Droid Sans" size="8"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{hostelAddress}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="2" y="31" width="398" height="16" forecolor="#0000FF"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Droid Sans" size="8"/>
+				</textElement>
+				<text><![CDATA[Staff Alloted Beds Report]]></text>
+			</staticText>
+		</band>
+	</title>
+	<pageHeader>
+		<band splitType="Stretch"/>
+	</pageHeader>
+	<detail>
+		<band height="12" splitType="Stretch">
+			<frame>
+				<reportElement style="Row" mode="Transparent" x="0" y="0" width="400" height="12"/>
+				<textField isStretchWithOverflow="true">
+					<reportElement style="Detail" x="0" y="0" width="133" height="12"/>
+					<textElement>
+						<font fontName="Droid Sans" size="6"/>
+					</textElement>
+					<textFieldExpression class="java.lang.String"><![CDATA[$F{personFullName}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="true">
+					<reportElement style="Detail" x="133" y="0" width="95" height="12"/>
+					<textElement>
+						<font fontName="Droid Sans" size="6"/>
+					</textElement>
+					<textFieldExpression class="java.lang.String"><![CDATA[$F{staffFloorName}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="true">
+					<reportElement style="Detail" x="325" y="0" width="75" height="12"/>
+					<textElement>
+						<font fontName="Droid Sans" size="6"/>
+					</textElement>
+					<textFieldExpression class="java.lang.String"><![CDATA[$F{staffBedName}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="true">
+					<reportElement style="Detail" x="228" y="0" width="97" height="12"/>
+					<textElement>
+						<font fontName="Droid Sans" size="6"/>
+					</textElement>
+					<textFieldExpression class="java.lang.String"><![CDATA[$F{staffRoomName}]]></textFieldExpression>
+				</textField>
+			</frame>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="4">
+			<line>
+				<reportElement positionType="FixRelativeToBottom" x="2" y="2" width="400" height="2"/>
+				<graphicElement>
+					<pen lineWidth="0.5" lineColor="#999999"/>
+				</graphicElement>
+			</line>
+		</band>
+	</columnFooter>
+	<pageFooter>
+		<band height="15" splitType="Stretch">
+			<frame>
+				<reportElement mode="Transparent" x="2" y="0" width="398" height="13" forecolor="#000000" backcolor="#FFFFFF"/>
+				<textField evaluationTime="Report">
+					<reportElement style="Column header" x="346" y="0" width="52" height="13" forecolor="#000000"/>
+					<textElement verticalAlignment="Middle">
+						<font fontName="Droid Sans" size="8" isBold="false"/>
+					</textElement>
+					<textFieldExpression class="java.lang.String"><![CDATA[" " + $V{PAGE_NUMBER}]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement style="Column header" x="289" y="0" width="57" height="13" forecolor="#000000"/>
+					<textElement textAlignment="Right" verticalAlignment="Middle">
+						<font fontName="Droid Sans" size="8" isBold="false"/>
+					</textElement>
+					<textFieldExpression class="java.lang.String"><![CDATA["|  Page "+$V{PAGE_NUMBER}+" of"]]></textFieldExpression>
+				</textField>
+				<textField pattern="MMMMM dd, yyyy">
+					<reportElement style="Column header" x="118" y="0" width="171" height="13" forecolor="#000000"/>
+					<textElement textAlignment="Right" verticalAlignment="Middle">
+						<font fontName="Droid Sans" size="8" isBold="false" isStrikeThrough="false"/>
+					</textElement>
+					<textFieldExpression class="java.util.Date"><![CDATA[new java.util.Date()]]></textFieldExpression>
+				</textField>
+			</frame>
+		</band>
+	</pageFooter>
+	<summary>
+		<band height="2" splitType="Stretch"/>
+	</summary>
+</jasperReport>

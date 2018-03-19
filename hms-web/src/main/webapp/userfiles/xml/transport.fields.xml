@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<fields templateEngineKind="Velocity" >
+        <description><![CDATA[]]></description>
+         <field name="transport.customerName" list="false" imageName="" syntaxKind="">
+                <description><![CDATA[]]></description>
+        </field>
+        <field name="transport.monthDate" list="false" imageName="" syntaxKind="">
+                <description><![CDATA[]]></description>
+        </field>
+        <field name="transport.vehicleNumber" list="false" imageName="" syntaxKind="">
+                <description><![CDATA[It gives serial number assigned to transport.]]></description>
+        </field>
+        <field name="transport.insuranceNumber" list="false" imageName="" syntaxKind="">
+                <description><![CDATA[]]></description>
+        </field>
+        <field name="transport.name" list="false" imageName="" syntaxKind="">
+                <description><![CDATA[]]></description>
+        </field>
+         <field name="transport.registrationAuthority" list="false" imageName="" syntaxKind="">
+                <description><![CDATA[]]></description>
+        </field>
+          <field name="transport.insuranceDetails" list="false" imageName="" syntaxKind="">
+                <description><![CDATA[]]></description>
+        </field>
+          <field name="transport.vehicleMaker" list="false" imageName="" syntaxKind="">
+                <description><![CDATA[]]></description>
+        </field>
+        <field name="transport.insuranceExpiredDate" list="false" imageName="" syntaxKind="">
+                <description><![CDATA[]]></description>
+        </field>
+        <field name="transport.closingReading" list="false" imageName="" syntaxKind="">
+                <description><![CDATA[]]></description>
+        </field>
+        <field name="transport.openingReading" list="false" imageName="" syntaxKind="">
+                <description><![CDATA[]]></description>
+        </field>
+        <field name="transport.totalKms" list="false" imageName="" syntaxKind="">
+                <description><![CDATA[]]></description>
+        </field>
+        <field name="transport.oilBalance" list="false" imageName="" syntaxKind="">
+                <description><![CDATA[]]></description>
+        </field>
+        <field name="transport.oilConsumed" list="false" imageName="" syntaxKind="">
+                <description><![CDATA[]]></description>
+        </field>
+        <field name="transport.oilPurchased" list="false" imageName="" syntaxKind="">
+                <description><![CDATA[]]></description>
+        </field>
+        <field name="transport.perLtrKms" list="false" imageName="" syntaxKind="">
+                <description><![CDATA[]]></description>
+        </field>
+        
+          <field name="transport.prevClosingReading" list="false" imageName="" syntaxKind="">
+                <description><![CDATA[]]></description>
+        </field>
+        <field name="transport.prevOpeningReading" list="false" imageName="" syntaxKind="">
+                <description><![CDATA[]]></description>
+        </field>
+        <field name="transport.prevTotalKms" list="false" imageName="" syntaxKind="">
+                <description><![CDATA[]]></description>
+        </field>
+        <field name="transport.prevOilBalance" list="false" imageName="" syntaxKind="">
+                <description><![CDATA[]]></description>
+        </field>
+        <field name="transport.prevOilConsumed" list="false" imageName="" syntaxKind="">
+                <description><![CDATA[]]></description>
+        </field>
+        <field name="transport.prevOilPurchased" list="false" imageName="" syntaxKind="">
+                <description><![CDATA[]]></description>
+        </field>
+        <field name="transport.prevPerLtrKms" list="false" imageName="" syntaxKind="">
+                <description><![CDATA[]]></description>
+        </field>
+        <field name="transport.roadTaxNextPaymentDate" list="false" imageName="" syntaxKind="">
+                <description><![CDATA[]]></description>
+        </field>  
+        <field name="transport.repairsCost" list="false" imageName="" syntaxKind="">
+                <description><![CDATA[]]></description>
+        </field>
+        <field name="transport.roadTaxNextPaymentDateStr" list="false" imageName="" syntaxKind="">
+                <description><![CDATA[It gives roadTax next payment date in string format.]]></description>
+        </field>
+        <field name="transport.insuranceExpiredDateStr" list="false" imageName="" syntaxKind="">
+                <description><![CDATA[It gives insurance expired date in string format.]]></description>
+        </field> 
+        <field name="transport.totalBalanceInTank" list="false" imageName="" syntaxKind="">
+                <description><![CDATA[]]></description>
+        </field> 
+        <field name="transport.totalKmsRunning" list="false" imageName="" syntaxKind="">
+                <description><![CDATA[]]></description>
+        </field>  
+        <field name="transport.monthName" list="false" imageName="" syntaxKind="">
+                <description><![CDATA[]]></description>
+        </field>
+        <field name="transport.prevMonthName" list="false" imageName="" syntaxKind="">
+                <description><![CDATA[]]></description>
+        </field>
+</fields>

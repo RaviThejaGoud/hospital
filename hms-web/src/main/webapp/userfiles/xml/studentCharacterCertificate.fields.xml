@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<fields templateEngineKind="Velocity" >
+        <description><![CDATA[]]></description>
+         <field name="student.personFullName" list="true" imageName="" syntaxKind="">
+                <description><![CDATA[]]></description>
+        </field>
+        <field name="student.fatherName" list="true" imageName="" syntaxKind="">
+                <description><![CDATA[]]></description>
+        </field>
+        <field name="student.motherName" list="true" imageName="" syntaxKind="">
+                <description><![CDATA[]]></description>
+        </field>
+        <field name="student.dateOfJoiningStr" list="true" imageName="" syntaxKind="">
+                <description><![CDATA[]]></description>
+        </field>
+        <field name="student.academicYear" list="true" imageName="" syntaxKind="">
+                <description><![CDATA[]]></description>
+        </field>
+        <field name="student.tcIssuedDate" list="true" imageName="" syntaxKind="">
+                <description><![CDATA[]]></description>
+        </field> 
+        <field name="student.toDay" list="true" imageName="" syntaxKind="">
+                <description><![CDATA[]]></description>
+        </field> 
+        
+        
+</fields>

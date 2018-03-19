@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+
+<decorators defaultdir="/decorator">
+    <!-- Any urls that are excluded will never be decorated by Sitemesh -->
+    <excludes>
+        <pattern>/debug.jsp</pattern>
+        <pattern>/styles/*</pattern>
+        <pattern>/scripts/*</pattern>
+        <pattern>/images/*</pattern>
+        <pattern>/dojo/*</pattern>
+        <pattern>/struts/*</pattern>
+        <pattern>/ajax*</pattern>
+        <pattern>/tags/ui/ajax/*</pattern>
+        <pattern>/nodecorate/*</pattern>
+        <pattern>/calendar/ajax*</pattern>
+		<pattern>/map/ajax*</pattern>
+        <pattern>/user/ajax*</pattern>
+        <pattern>/staff/ajax*</pattern>
+        <pattern>/student/ajax*</pattern>
+        <pattern>/common/ajax*</pattern>
+        <pattern>/admin/ajax*</pattern>
+        <pattern>/admin/student/onlineAdmissions*</pattern>
+        <pattern>/masterAdmin/ajax*</pattern>
+        <pattern>/madmin/ajax*</pattern>
+        <pattern>/transport/ajax*</pattern>
+        <pattern>/parent/ajax*</pattern>
+        <pattern>/login.jsp*</pattern>
+        <pattern>/signup/ajax*</pattern>
+        <pattern>/signup/publicViewAdmissionDetails*</pattern>
+        <pattern>/signup/onlineApplicationFormByCustomer*</pattern>
+        <pattern>/signup/doForgotPassword*</pattern>
+        <pattern>/signup/parentRegStep1*</pattern>
+        <pattern>/signup/parentRegStep2*</pattern>
+        <pattern>/signup/doParentRegistration*</pattern>
+         <pattern>/signup/sendPassWordToUsers*</pattern>
+        <pattern>/library/ajax*</pattern>
+         <pattern>/hostel/ajax*</pattern>
+		<pattern>/eazyContactUs*</pattern> 
+		<pattern>/reports/ajax*</pattern>
+		<pattern>/schoolfee/ajax*</pattern>       
+		<pattern>/exam/ajax*</pattern>
+		<pattern>/govt/ajax*</pattern>
+		<pattern>/timeTable/ajax*</pattern>
+		<pattern>/admin/manageAdmissionSettings*</pattern>
+		<pattern>/schoolfee/manageAdmissionStudentFee*</pattern>
+		<pattern>/userFiles*</pattern>
+		<pattern>/signup/ajaxCapturePhotoForAdmissions*</pattern>	
+		<pattern>/signup/logout*</pattern>	
+	    <pattern>/alumnee/ajax*</pattern>
+	    <pattern>/signup/doCreateNewCustomerAccount*</pattern>
+	    <pattern>/signup/urlSaveNewCustomerDetails*</pattern>
+	    <pattern>/account/ajax*</pattern>
+	    <pattern>/privacyPolicy.jsp</pattern>
+	    <pattern>/sports/ajax*</pattern>
+	    <pattern>/store/ajax*</pattern>
+    </excludes>
+    <decorator name="main" page="userDecorator.jsp">
+        <pattern>/*</pattern>
+    </decorator>
+      <decorator name="signup" page="userDecorator.jsp">
+        <pattern>/signup/*</pattern>
+    </decorator>
+ </decorators>
+

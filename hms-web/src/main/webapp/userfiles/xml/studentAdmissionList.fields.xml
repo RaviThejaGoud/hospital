@@ -1,0 +1,395 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<fields templateEngineKind="Velocity" >
+        <description><![CDATA[]]></description>
+        <field name="student.organization" list="true" imageName="" syntaxKind="">
+                <description><![CDATA[]]></description>
+        </field>
+        <field name="student.organizationName" list="true" imageName="" syntaxKind="">
+                <description><![CDATA[]]></description>
+        </field>
+        <field name="student.recognisedBy" list="true" imageName="" syntaxKind="">
+                <description><![CDATA[]]></description>
+        </field>
+        <field name="student.custEmail" list="true" imageName="" syntaxKind="">
+                <description><![CDATA[]]></description>
+        </field>
+        <field name="student.webSiteUrl" list="true" imageName="" syntaxKind="">
+                <description><![CDATA[]]></description>
+        </field>
+        <field name="student.organizationAddressLineCityAndPostalCode" list="true" imageName="" syntaxKind="">
+                <description><![CDATA[]]></description>
+        </field>
+         <field name="student.organizationCustAddressLineCityAndPostalCode" list="true" imageName="" syntaxKind="">
+                <description><![CDATA[]]></description>
+        </field>
+        <field name="student.academicYear" list="true" imageName="" syntaxKind="">
+                <description><![CDATA[It gives serial number assigned to student.]]></description>
+        </field>
+         <field name="student.admissionNumber" list="true" imageName="" syntaxKind="">
+                <description><![CDATA[]]></description>
+        </field>
+        
+        <field name="student.fatherName" list="true" imageName="" syntaxKind="">
+                <description><![CDATA[]]></description>
+        </field>
+         <field name="student.communityName" list="true" imageName="" syntaxKind="">
+                <description><![CDATA[]]></description>
+        </field>
+        <field name="student.dateOfJoining" list="true"  imageName="" syntaxKind="">
+        	<description><![CDATA[]]></description>
+        </field>
+        <field name="student.dateOfBirthInWords" list="true" imageName="" syntaxKind="">
+                <description><![CDATA[]]></description>
+        </field>
+        <field name="student.studentDateOfJoingInWords" list="true" imageName="" syntaxKind="">
+                <description><![CDATA[]]></description>
+        </field>
+        <field name="student.nationalityAndReligion" list="true" imageName="" syntaxKind="">
+                <description><![CDATA[]]></description>
+        </field>
+         <field name="student.studiedClasses" list="true" imageName="" syntaxKind="">
+                <description><![CDATA[If student joined school in VI class and current year student is studying X class. This field gives result like VI - X. ]]></description>
+        </field>
+        <field name="student.branchShortName" list="true" imageName="" syntaxKind="">
+                <description><![CDATA[Stream Short Name]]></description>
+        </field>
+        <field name="student.identification1" list="true" imageName="" syntaxKind="">
+                <description><![CDATA[]]></description>
+        </field>
+        <field name="student.identification2" list="true" imageName="" syntaxKind="">
+                <description><![CDATA[]]></description>
+        </field>
+         <field name="student.schoollogo" list="true" imageName="schoollogo" syntaxKind="">
+                <description><![CDATA[]]></description>
+        </field>
+         <field name="student.dateOfBirth" list="true" imageName="" syntaxKind="">
+                <description><![CDATA[]]></description>
+        </field>
+        <field name="student.dateOfBirthStr" list="true" imageName="" syntaxKind="">
+                <description><![CDATA[]]></description>
+        </field>
+         <field name="student.dateOfJoiningStr" list="true" imageName="" syntaxKind="">
+                <description><![CDATA[]]></description>
+        </field>
+        <field name="student.relievingDateStr" list="true" imageName="" syntaxKind="">
+                <description><![CDATA[]]></description>
+        </field>
+        <field name="student.castAndSubCastName" list="true" imageName="" syntaxKind="">
+                <description><![CDATA[]]></description>
+        </field>
+         <field name="student.streamAndBranchAndYearName" list="true" imageName="" syntaxKind="">
+                <description><![CDATA[]]></description>
+        </field>
+        <field name="student.nationality" list="true" imageName="" syntaxKind="">
+                <description><![CDATA[]]></description>
+        </field>
+        <field name="student.religion" list="true" imageName="" syntaxKind="">
+                <description><![CDATA[]]></description>
+        </field>
+        <field name="student.gender" list="true" imageName="" syntaxKind="">
+                <description><![CDATA[]]></description>
+        </field>
+        <field name="student.motherName" list="true" imageName="" syntaxKind="">
+                <description><![CDATA[]]></description>
+        </field>
+        <field name="student.streetName" list="true" imageName="" syntaxKind="">
+                <description><![CDATA[]]></description>
+        </field>
+        <field name="student.city" list="true" imageName="" syntaxKind="">
+                <description><![CDATA[]]></description>
+        </field>
+        <field name="student.stateName" list="true" imageName="" syntaxKind="">
+                <description><![CDATA[]]></description>
+        </field>
+        <field name="student.mediumOfStudy" list="true" imageName="" syntaxKind="">
+                <description><![CDATA[]]></description>
+        </field>
+        <field name="student.personFullName" list="true" imageName="" syntaxKind="">
+                <description><![CDATA[]]></description>
+        </field>
+        <field name="student.classJoined" list="true" imageName="" syntaxKind="">
+                <description><![CDATA[]]></description>
+        </field>
+          <field name="student.toDay" list="true" imageName="" syntaxKind="">
+                <description><![CDATA[]]></description>
+        </field>
+        <field name="student.studentAddress" list="true" imageName="" syntaxKind="">
+                <description><![CDATA[]]></description>
+        </field>
+        <field name="student.toDayDate" list="true" imageName="" syntaxKind="">
+                <description><![CDATA[]]></description>
+        </field>
+         <field name="student.className" list="true" imageName="" syntaxKind="">
+                <description><![CDATA[]]></description>
+        </field> 
+        
+        <field name="student.lastSchool" list="true" imageName="" syntaxKind="">
+                <description><![CDATA[]]></description>
+        </field> 
+        
+         <field name="student.fatherAadharNumber" list="true" imageName="" syntaxKind="">
+                <description><![CDATA[]]></description>
+        </field> 
+         <field name="student.motherAadharNumber" list="true" imageName="" syntaxKind="">
+                <description><![CDATA[]]></description>
+        </field> 
+        
+        <field name="student.age" list="true" imageName="" syntaxKind="">
+                <description><![CDATA[]]></description>
+        </field> 
+        
+        <field name="student.ageAppropriation" list="true" imageName="" syntaxKind="">
+                <description><![CDATA[]]></description>
+        </field>
+        
+        <field name="student.transferCertificateNo" list="true" imageName="" syntaxKind="">
+                <description><![CDATA[]]></description>
+        </field>
+        
+        <field name="student.transferCertificateDateStr" list="true" imageName="" syntaxKind="">
+                <description><![CDATA[]]></description>
+        </field>
+        
+         <field name="student.studentCasteCertificate" list="true" imageName="" syntaxKind="">
+                <description><![CDATA[]]></description>
+        </field>
+        
+        <field name="student.studentMobile" list="true" imageName="" syntaxKind="">
+                <description><![CDATA[]]></description>
+        </field>
+        
+        <field name="student.studentEmail" list="true" imageName="" syntaxKind="">
+                <description><![CDATA[]]></description>
+        </field>
+        
+        <field name="student.hostelModeStr" list="true" imageName="" syntaxKind="">
+                <description><![CDATA[]]></description>
+        </field>
+        
+        <field name="student.placeOfBirth" list="true" imageName="" syntaxKind="">
+                <description><![CDATA[]]></description>
+        </field>
+        
+        <field name="student.dateofAdmissionStr" list="true" imageName="" syntaxKind="">
+                <description><![CDATA[]]></description>
+        </field>
+        
+        <field name="student.studentCaste" list="true" imageName="" syntaxKind="">
+                <description><![CDATA[]]></description>
+        </field>
+        <field name="student.motherToung" list="true" imageName="" syntaxKind="">
+                <description><![CDATA[]]></description>
+        </field>
+        
+        <field name="student.fatherQualification" list="true" imageName="" syntaxKind="">
+                <description><![CDATA[]]></description>
+        </field>
+        <field name="student.fatherOccupation" list="true" imageName="" syntaxKind="">
+                <description><![CDATA[]]></description>
+        </field>
+        
+        <field name="student.motherQualification" list="true" imageName="" syntaxKind="">
+                <description><![CDATA[]]></description>
+        </field>
+        
+        <field name="student.motherOccupation" list="true" imageName="" syntaxKind="">
+                <description><![CDATA[]]></description>
+        </field>
+        
+        <field name="student.noOfBrother" list="true" imageName="" syntaxKind="">
+                <description><![CDATA[]]></description>
+        </field>
+        <field name="student.noOfSisters" list="true" imageName="" syntaxKind="">
+                <description><![CDATA[]]></description>
+        </field>
+        <field name="student.noOfElder" list="true" imageName="" syntaxKind="">
+                <description><![CDATA[]]></description>
+        </field>
+        <field name="student.noOfYounger" list="true" imageName="" syntaxKind="">
+                <description><![CDATA[]]></description>
+        </field>
+        
+        <field name="student.residentialAddress" list="true" imageName="" syntaxKind="">
+                <description><![CDATA[]]></description>
+        </field>
+        
+        <field name="student.phoneNumber" list="true" imageName="" syntaxKind="">
+                <description><![CDATA[]]></description>
+        </field>
+        <field name="student.monthlyIncome" list="true" imageName="" syntaxKind="">
+                <description><![CDATA[]]></description>
+        </field>
+        
+        <field name="student.mobileNumber" list="true" imageName="" syntaxKind="">
+                <description><![CDATA[]]></description>
+        </field>
+        
+        <field name="student.anyOtherLanguageSpoken" list="true" imageName="" syntaxKind="">
+                <description><![CDATA[]]></description>
+        </field>
+        <field name="student.specialInterest" list="true" imageName="" syntaxKind="">
+                <description><![CDATA[]]></description>
+        </field>
+        
+        <field name="student.interestsAndHobbies" list="true" imageName="" syntaxKind="">
+                <description><![CDATA[]]></description>
+        </field>
+        
+        <field name="student.bloodGroup" list="true" imageName="" syntaxKind="">
+                <description><![CDATA[]]></description>
+        </field>
+        
+        <field name="student.anyHealthDiseases" list="true" imageName="" syntaxKind="">
+                <description><![CDATA[]]></description>
+        </field>
+        
+        <field name="student.specificPointNoted" list="true" imageName="" syntaxKind="">
+                <description><![CDATA[]]></description>
+        </field>
+        
+        <field name="student.urbanOrRural" list="true" imageName="" syntaxKind="">
+                <description><![CDATA[]]></description>
+        </field>
+        
+        <field name="student.fatherCasteCertificate" list="true" imageName="" syntaxKind="">
+                <description><![CDATA[]]></description>
+        </field>
+        
+        <field name="student.motherCasteCertificate" list="true" imageName="" syntaxKind="">
+                <description><![CDATA[]]></description>
+        </field>
+        
+         <field name="student.fatherCaste" list="true" imageName="" syntaxKind="">
+                <description><![CDATA[]]></description>
+        </field>
+        
+         <field name="student.motherCaste" list="true" imageName="" syntaxKind="">
+                <description><![CDATA[]]></description>
+        </field>
+        
+         <field name="student.studentCasteCertificate" list="true" imageName="" syntaxKind="">
+                <description><![CDATA[]]></description>
+        </field>
+        
+        <field name="student.bplStatus" list="true" imageName="" syntaxKind="">
+                <description><![CDATA[]]></description>
+        </field>
+        
+        <field name="student.bplNumber" list="true" imageName="" syntaxKind="">
+                <description><![CDATA[]]></description>
+        </field>
+        
+        <field name="student.socialCategory" list="true" imageName="" syntaxKind="">
+                <description><![CDATA[]]></description>
+        </field>
+        
+        <field name="student.rteStatus" list="true" imageName="" syntaxKind="">
+                <description><![CDATA[]]></description>
+        </field>
+        
+        <field name="student.rteStatus" list="true" imageName="" syntaxKind="">
+                <description><![CDATA[]]></description>
+        </field>
+        
+         <field name="student.previousSchoolAffiliation" list="true" imageName="" syntaxKind="">
+                <description><![CDATA[]]></description>
+        </field>
+         <field name="student.previousSchoolType" list="true" imageName="" syntaxKind="">
+                <description><![CDATA[]]></description>
+        </field>
+        
+        
+        <field name="student.previousSchoolPincode" list="true" imageName="" syntaxKind="">
+                <description><![CDATA[]]></description>
+        </field>
+        <field name="student.previousSchoolDistictName" list="true" imageName="" syntaxKind="">
+                <description><![CDATA[]]></description>
+        </field>
+        <field name="student.previousSchoolTaluka" list="true" imageName="" syntaxKind="">
+                <description><![CDATA[]]></description>
+        </field>
+        <field name="student.previousSchoolCity" list="true" imageName="" syntaxKind="">
+                <description><![CDATA[]]></description>
+        </field>
+        <field name="student.previousSchoolStreetName" list="true" imageName="" syntaxKind="">
+                <description><![CDATA[]]></description>
+        </field>
+        
+        <field name="student.bhagyalakshmiBondNo" list="true" imageName="" syntaxKind="">
+                <description><![CDATA[]]></description>
+        </field>
+        
+        
+        <field name="student.studentResidencePincode" list="true" imageName="" syntaxKind="">
+                <description><![CDATA[]]></description>
+        </field>
+        <field name="student.studentResidenceDistictName" list="true" imageName="" syntaxKind="">
+                <description><![CDATA[]]></description>
+        </field>
+        <field name="student.studentResidenceTaluka" list="true" imageName="" syntaxKind="">
+                <description><![CDATA[]]></description>
+        </field>
+        <field name="student.studentResidenceCity" list="true" imageName="" syntaxKind="">
+                <description><![CDATA[]]></description>
+        </field>
+        <field name="student.studentResidenceStreetName" list="true" imageName="" syntaxKind="">
+                <description><![CDATA[]]></description>
+        </field>
+        
+        <field name="student.parentEmail" list="true" imageName="" syntaxKind="">
+                <description><![CDATA[]]></description>
+        </field>
+        
+        <field name="student.motherMobileNumber" list="true" imageName="" syntaxKind="">
+                <description><![CDATA[]]></description>
+        </field>
+        <field name="student.motherEmailAddress" list="true" imageName="" syntaxKind="">
+                <description><![CDATA[]]></description>
+        </field>
+        
+         <field name="student.studentBankAccountDetails" list="true" imageName="" syntaxKind="">
+                <description><![CDATA[]]></description>
+        </field>
+        
+        <field name="student.bankIFSCCode" list="true" imageName="" syntaxKind="">
+                <description><![CDATA[]]></description>
+        </field>
+        
+        <field name="student.transportMode" list="true" imageName="" syntaxKind="">
+                <description><![CDATA[]]></description>
+        </field>
+        
+        <field name="student.aadharCardNumber" list="true" imageName="" syntaxKind="">
+                <description><![CDATA[]]></description>
+        </field>
+        
+        <field name="student.noOfElderSisters" list="true" imageName="" syntaxKind="">
+                <description><![CDATA[]]></description>
+        </field>
+        <field name="student.noOfYoungerSisters" list="true" imageName="" syntaxKind="">
+                <description><![CDATA[]]></description>
+        </field>
+        
+         <field name="student.mediumOfInstruction" list="true" imageName="" syntaxKind="">
+                <description><![CDATA[]]></description>
+        </field>
+        
+        <field name="student.subCastName" list="true" imageName="" syntaxKind="">
+                <description><![CDATA[]]></description>
+        </field>
+        
+        <field name="student.special" list="true" imageName="" syntaxKind="">
+                <description><![CDATA[]]></description>
+        </field>
+        
+        <field name="student.phIdStr" list="true" imageName="" syntaxKind="">
+                <description><![CDATA[]]></description>
+        </field>
+        
+         <field name="student.transportModeStr" list="true" imageName="" syntaxKind="">
+                <description><![CDATA[]]></description>
+        </field>
+        
+        
+        
+</fields>

@@ -1,0 +1,227 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="viewAllStudentIdCardsGeneration" columnCount="5" pageWidth="828" pageHeight="555" orientation="Landscape" columnWidth="159" columnSpacing="6" leftMargin="3" rightMargin="3" topMargin="15" bottomMargin="15">
+	<property name="template.type" value="columnar"/>
+	<property name="ireport.zoom" value="2.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<style name="Title" forecolor="#000000" fontName="Times New Roman" fontSize="50" isBold="false" pdfFontName="Times-Bold"/>
+	<style name="SubTitle" forecolor="#666666" fontName="Times New Roman" fontSize="18" isBold="false" pdfFontName="Times-Roman"/>
+	<style name="Column header" forecolor="#666666" fontName="Times New Roman" fontSize="14" isBold="true" pdfFontName="Times-Roman"/>
+	<style name="Detail" mode="Transparent" fontName="Times New Roman" pdfFontName="Times-Roman"/>
+	<style name="Row" mode="Transparent" fontName="Times New Roman" pdfFontName="Times-Roman">
+		<conditionalStyle>
+			<conditionExpression><![CDATA[$V{REPORT_COUNT}%2 == 0]]></conditionExpression>
+			<style mode="Opaque" backcolor="#F0EFEF"/>
+		</conditionalStyle>
+	</style>
+	<style name="Crosstab Data Text" hAlign="Center"/>
+	<parameter name="transportModuleStatus" class="java.lang.Boolean">
+		<defaultValueExpression><![CDATA[new Boolean($F{transportModuleStatus})]]></defaultValueExpression>
+	</parameter>
+	<parameter name="studentTransportStatus" class="java.lang.Boolean">
+		<defaultValueExpression><![CDATA[new Boolean($F{studentTransportStatus})]]></defaultValueExpression>
+	</parameter>
+	<field name="personFullName" class="java.lang.String"/>
+	<field name="bloodGroup" class="java.lang.String"/>
+	<field name="vehicleName" class="java.lang.String"/>
+	<field name="dateOfBirthStr" class="java.lang.String"/>
+	<field name="classAndSection" class="java.lang.String"/>
+	<field name="customerName" class="java.lang.String"/>
+	<field name="anyTitle" class="java.lang.String"/>
+	<field name="parentAddress" class="java.lang.String"/>
+	<field name="fatherName" class="java.lang.String"/>
+	<field name="transportModeStatus" class="java.lang.String"/>
+	<field name="vehicleNumber" class="java.lang.String"/>
+	<field name="admissionNumber" class="java.lang.String"/>
+	<field name="schoolIdCardAttachmentFilePath" class="java.lang.String"/>
+	<field name="customerAttachmentFilePath" class="java.lang.String"/>
+	<field name="academicYear" class="java.lang.String"/>
+	<field name="transportModuleStatus" class="java.lang.Boolean"/>
+	<field name="studentTransportStatus" class="java.lang.Boolean"/>
+	<field name="addressLine1" class="java.lang.String"/>
+	<field name="roleDescription" class="java.lang.String"/>
+	<field name="barcodeImage" class="java.lang.String"/>
+	<field name="digitalSignature" class="java.lang.String"/>
+	<group name="Group1">
+		<groupExpression><![CDATA[(int)($V{REPORT_COUNT}/15)]]></groupExpression>
+		<groupHeader>
+			<band/>
+		</groupHeader>
+		<groupFooter>
+			<band/>
+		</groupFooter>
+	</group>
+	<group name="Group2">
+		<groupExpression><![CDATA[(int)($V{REPORT_COUNT}/5)]]></groupExpression>
+		<groupHeader>
+			<band/>
+		</groupHeader>
+	</group>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<pageHeader>
+		<band splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band splitType="Stretch"/>
+	</columnHeader>
+	<detail>
+		<band height="250">
+			<line>
+				<reportElement positionType="FixRelativeToBottom" x="8" y="11" width="1" height="225">
+					<property name="net.sf.jasperreports.export.pdf.tag.h1" value="start"/>
+				</reportElement>
+				<graphicElement>
+					<pen lineWidth="0.5" lineColor="#999999"/>
+				</graphicElement>
+			</line>
+			<line>
+				<reportElement positionType="FixRelativeToBottom" x="9" y="10" width="140" height="1"/>
+				<graphicElement>
+					<pen lineWidth="0.5" lineColor="#999999"/>
+				</graphicElement>
+			</line>
+			<line>
+				<reportElement positionType="FixRelativeToBottom" x="149" y="11" width="1" height="225">
+					<property name="net.sf.jasperreports.export.pdf.tag.h1" value="start"/>
+				</reportElement>
+				<graphicElement>
+					<pen lineWidth="0.5" lineColor="#999999"/>
+				</graphicElement>
+			</line>
+			<line>
+				<reportElement positionType="FixRelativeToBottom" x="9" y="235" width="140" height="1"/>
+				<graphicElement>
+					<pen lineWidth="0.5" lineColor="#999999"/>
+				</graphicElement>
+			</line>
+			<staticText>
+				<reportElement x="15" y="73" width="60" height="12" forecolor="#FF0033"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font size="6" isBold="true"/>
+				</textElement>
+				<text><![CDATA[ID CARD :]]></text>
+			</staticText>
+			<textField isBlankWhenNull="true">
+				<reportElement x="61" y="144" width="87" height="10" forecolor="#0000FF"/>
+				<textElement verticalAlignment="Middle">
+					<font size="7" isBold="true"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{roleDescription}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="76" y="73" width="73" height="13" forecolor="#0000FF"/>
+				<textElement verticalAlignment="Middle">
+					<font size="6" isBold="true"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{academicYear}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="13" y="156" width="46" height="10" forecolor="#000000"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font size="7" isBold="true"/>
+				</textElement>
+				<text><![CDATA[ D.O.B :]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="12" y="132" width="47" height="10" forecolor="#000000"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font size="7" isBold="true"/>
+				</textElement>
+				<text><![CDATA[ Name :]]></text>
+			</staticText>
+			<image scaleImage="FillFrame" hAlign="Left" onErrorType="Icon">
+				<reportElement x="55" y="12" width="49" height="34"/>
+				<imageExpression class="java.lang.String"><![CDATA[$F{customerAttachmentFilePath}]]></imageExpression>
+			</image>
+			<textField isBlankWhenNull="true">
+				<reportElement x="11" y="214" width="137" height="19" forecolor="#0000FF"/>
+				<textElement textAlignment="Center">
+					<font size="6" isBold="true"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{parentAddress}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement style="Title" x="12" y="45" width="134" height="20" forecolor="#0000FF"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="SansSerif" size="7" isBold="true"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{customerName}]]></textFieldExpression>
+			</textField>
+			<image scaleImage="FillFrame" isUsingCache="true" onErrorType="Icon">
+				<reportElement x="52" y="88" width="43" height="42"/>
+				<imageExpression class="java.lang.String"><![CDATA[$F{schoolIdCardAttachmentFilePath}]]></imageExpression>
+			</image>
+			<image scaleImage="FillFrame" onErrorType="Blank">
+				<reportElement x="106" y="180" width="40" height="21"/>
+				<imageExpression class="java.lang.String"><![CDATA[$F{digitalSignature}]]></imageExpression>
+			</image>
+			<textField isBlankWhenNull="true">
+				<reportElement x="61" y="168" width="85" height="10" forecolor="#0000FF"/>
+				<textElement verticalAlignment="Middle">
+					<font size="7" isBold="true"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{bloodGroup}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="61" y="156" width="85" height="10" forecolor="#0000FF"/>
+				<textElement verticalAlignment="Middle">
+					<font size="7" isBold="true"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{dateOfBirthStr}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="13" y="144" width="46" height="10" forecolor="#000000"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font size="7" isBold="true"/>
+				</textElement>
+				<text><![CDATA[ Desg :]]></text>
+			</staticText>
+			<image scaleImage="FillFrame" onErrorType="Blank">
+				<reportElement x="12" y="197" width="59" height="13" isRemoveLineWhenBlank="true"/>
+				<imageExpression class="java.lang.String"><![CDATA[$F{barcodeImage} == null ? "" : $F{barcodeImage}]]></imageExpression>
+			</image>
+			<textField isBlankWhenNull="true">
+				<reportElement x="12" y="61" width="134" height="12" forecolor="#0000FF"/>
+				<textElement textAlignment="Center">
+					<font size="6" isBold="false"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{anyTitle}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="9" y="168" width="50" height="10" forecolor="#000000"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font size="7" isBold="true"/>
+				</textElement>
+				<text><![CDATA[ Blood Group :]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="104" y="201" width="42" height="10" forecolor="#000000"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="6" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Principal]]></text>
+			</staticText>
+			<textField isBlankWhenNull="true">
+				<reportElement x="61" y="132" width="87" height="10" forecolor="#0000FF"/>
+				<textElement verticalAlignment="Middle">
+					<font size="7" isBold="true"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{personFullName}]]></textFieldExpression>
+			</textField>
+			<line>
+				<reportElement positionType="FixRelativeToBottom" x="9" y="87" width="140" height="1"/>
+				<graphicElement>
+					<pen lineWidth="0.5" lineColor="#999999"/>
+				</graphicElement>
+			</line>
+			<line>
+				<reportElement positionType="FixRelativeToBottom" x="9" y="212" width="140" height="1"/>
+				<graphicElement>
+					<pen lineWidth="0.5" lineColor="#999999"/>
+				</graphicElement>
+			</line>
+		</band>
+	</detail>
+</jasperReport>

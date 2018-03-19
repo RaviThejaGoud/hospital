@@ -1,0 +1,276 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="viewAllStudentIdCardsGeneration" columnCount="5" pageWidth="828" pageHeight="555" orientation="Landscape" columnWidth="159" columnSpacing="6" leftMargin="3" rightMargin="3" topMargin="15" bottomMargin="15">
+	<property name="template.type" value="columnar"/>
+	<property name="ireport.zoom" value="4.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="672"/>
+	<style name="Title" forecolor="#000000" fontName="Times New Roman" fontSize="50" isBold="false" pdfFontName="Times-Bold"/>
+	<style name="SubTitle" forecolor="#666666" fontName="Times New Roman" fontSize="18" isBold="false" pdfFontName="Times-Roman"/>
+	<style name="Column header" forecolor="#666666" fontName="Times New Roman" fontSize="14" isBold="true" pdfFontName="Times-Roman"/>
+	<style name="Detail" mode="Transparent" fontName="Times New Roman" pdfFontName="Times-Roman"/>
+	<style name="Row" mode="Transparent" fontName="Times New Roman" pdfFontName="Times-Roman">
+		<conditionalStyle>
+			<conditionExpression><![CDATA[$V{REPORT_COUNT}%2 == 0]]></conditionExpression>
+			<style mode="Opaque" backcolor="#F0EFEF"/>
+		</conditionalStyle>
+	</style>
+	<parameter name="transportModuleStatus" class="java.lang.Boolean">
+		<defaultValueExpression><![CDATA[new Boolean($F{transportModuleStatus})]]></defaultValueExpression>
+	</parameter>
+	<parameter name="studentTransportStatus" class="java.lang.Boolean">
+		<defaultValueExpression><![CDATA[new Boolean($F{studentTransportStatus})]]></defaultValueExpression>
+	</parameter>
+	<field name="personFullName" class="java.lang.String"/>
+	<field name="bloodGroup" class="java.lang.String"/>
+	<field name="vehicleName" class="java.lang.String"/>
+	<field name="dateOfBirthDMY" class="java.lang.String"/>
+	<field name="classAndSection" class="java.lang.String"/>
+	<field name="customerName" class="java.lang.String"/>
+	<field name="customerFullAddress" class="java.lang.String"/>
+	<field name="parentAddress" class="java.lang.String"/>
+	<field name="fatherName" class="java.lang.String"/>
+	<field name="transportModeStatus" class="java.lang.String"/>
+	<field name="vehicleNumber" class="java.lang.String"/>
+	<field name="admissionNumber" class="java.lang.String"/>
+	<field name="schoolIdCardAttachmentFilePath" class="java.lang.String"/>
+	<field name="customerAttachmentFilePath" class="java.lang.String"/>
+	<field name="academicYear" class="java.lang.String"/>
+	<field name="transportModuleStatus" class="java.lang.Boolean"/>
+	<field name="studentTransportStatus" class="java.lang.Boolean"/>
+	<field name="mobileNumber" class="java.lang.String"/>
+	<field name="staticPhoto" class="java.lang.String"/>
+	<field name="digitalSignature" class="java.lang.String"/>
+	<field name="barcodeImage" class="java.lang.String"/>
+	<group name="Group1">
+		<groupExpression><![CDATA[(int)($V{REPORT_COUNT}/15)]]></groupExpression>
+		<groupHeader>
+			<band/>
+		</groupHeader>
+		<groupFooter>
+			<band/>
+		</groupFooter>
+	</group>
+	<group name="Group2">
+		<groupExpression><![CDATA[(int)($V{REPORT_COUNT}/5)]]></groupExpression>
+		<groupHeader>
+			<band/>
+		</groupHeader>
+	</group>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<pageHeader>
+		<band splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band splitType="Stretch"/>
+	</columnHeader>
+	<detail>
+		<band height="261">
+			<staticText>
+				<reportElement mode="Opaque" x="0" y="-5" width="159" height="249" backcolor="#FFFACD"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[]]></text>
+			</staticText>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement style="Detail" positionType="Float" x="4" y="136" width="151" height="11" forecolor="#0000FF"/>
+				<textElement textAlignment="Center">
+					<font fontName="Droid Sans" size="8" isBold="true"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{personFullName}]]></textFieldExpression>
+			</textField>
+			<line>
+				<reportElement positionType="FixRelativeToBottom" x="4" y="243" width="151" height="1"/>
+				<graphicElement>
+					<pen lineWidth="0.5" lineColor="#999999"/>
+				</graphicElement>
+			</line>
+			<line>
+				<reportElement positionType="FixRelativeToBottom" x="155" y="1" width="1" height="242">
+					<property name="net.sf.jasperreports.export.pdf.tag.h1" value="start"/>
+				</reportElement>
+				<graphicElement>
+					<pen lineWidth="0.5" lineColor="#999999"/>
+				</graphicElement>
+			</line>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement style="Detail" positionType="Float" x="6" y="46" width="145" height="19" forecolor="#0000FF"/>
+				<textElement textAlignment="Center" verticalAlignment="Top">
+					<font fontName="Droid Sans" size="6"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{customerFullAddress}]]></textFieldExpression>
+			</textField>
+			<line>
+				<reportElement positionType="FixRelativeToBottom" x="4" y="220" width="151" height="1"/>
+				<graphicElement>
+					<pen lineWidth="0.5" lineColor="#999999"/>
+				</graphicElement>
+			</line>
+			<image scaleImage="FillFrame" isUsingCache="true" onErrorType="Icon">
+				<reportElement x="52" y="78" width="57" height="57"/>
+				<imageExpression class="java.lang.String"><![CDATA[$F{schoolIdCardAttachmentFilePath}]]></imageExpression>
+			</image>
+			<line>
+				<reportElement positionType="FixRelativeToBottom" x="3" y="1" width="1" height="242">
+					<property name="net.sf.jasperreports.export.pdf.tag.h1" value="start"/>
+				</reportElement>
+				<graphicElement>
+					<pen lineWidth="0.5" lineColor="#999999"/>
+				</graphicElement>
+			</line>
+			<line>
+				<reportElement positionType="FixRelativeToBottom" x="4" y="74" width="151" height="1"/>
+				<graphicElement>
+					<pen lineWidth="0.5" lineColor="#999999"/>
+				</graphicElement>
+			</line>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement style="Detail" positionType="Float" x="48" y="3" width="107" height="40" forecolor="#008B45"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Droid Sans" size="9" isBold="true"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{customerName}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement style="Column header" positionType="Float" x="45" y="66" width="32" height="8" forecolor="#000000"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="Droid Sans" size="6" isBold="false"/>
+				</textElement>
+				<text><![CDATA[ID CARD : ]]></text>
+			</staticText>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement style="Detail" positionType="Float" x="80" y="66" width="46" height="8" forecolor="#0000FF"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="Droid Sans" size="6"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{academicYear}]]></textFieldExpression>
+			</textField>
+			<line>
+				<reportElement positionType="FixRelativeToBottom" x="4" y="0" width="151" height="1"/>
+				<graphicElement>
+					<pen lineWidth="0.5" lineColor="#999999"/>
+				</graphicElement>
+			</line>
+			<image scaleImage="FillFrame" hAlign="Left" onErrorType="Icon">
+				<reportElement x="6" y="2" width="41" height="41"/>
+				<imageExpression class="java.lang.String"><![CDATA[$F{customerAttachmentFilePath}]]></imageExpression>
+			</image>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement style="Detail" positionType="Float" x="7" y="213" width="149" height="20" forecolor="#0000FF"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Droid Sans" size="5"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{parentAddress}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement style="Column header" positionType="Float" x="109" y="206" width="24" height="7" forecolor="#000000"/>
+				<textElement textAlignment="Center">
+					<font fontName="Droid Sans" size="6" isBold="false"/>
+				</textElement>
+				<text><![CDATA[Principal]]></text>
+			</staticText>
+			<image scaleImage="FillFrame" onErrorType="Blank">
+				<reportElement x="109" y="196" width="40" height="10"/>
+				<imageExpression class="java.lang.String"><![CDATA[$F{digitalSignature}]]></imageExpression>
+			</image>
+			<staticText>
+				<reportElement style="Column header" positionType="Float" x="12" y="186" width="46" height="7" forecolor="#FF0033">
+					<printWhenExpression><![CDATA[new Boolean($F{studentTransportStatus})]]></printWhenExpression>
+				</reportElement>
+				<textElement textAlignment="Right">
+					<font fontName="Droid Sans" size="6" isBold="false"/>
+				</textElement>
+				<text><![CDATA[Vehicle Name :]]></text>
+			</staticText>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement style="Detail" positionType="Float" x="61" y="163" width="94" height="8" forecolor="#0000FF"/>
+				<textElement textAlignment="Left">
+					<font fontName="Droid Sans" size="6" isBold="true"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{dateOfBirthDMY}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement style="Column header" positionType="Float" x="61" y="186" width="94" height="7" forecolor="#0000FF">
+					<printWhenExpression><![CDATA[new Boolean($F{studentTransportStatus})]]></printWhenExpression>
+				</reportElement>
+				<textElement textAlignment="Left">
+					<font fontName="Droid Sans" size="6" isBold="true"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{vehicleName}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement style="Column header" positionType="Float" x="12" y="147" width="46" height="7" forecolor="#FF0033"/>
+				<textElement textAlignment="Right">
+					<font fontName="Droid Sans" size="6" isBold="false"/>
+				</textElement>
+				<text><![CDATA[Class :]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" positionType="Float" x="12" y="155" width="46" height="8" forecolor="#FF0033"/>
+				<textElement textAlignment="Right">
+					<font fontName="Droid Sans" size="6" isBold="false"/>
+				</textElement>
+				<text><![CDATA[Admission No :]]></text>
+			</staticText>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement style="Column header" positionType="Float" x="61" y="179" width="94" height="7" forecolor="#0000FF">
+					<printWhenExpression><![CDATA[new Boolean($F{transportModuleStatus})]]></printWhenExpression>
+				</reportElement>
+				<textElement textAlignment="Left">
+					<font fontName="Droid Sans" size="6" isBold="true"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{transportModeStatus}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement style="Detail" positionType="Float" stretchType="RelativeToBandHeight" x="61" y="171" width="94" height="8" forecolor="#0000FF"/>
+				<textElement textAlignment="Left">
+					<font fontName="Droid Sans" size="6" isBold="true"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{fatherName}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement style="Detail" positionType="Float" x="61" y="148" width="94" height="7" forecolor="#0000FF"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="Droid Sans" size="6" isBold="true"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{classAndSection}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement style="Column header" positionType="Float" stretchType="RelativeToBandHeight" x="12" y="171" width="46" height="8" forecolor="#FF0033"/>
+				<textElement textAlignment="Right">
+					<font fontName="Droid Sans" size="6" isBold="false"/>
+				</textElement>
+				<text><![CDATA[Father Name :]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" positionType="Float" x="12" y="163" width="46" height="8" forecolor="#FF0033"/>
+				<textElement textAlignment="Right">
+					<font fontName="Droid Sans" size="6" isBold="false"/>
+				</textElement>
+				<text><![CDATA[Date Of Birth :]]></text>
+			</staticText>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement style="Detail" positionType="Float" x="61" y="155" width="94" height="8" forecolor="#0000FF"/>
+				<textElement textAlignment="Left">
+					<font fontName="Droid Sans" size="6" isBold="true"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{admissionNumber}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement style="Column header" positionType="Float" x="10" y="179" width="48" height="7" forecolor="#FF0033">
+					<printWhenExpression><![CDATA[new Boolean($F{transportModuleStatus})]]></printWhenExpression>
+				</reportElement>
+				<textElement textAlignment="Right">
+					<font fontName="Droid Sans" size="6" isBold="false"/>
+				</textElement>
+				<text><![CDATA[Transport Mode :]]></text>
+			</staticText>
+			<image scaleImage="FillFrame" onErrorType="Blank">
+				<reportElement x="8" y="196" width="72" height="16" isRemoveLineWhenBlank="true"/>
+				<imageExpression class="java.lang.String"><![CDATA[$F{barcodeImage} == null ? "" : $F{barcodeImage}]]></imageExpression>
+			</image>
+		</band>
+	</detail>
+</jasperReport>

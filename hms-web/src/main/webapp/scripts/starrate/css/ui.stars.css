@@ -1,0 +1,74 @@
+/*!
+ * jQuery UI Stars v2.1.1
+ * http://plugins.jquery.com/project/Star_Rating_widget
+ *
+ * Copyright (c) 2009 Orkan (orkans@gmail.com)
+ * Dual licensed under the MIT and GPL licenses.
+ * http://docs.jquery.com/License
+ *
+ * $Rev: 102 $
+ * $Date: 2016/03/02 06:13:04 $
+ * $Build: 32 (2009-06-12)
+ *
+ */
+.ui-stars-star,
+.ui-stars-cancel {
+	float: left;
+	display: block;
+	overflow: hidden;
+	text-indent: -999em;
+	cursor: pointer;
+}
+.ui-stars-star a,
+.ui-stars-cancel a {
+	width: 16px;
+	height: 15px;
+	display: block;
+	background: url(ui.stars.gif) no-repeat 0 0;
+}
+.ui-stars-star a {
+	background-position: 0 -32px;
+}
+.ui-stars-star-on a {
+	background-position: 0 0px;
+}
+.ui-stars-star-hover a {
+	background-position: 0 -48px;
+}
+.ui-stars-cancel-hover a {
+	background-position: 0 -16px;
+}
+.ui-stars-star-disabled,
+.ui-stars-star-disabled a,
+.ui-stars-cancel-disabled a {
+	cursor: default !important;
+}
+
+.loader {
+	-moz-background-clip:border;
+	-moz-background-inline-policy:continuous;
+	-moz-background-origin:padding;
+	background:transparent url(spinner.gif) no-repeat scroll left center;
+	display:none;
+	padding-left:20px;
+}
+span.stars, span.stars span {
+    display: block;
+    background: url(ui.stars.gif) 0 -32px repeat-x;
+    width: 80px;
+    height: 16px;
+}
+
+span.stars span {
+    background-position: 0 0;
+}
+span.innerStarsVal, span.innerStarsVal span {
+    display: block;
+    background: url(ui.stars.gif) 0 -32px repeat-x;
+    width: 80px;
+    height: 16px;
+}
+
+span.innerStarsVal span {
+    background-position: 0 0;
+}

@@ -1,0 +1,181 @@
+<%@ include file="/common/taglibs.jsp"%>
+<%@ page
+	import="org.springframework.security.web.authentication.AbstractProcessingFilter"%>
+<%@ page
+	import="org.springframework.security.web.authentication.AuthenticationProcessingFilter"%>
+<%@ page
+	import="org.springframework.security.core.AuthenticationException"%>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head profile="http://gmpg.org/xfn/11">
+		<title>Eazy School :: Empowering School Administration</title>
+<link rel="shortcut icon" href="${pageContext.request.contextPath}/images/favlogo.ico"/>		
+<%-- <sj:head debug="false" compressed="true" jquerytheme="dark-hive"
+			loadFromGoogle="%{google}" ajaxhistory="%{ajaxhistory}"
+			defaultIndicator="myDefaultIndicator"
+			defaultLoadingText="Loading ..." /> --%>
+ 		<style type="text/css" media="all">
+			@import url("${pageContext.request.contextPath}/plugins/bootstrap/css/bootstrap.min.css");
+			@import url("${pageContext.request.contextPath}/plugins/font-awesome/css/font-awesome.min.css");
+			@import url("${pageContext.request.contextPath}/styles/newCss/style-metronic.css");
+			@import url("${pageContext.request.contextPath}/styles/newCss/style.css");	
+			@import url("${pageContext.request.contextPath}/styles/newCss/style-responsive.css");			
+			 @import url("${pageContext.request.contextPath}/plugins/uniform/css/uniform.default.css");
+  			@import url("${pageContext.request.contextPath}/styles/newCss/pages/login.css");
+  			.login .contentWeb {
+				  background-color: #eceef1;
+				  -webkit-border-radius: 7px;
+				  -moz-border-radius: 7px;
+				  -ms-border-radius: 7px;
+				  -o-border-radius: 7px;
+				  border-radius: 7px;
+				  width: 220px;
+				  margin: 40px auto 10px auto;
+				  padding: 30px;
+				  padding-top: 10px;
+				  overflow: hidden;
+				  position: relative;
+				}
+				.login .contentWeb .form-title {
+				  font-weight: 300;
+				  margin: 5px 20px 10px 37px;
+				}
+          </style>
+	</head>
+<body class="login">
+	<!-- <div class="logo">
+		<img src="img/bg/logo.png" alt="" /> 
+	</div> -->
+	<div class="contentWeb">
+		<form class="form-vertical login-form"  name="f" action="../<c:url value='j_spring_security_check'/>" method="post" onsubmit="saveUsername(this);" target="_new">
+		   	<jsp:include page="/common/messages.jsp" />
+		   		 <c:if test="${param.login_error != null}">
+					<div class="alert alert-error"><button data-dismiss="alert" class="close"></button>
+						 <c:if test="${not empty SPRING_SECURITY_LAST_EXCEPTION}">
+						<span>Your login attempt was not successful due to
+						<c:out value="${SPRING_SECURITY_LAST_EXCEPTION.message}"/></span>
+						</c:if>
+					</div>
+				</c:if>
+		 	<h3 class="form-title">Sign In</h3>
+			<div class="alert alert-error hide">
+				<button class="close" data-dismiss="alert"></button>
+				<span>Enter any username and password.</span>
+			</div>
+			<div class="form-group">
+				<!--ie8, ie9 does not support html5 placeholder, so we just show field title for that-->
+				<label class="control-label visible-ie8 visible-ie9">Username</label>
+				<div class="controls">
+					<div class="input-icon left">
+						<i class="fa fa-user" style="margin: 9px;"></i>
+							<input type='text' name='j_username' id="j_username" class="form-control form-control-solid placeholder-no-fix" placeholder="Username" maxlength="40" size="20" />
+					</div>
+				</div>
+			</div>
+			<div class="form-group">
+				<label class="control-label visible-ie8 visible-ie9">Password</label>
+				<div class="controls">
+					<div class="input-icon left">
+						<i class="fa fa-lock" style="margin: 9px;"></i>
+						<input type='password' id="j_password" name='j_password' maxlength="40" size="20" placeholder="Password"  class="form-control form-control-solid placeholder-no-fix"/>
+					</div>
+				</div>
+			</div>
+			<div class="form-actions">
+				<button type="submit" class="btn btn-success uppercase">Login&nbsp;<i class="m-icon-swapright m-icon-white"></i></button><span class="dotLine"></span>
+				<label class="rememberme check">
+					<input type='checkbox' name='rememberMe' id="rememberMe" value="Remember Me" checked="checked"  />Remember
+				 </label>
+				  <%--<span class="dotLine"></span>
+				  <a href="${pageContext.request.contextPath}/signup/doForgotPassword.do"  id="forget-password"  class="forget-password">Forgot Password?</a>  --%>
+		   </div>
+		   
+			<%-- <div class="login-options">
+				<ul class="social-icons">
+					<li style="text-indent: 0;width: 90px;">
+						 <a target="_NEW" href="https://play.google.com/store/apps/details?id=com.urt.android.asms&amp;hl=en" style="margin: 0px;"><img style="border: 0px none;height: 34px;width: 88px;" alt="Download App" src="images/en_app_rgb_wo_45.png"></a>
+					</li>
+					<li style="text-indent: 0">
+						<img style="margin: 0px;width: 110px;height: 33px;" src="https://seal.godaddy.com/images/3/en/siteseal_gd_3_h_l_m.gif" alt="Security Seal" id="seal-img">
+					</li>
+					<li style="text-indent: 0">
+						<span id="cdSiteSeal1">
+							<script type="text/javascript" src="//tracedseals.starfieldtech.com/siteseal/get?scriptId=cdSiteSeal1&amp;cdSealType=Seal1&amp;sealId=55e4ye7y7mb731739a7de84205f673jp6u9y7mb7355e4ye74be917f57c3c7518"></script>
+						</span>
+					</li>
+				</ul>
+			</div>
+			<div class="create-account">
+				<p>
+					<span style="font-size: 11px;">Parent Don't have an account yet ?</span>  
+					<a href="${pageContext.request.contextPath}/signup/doParentRegistration.do"  id="register-btn" class="uppercase">Create an account</a>
+				</p>
+			</div> --%>
+		</form>
+	</div>	 
+	<!-- <div class="copyright">
+		2015 &copy; HYNIVA Consulting Services PVT Ltd.
+	</div> -->
+  
+<script src="${pageContext.request.contextPath}/plugins/bootstrap/js/bootstrap.min.js" type="text/javascript"></script>
+<script src="${pageContext.request.contextPath}/scripts/newScripts/jquery.cookie.min.js" type="text/javascript" ></script>
+<script src="${pageContext.request.contextPath}/plugins/uniform/jquery.uniform.min.js" type="text/javascript" ></script>	
+<script type="text/javascript" src="${pageContext.request.contextPath}/scripts/validation/jquery.validate.js"></script>					 
+<script  src="${pageContext.request.contextPath}/plugins/select2/select2.min.js" type="text/javascript" ></script>					
+<script type="text/javascript"  src="${pageContext.request.contextPath}/scripts/newScripts/app.js"></script>  
+<script type="text/javascript" src="${pageContext.request.contextPath}/scripts/newScripts/login.js"></script>
+<script type="text/javascript">
+	function saveUsername(theForm) {
+		if (theForm.rememberMe.checked) {
+			$.cookie("username", document.getElementById("j_username").value, {
+				expires : 30
+		});
+		$.cookie("password", document.getElementById("j_password").value, {
+			expires : 30
+		});
+	} else {
+		$.cookie("username", null);
+		$.cookie("password", null);
+		$.cookie("username", document.getElementById("j_username").value, {
+			expires : 30
+		});
+	}
+	$.cookie("rememberMe", theForm.rememberMe.checked, {
+		expires : 30
+	});
+	return true;
+}
+$(document).ready(function() {
+		 App.init();
+		  Login.init();			
+	$("#j_username").focus();
+	/* This function is used to get cookies */
+	document.getElementById("rememberMe").checked = true;
+	if ($.cookie('rememberMe') == 'true') {
+		document.getElementById("rememberMe").checked = true;
+		if ($.cookie("username") != null) {
+			document.getElementById("j_username").value = $.cookie("username");
+			document.getElementById("j_password").value = $.cookie("password");
+		}
+	} else {
+		document.getElementById("rememberMe").checked = false;
+		if ($.cookie('username') != null && $.cookie('password') != null) {
+			document.getElementById("j_username").value ="";
+			document.getElementById("j_password").value ="";
+		}/*else{
+			document.getElementById("j_username").value = $.cookie("username");
+			document.getElementById("j_password").value = $.cookie("password");	
+		}*/
+	}
+		
+	var urlHref= window.location.href;
+	
+	 if (urlHref.lastIndexOf(".do") >=0){
+			document.location.href="";
+	}
+	
+});
+</script>	
+</body>
+</html>

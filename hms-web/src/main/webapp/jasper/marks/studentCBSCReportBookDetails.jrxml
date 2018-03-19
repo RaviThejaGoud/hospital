@@ -1,0 +1,456 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="studentCBSCReportBookDetails" pageWidth="420" pageHeight="550" columnWidth="380" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20">
+	<property name="ireport.zoom" value="3.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<style name="Title" forecolor="#FFFFFF" fontName="Times New Roman" fontSize="50" isBold="false" pdfFontName="Times-Bold"/>
+	<style name="SubTitle" forecolor="#666666" fontName="Times New Roman" fontSize="18" isBold="false" pdfFontName="Times-Roman"/>
+	<style name="Column header" forecolor="#666666" fontName="Times New Roman" fontSize="14" isBold="true" pdfFontName="Times-Roman"/>
+	<style name="Detail" mode="Transparent" fontName="Times New Roman" pdfFontName="Times-Roman"/>
+	<style name="Row" mode="Transparent" fontName="Times New Roman" pdfFontName="Times-Roman">
+		<conditionalStyle>
+			<conditionExpression><![CDATA[$V{REPORT_COUNT}%2 == 0]]></conditionExpression>
+			<style mode="Opaque" backcolor="#F0EFEF"/>
+		</conditionalStyle>
+	</style>
+	<queryString language="SQL">
+		<![CDATA[]]>
+	</queryString>
+	<field name="fatherName" class="java.lang.String"/>
+	<field name="personFullName" class="java.lang.String"/>
+	<field name="motherName" class="java.lang.String"/>
+	<field name="dateOfBirth" class="java.sql.Timestamp"/>
+	<field name="bloodGroup" class="java.lang.String"/>
+	<field name="mobileNumber" class="java.lang.String"/>
+	<field name="parentFullAddress" class="java.lang.String"/>
+	<field name="className" class="java.lang.String"/>
+	<field name="section" class="java.lang.String"/>
+	<field name="contactNumber" class="java.lang.String"/>
+	<field name="organization" class="java.lang.String"/>
+	<field name="customerFullAddress" class="java.lang.String"/>
+	<field name="registerNumber" class="java.lang.String"/>
+	<field name="admissionNumber" class="java.lang.String"/>
+	<field name="custEmail" class="java.lang.String"/>
+	<field name="oralHygiene" class="java.lang.String"/>
+	<field name="vision" class="java.lang.String"/>
+	<field name="teeth" class="java.lang.String"/>
+	<field name="weight" class="java.lang.Double"/>
+	<field name="height" class="java.lang.Double"/>
+	<title>
+		<band splitType="Stretch"/>
+	</title>
+	<pageHeader>
+		<band splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="45" splitType="Stretch">
+			<staticText>
+				<reportElement style="SubTitle" x="159" y="14" width="107" height="18" forecolor="#000000"/>
+				<textElement textAlignment="Left">
+					<font fontName="Verdana" size="12" isBold="true" isPdfEmbedded="false"/>
+				</textElement>
+				<text><![CDATA[SCHOOL LOGO]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="419" splitType="Stretch">
+			<staticText>
+				<reportElement style="Column header" positionType="Float" x="32" y="130" width="84" height="20" forecolor="#000000"/>
+				<textElement>
+					<font fontName="Arial" size="9" isBold="false" pdfFontName="Helvetica"/>
+				</textElement>
+				<text><![CDATA[Name Of Student]]></text>
+			</staticText>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement style="Detail" positionType="Float" x="103" y="130" width="96" height="20"/>
+				<textElement>
+					<font fontName="Arial" size="9" isBold="false" isUnderline="false" pdfFontName="Helvetica"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{personFullName}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement style="Column header" positionType="Float" x="230" y="225" width="84" height="20" forecolor="#000000"/>
+				<textElement>
+					<font fontName="Arial" size="9" isBold="false" pdfFontName="Helvetica"/>
+				</textElement>
+				<text><![CDATA[fatherName]]></text>
+			</staticText>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement style="Detail" positionType="Float" x="313" y="225" width="79" height="20"/>
+				<textElement>
+					<font fontName="Arial" size="9" isBold="false" isUnderline="false" pdfFontName="Helvetica"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{fatherName}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement style="Column header" positionType="Float" x="32" y="225" width="84" height="20" forecolor="#000000"/>
+				<textElement>
+					<font fontName="Arial" size="9" isBold="false" pdfFontName="Helvetica"/>
+				</textElement>
+				<text><![CDATA[motherName]]></text>
+			</staticText>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement style="Detail" positionType="Float" x="115" y="225" width="116" height="20"/>
+				<textElement>
+					<font fontName="Arial" size="9" isBold="false" isUnderline="true" pdfFontName="Helvetica"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{motherName}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement style="Column header" positionType="Float" x="202" y="168" width="65" height="20" forecolor="#000000"/>
+				<textElement>
+					<font fontName="Arial" size="9" isBold="false" pdfFontName="Helvetica"/>
+				</textElement>
+				<text><![CDATA[dateOfBirth]]></text>
+			</staticText>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement style="Detail" positionType="Float" x="267" y="168" width="108" height="20"/>
+				<textElement>
+					<font fontName="Arial" size="9" isBold="false" isUnderline="false" pdfFontName="Helvetica"/>
+				</textElement>
+				<textFieldExpression class="java.sql.Timestamp"><![CDATA[$F{dateOfBirth}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement style="Column header" positionType="Float" x="32" y="286" width="86" height="20" forecolor="#000000"/>
+				<textElement>
+					<font fontName="Arial" size="9" isBold="false" pdfFontName="Helvetica"/>
+				</textElement>
+				<text><![CDATA[bloodGroup :]]></text>
+			</staticText>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement style="Detail" positionType="Float" x="117" y="286" width="109" height="20"/>
+				<textElement>
+					<font fontName="Arial" size="9" isBold="false" isUnderline="false" pdfFontName="Helvetica"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{bloodGroup}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement style="Column header" positionType="Float" x="227" y="266" width="80" height="20" forecolor="#000000"/>
+				<textElement>
+					<font fontName="Arial" size="9" isBold="false" pdfFontName="Helvetica"/>
+				</textElement>
+				<text><![CDATA[Weight :]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" positionType="Float" x="228" y="286" width="81" height="20" forecolor="#000000"/>
+				<textElement>
+					<font fontName="Arial" size="9" isBold="false" pdfFontName="Helvetica"/>
+				</textElement>
+				<text><![CDATA[Vision :]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" positionType="Float" x="32" y="206" width="110" height="20" forecolor="#000000"/>
+				<textElement>
+					<font fontName="Arial" size="9" isBold="false" pdfFontName="Helvetica"/>
+				</textElement>
+				<text><![CDATA[Board Of Registration No]]></text>
+			</staticText>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement style="Detail" positionType="Float" x="141" y="206" width="157" height="20"/>
+				<textElement>
+					<font fontName="Arial" size="9" isBold="false" isUnderline="false" pdfFontName="Helvetica"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{registerNumber}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement style="Column header" positionType="Float" x="32" y="168" width="88" height="20" forecolor="#000000"/>
+				<textElement>
+					<font fontName="Arial" size="9" isBold="false" pdfFontName="Helvetica"/>
+				</textElement>
+				<text><![CDATA[admissionNumber]]></text>
+			</staticText>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement style="Detail" positionType="Float" x="107" y="168" width="96" height="20"/>
+				<textElement>
+					<font fontName="Arial" size="9" isBold="false" isUnderline="false" pdfFontName="Helvetica"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{admissionNumber}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement style="Column header" positionType="Float" mode="Opaque" x="18" y="114" width="110" height="15" forecolor="#000000"/>
+				<textElement textAlignment="Left">
+					<font fontName="Verdana" size="12" isBold="true" isItalic="false" pdfFontName="Helvetica" isPdfEmbedded="false"/>
+				</textElement>
+				<text><![CDATA[Student Profile]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" positionType="Float" x="32" y="149" width="85" height="20" forecolor="#000000"/>
+				<textElement>
+					<font fontName="Arial" size="9" isBold="false" pdfFontName="Helvetica"/>
+				</textElement>
+				<text><![CDATA[Section]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" positionType="Float" x="104" y="149" width="138" height="20" forecolor="#000000"/>
+				<textElement>
+					<font fontName="Arial" size="9" isBold="false" isItalic="false" pdfFontName="Helvetica"/>
+				</textElement>
+				<text><![CDATA[$F{className}" - "$F{section}]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" positionType="Float" x="242" y="149" width="56" height="20" forecolor="#000000"/>
+				<textElement>
+					<font fontName="Arial" size="9" isBold="false" pdfFontName="Helvetica"/>
+				</textElement>
+				<text><![CDATA[Home]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" positionType="Float" x="32" y="187" width="167" height="20" forecolor="#000000"/>
+				<textElement>
+					<font fontName="Arial" size="9" isBold="false" pdfFontName="Helvetica"/>
+				</textElement>
+				<text><![CDATA[Residential Address And Telephone No :]]></text>
+			</staticText>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement style="Detail" positionType="Float" x="199" y="187" width="193" height="20"/>
+				<textElement>
+					<font fontName="Arial" size="9" isBold="false" isUnderline="false" pdfFontName="Helvetica"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{parentFullAddress}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement positionType="Float" mode="Opaque" x="18" y="246" width="95" height="15" forecolor="#000000"/>
+				<textElement textAlignment="Left">
+					<font fontName="Verdana" size="12" isBold="true" isItalic="false" pdfFontName="Helvetica" isPdfEmbedded="false"/>
+				</textElement>
+				<text><![CDATA[Health Status]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" positionType="Float" x="32" y="266" width="85" height="20" forecolor="#000000"/>
+				<textElement>
+					<font fontName="Arial" size="9" isBold="false" pdfFontName="Helvetica"/>
+				</textElement>
+				<text><![CDATA[Height          :]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" positionType="Float" x="32" y="306" width="85" height="20" forecolor="#000000"/>
+				<textElement>
+					<font fontName="Arial" size="9" isBold="false" pdfFontName="Helvetica"/>
+				</textElement>
+				<text><![CDATA[Teeth           :]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" positionType="Float" x="32" y="326" width="110" height="20" forecolor="#000000"/>
+				<textElement>
+					<font fontName="Arial" size="9" isBold="false" pdfFontName="Helvetica"/>
+				</textElement>
+				<text><![CDATA[Specific Aliment,If any :]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" positionType="Float" x="229" y="306" width="80" height="20" forecolor="#000000"/>
+				<textElement>
+					<font fontName="Arial" size="9" isBold="false" pdfFontName="Helvetica"/>
+				</textElement>
+				<text><![CDATA[Oral Hygiene :]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" positionType="Float" x="116" y="306" width="112" height="20" forecolor="#000000"/>
+				<textElement>
+					<font fontName="Arial" size="9" isBold="false" pdfFontName="Helvetica"/>
+				</textElement>
+				<text><![CDATA[$F{teeth}]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" positionType="Float" x="309" y="306" width="83" height="20" forecolor="#000000"/>
+				<textElement>
+					<font fontName="Arial" size="9" isBold="false" pdfFontName="Helvetica"/>
+				</textElement>
+				<text><![CDATA[$F{oralHygiene}]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" positionType="Float" x="117" y="266" width="104" height="20" forecolor="#000000"/>
+				<textElement>
+					<font fontName="Arial" size="9" isBold="false" pdfFontName="Helvetica"/>
+				</textElement>
+				<text><![CDATA[$F{height}]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" positionType="Float" x="306" y="266" width="86" height="20" forecolor="#000000"/>
+				<textElement>
+					<font fontName="Arial" size="9" isBold="false" pdfFontName="Helvetica"/>
+				</textElement>
+				<text><![CDATA[$F{weight}]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" positionType="Float" x="142" y="326" width="250" height="20" forecolor="#000000"/>
+				<textElement>
+					<font fontName="Arial" size="9" isBold="false" pdfFontName="Helvetica"/>
+				</textElement>
+				<text><![CDATA[ _____________________]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" positionType="Float" x="19" y="347" width="86" height="15" forecolor="#000000" backcolor="#000000"/>
+				<textElement textAlignment="Left">
+					<font fontName="Verdana" size="12" isBold="true" isItalic="false" pdfFontName="Helvetica" isPdfEmbedded="false"/>
+				</textElement>
+				<text><![CDATA[Attendance]]></text>
+			</staticText>
+			<line>
+				<reportElement positionType="FixRelativeToBottom" x="398" y="-45" width="1" height="462"/>
+			</line>
+			<line>
+				<reportElement positionType="FixRelativeToBottom" x="4" y="-44" width="1" height="461"/>
+			</line>
+			<line>
+				<reportElement positionType="FixRelativeToBottom" x="4" y="416" width="395" height="1"/>
+			</line>
+			<staticText>
+				<reportElement style="Column header" positionType="Float" x="34" y="365" width="228" height="18" forecolor="#000000"/>
+				<textElement>
+					<font fontName="Arial" size="9" isBold="false" pdfFontName="Helvetica"/>
+				</textElement>
+				<text><![CDATA[Total Attendance Of The Student _______________,]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" positionType="Float" x="263" y="365" width="129" height="18" forecolor="#000000"/>
+				<textElement>
+					<font fontName="Arial" size="9" isBold="false" pdfFontName="Helvetica"/>
+				</textElement>
+				<text><![CDATA[Total Working Days _____________,]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" positionType="Float" x="34" y="383" width="358" height="13" forecolor="#000000"/>
+				<textElement>
+					<font fontName="Arial" size="9" isBold="false" pdfFontName="Helvetica"/>
+				</textElement>
+				<text><![CDATA[Signature Of Teachers  _________________,_________________,______]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" positionType="Float" x="34" y="396" width="358" height="18" forecolor="#000000"/>
+				<textElement>
+					<font fontName="Arial" size="9" isBold="false" pdfFontName="Helvetica"/>
+				</textElement>
+				<text><![CDATA[Signature Of Principal ____________________________,]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" positionType="Float" x="146" y="101" width="140" height="15" forecolor="#000000"/>
+				<textElement textAlignment="Center">
+					<font fontName="Arial" size="9" isBold="false" isItalic="false" pdfFontName="Helvetica"/>
+				</textElement>
+				<text><![CDATA[$F{className}" - "$F{section}]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" positionType="Float" x="159" y="85" width="82" height="15" forecolor="#000000"/>
+				<textElement textAlignment="Center">
+					<font fontName="Arial" size="11" isBold="true" isItalic="false" pdfFontName="Helvetica"/>
+				</textElement>
+				<text><![CDATA[Session]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" positionType="Float" x="159" y="66" width="81" height="19" forecolor="#000000"/>
+				<textElement textAlignment="Center">
+					<font fontName="Arial" size="13" isBold="true" isItalic="true" isStrikeThrough="false" pdfFontName="Helvetica"/>
+				</textElement>
+				<text><![CDATA[Report Book]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" positionType="Float" x="100" y="29" width="81" height="15" forecolor="#000000"/>
+				<textElement>
+					<font fontName="Arial" size="9" isBold="false" pdfFontName="Helvetica"/>
+				</textElement>
+				<text><![CDATA[Complete Address :]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" positionType="Float" x="101" y="57" width="47" height="15" forecolor="#000000"/>
+				<textElement>
+					<font fontName="Arial" size="9" isBold="false" pdfFontName="Helvetica"/>
+				</textElement>
+				<text><![CDATA[EmailID :]]></text>
+			</staticText>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement style="Detail" positionType="Float" x="147" y="54" width="142" height="15"/>
+				<textElement>
+					<font fontName="Arial" size="9" isBold="false" isUnderline="false" pdfFontName="Helvetica"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{custEmail}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement style="Column header" positionType="Float" x="292" y="51" width="75" height="15" forecolor="#000000"/>
+				<textElement>
+					<font fontName="Arial" size="9" isBold="false" pdfFontName="Helvetica"/>
+				</textElement>
+				<text><![CDATA[contactNumber :]]></text>
+			</staticText>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement style="Detail" positionType="Float" x="366" y="51" width="95" height="15"/>
+				<textElement>
+					<font fontName="Arial" size="9" isBold="false" isUnderline="false" pdfFontName="Helvetica"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{contactNumber}]]></textFieldExpression>
+			</textField>
+			<line>
+				<reportElement positionType="FixRelativeToBottom" x="4" y="-44" width="394" height="1"/>
+			</line>
+			<staticText>
+				<reportElement style="Column header" positionType="Float" x="314" y="286" width="59" height="20" forecolor="#000000"/>
+				<textElement>
+					<font fontName="Arial" size="9" isBold="false" pdfFontName="Helvetica"/>
+				</textElement>
+				<text><![CDATA[(L) $F{vision}]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" positionType="Float" x="366" y="286" width="26" height="20" forecolor="#000000"/>
+				<textElement>
+					<font fontName="Arial" size="9" isBold="false" pdfFontName="Helvetica"/>
+				</textElement>
+				<text><![CDATA[(R) ________]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" positionType="Float" x="297" y="149" width="88" height="18" forecolor="#000000"/>
+				<textElement>
+					<font fontName="Arial" size="9" isBold="false" pdfFontName="Helvetica"/>
+				</textElement>
+				<text><![CDATA[ ________________]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" positionType="Float" x="100" y="14" width="81" height="15" forecolor="#000000"/>
+				<textElement>
+					<font fontName="Arial" size="9" isBold="false" pdfFontName="Helvetica"/>
+				</textElement>
+				<text><![CDATA[Name Of School :]]></text>
+			</staticText>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement style="Detail" positionType="Float" x="181" y="14" width="124" height="15"/>
+				<textElement>
+					<font fontName="Arial" size="9" isBold="false" isUnderline="false" pdfFontName="Helvetica"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{organization}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="12" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band splitType="Stretch">
+			<frame>
+				<reportElement mode="Opaque" x="4" y="-14" width="395" height="13" forecolor="#D0B48E" backcolor="#006699"/>
+				<textField evaluationTime="Report">
+					<reportElement style="Column header" x="352" y="0" width="40" height="13" forecolor="#FFFFFF"/>
+					<textElement verticalAlignment="Middle">
+						<font size="10" isBold="false"/>
+					</textElement>
+					<textFieldExpression class="java.lang.String"><![CDATA[" " + $V{PAGE_NUMBER}]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement style="Column header" x="263" y="0" width="80" height="13" forecolor="#FFFFFF"/>
+					<textElement textAlignment="Right" verticalAlignment="Middle">
+						<font size="10" isBold="false"/>
+					</textElement>
+					<textFieldExpression class="java.lang.String"><![CDATA["Page "+$V{PAGE_NUMBER}+" of"]]></textFieldExpression>
+				</textField>
+				<textField pattern="EEEEE dd MMMMM yyyy">
+					<reportElement style="Column header" x="0" y="0" width="199" height="13" forecolor="#FFFFFF"/>
+					<textElement verticalAlignment="Middle">
+						<font size="10" isBold="false"/>
+					</textElement>
+					<textFieldExpression class="java.util.Date"><![CDATA[new java.util.Date()]]></textFieldExpression>
+				</textField>
+			</frame>
+		</band>
+	</pageFooter>
+	<summary>
+		<band splitType="Stretch"/>
+	</summary>
+</jasperReport>

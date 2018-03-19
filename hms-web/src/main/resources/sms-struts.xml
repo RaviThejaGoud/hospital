@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:aop="http://www.springframework.org/schema/aop"
+	xmlns:tx="http://www.springframework.org/schema/tx" xmlns:context="http://www.springframework.org/schema/context" xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-4.1.xsd
+        http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop-4.1.xsd
+        http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx-4.1.xsd
+        http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-4.1.xsd">
+
+	<context:annotation-config />
+	  <!-- <aop:aspectj-autoproxy /> 
+	 <context:load-time-weaver aspectj-weaving="autodetect"/>  -->
+
+	<context:component-scan base-package="com.urt.service.manager.*" />
+
+	<bean id="baseAction" class="com.urt.webapp.action.base.BaseAction" scope="prototype">
+		<property name="webUserMetaDataTaskExecutor" ref="webUserMetaDataTaskExecutor" />
+		<!-- <property name="processStudentMarkExecutor" ref="processStudentMarkExecutor" /> -->
+	</bean>
+
+	<bean id="taskExecutor" class="org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor">
+		<property name="corePoolSize" value="5" />
+		<property name="maxPoolSize" value="10" />
+	</bean>
+
+	<bean id="webUserMetaDataTaskExecutor" class="com.urt.service.thread.WebUserMetaDataTaskExecutor">
+		<property name="taskExecutor" ref="taskExecutor"></property>
+	</bean>
+
+	<!-- <bean id="processStudentMarkExecutor" class="com.urt.webapp.action.admin.ProcessStudentMarkExecutor">
+		<property name="taskExecutor" ref="taskExecutor"></property>
+	</bean> -->
+	<bean id="reportsAction" class="com.urt.webapp.action.reports.ReportsAction" depends-on="baseAction">
+	</bean>
+	<bean id="userAction" class="com.urt.webapp.action.user.UserAction" depends-on="baseAction">
+
+	</bean>
+	<bean id="adminAction" class="com.urt.webapp.action.admin.AdminAction" depends-on="baseAction">
+	</bean>
+	<bean id="masterCustAction" class="com.urt.webapp.action.admin.MasterCustAdminAction" depends-on="baseAction">
+	</bean>
+	<bean id="subscriptionAction" class="com.urt.webapp.action.subscription.SubscriptionAction" depends-on="baseAction">
+	</bean>
+	<bean id="govtReportsAction" class="com.urt.webapp.action.govt.GovtReportsAction" depends-on="baseAction">
+	</bean>
+	<bean id="transportAction" class="com.urt.webapp.action.transport.TransportAction" depends-on="baseAction">
+	</bean>
+	<bean id="staffAction" class="com.urt.webapp.action.staff.StaffAction" depends-on="baseAction">
+	</bean>
+
+	<bean id="depends-onAction" class="com.urt.webapp.action.parent.ParentAction" depends-on="baseAction">
+
+	</bean>
+	<bean id="alumneeAction" class="com.urt.webapp.action.alumnee.AlumneeAction" depends-on="baseAction"></bean>
+	<bean id="eventAction" class="com.urt.webapp.action.event.EventAction" depends-on="baseAction">
+	</bean>
+	<bean id="libraryAction" class="com.urt.webapp.action.library.LibraryAction" depends-on="baseAction">
+	</bean>
+	<bean id="hostelAction" class="com.urt.webapp.action.hostel.HostelAction" depends-on="baseAction">
+	</bean>
+	<bean id="accountAction" class="com.urt.webapp.action.account.AccountAction" depends-on="baseAction">
+	</bean>
+	
+	<bean id="sportstAction" class="com.urt.webapp.action.sports.SportsAction" depends-on="baseAction">
+
+	</bean>
+	<bean id="storeAction" class="com.urt.webapp.action.stores.StoresAction" depends-on="baseAction"/>
+	
+	
+	<!-- Define the Job Bean that will be executed. Our bean is named in the  jobClass property. -->
+	<bean name="campaignBatchJob" class="org.springframework.scheduling.quartz.JobDetailFactoryBean">
+		<property name="jobClass" value="com.urt.webapp.batch.trigger.CampaignBatchJob" />
+	</bean>
+
+	<bean name="mobileAndEmailRemainderBatchJob" class="org.springframework.scheduling.quartz.JobDetailFactoryBean"><!-- org.springframework.scheduling.quartz.JobDetailBean -->
+		<property name="jobClass" value="com.urt.webapp.batch.trigger.MobileAndEmailRemaindersBatchJob" />
+	</bean>
+
+	<bean name="messagesGuidCodeBatchJob" class="org.springframework.scheduling.quartz.JobDetailFactoryBean"><!-- org.springframework.scheduling.quartz.JobDetailBean -->
+		<property name="jobClass" value="com.urt.webapp.batch.trigger.MessagesGuidCodeBatchJob" />
+	</bean>
+	<!-- <bean name="studentMarksProcedureBatchJob" class="org.springframework.scheduling.quartz.JobDetailFactoryBean">org.springframework.scheduling.quartz.JobDetailBean
+		<property name="jobClass" value="com.urt.webapp.batch.trigger.StudentMarksProcedureBatchJob" />
+	</bean> -->
+
+	<bean name="parentCredetialsCreationBatchJob" class="org.springframework.scheduling.quartz.JobDetailFactoryBean"><!-- org.springframework.scheduling.quartz.JobDetailBean -->
+		<property name="jobClass" value="com.urt.webapp.batch.trigger.ParentCredetialsCreationBatchJob" />
+	</bean>
+
+	<bean name="mobileAndEmailTop5StudentsDetailsBatchJob" class="org.springframework.scheduling.quartz.JobDetailFactoryBean"><!-- org.springframework.scheduling.quartz.JobDetailBean -->
+		<property name="jobClass" value="com.urt.webapp.batch.trigger.MobileAndEmailTop5StudentsDetailsBatchJob" />
+	</bean>
+
+	<!-- Associate the Job Bean with a Trigger. Triggers define when a job is executed. -->
+	<bean id="simpleTrigger" class="org.springframework.scheduling.quartz.SimpleTriggerFactoryBean"><!-- org.springframework.scheduling.quartz.SimpleTriggerBean -->
+		<property name="jobDetail" ref="campaignBatchJob" />
+		<property name="startDelay" value="1000" />
+		<property name="repeatInterval" value="86400" />
+	</bean>
+
+	<!-- Associate the Job Bean with a Cron Trigger. Triggers define when a job is executed. -->
+	<bean id="cronTrigger" class="org.springframework.scheduling.quartz.CronTriggerFactoryBean"><!-- org.springframework.scheduling.quartz.CronTriggerBean -->
+		<property name="jobDetail" ref="campaignBatchJob" />
+		<property name="cronExpression">
+			<!-- Fire at 11:30 pm every day -->
+			<!-- Fire at " 0 0/2 * * * ? " every 2 mins -->
+			<!-- Fire at " 0 30 23 * * ? " every 11:30 pm every day -->
+			<!-- Fire at "0 0 7 * * ?" morning 7 AM every day -->
+			<!-- <value> 0 0/2 * * * ? </value> -->
+			<!-- <value>0 0 9,12,15,18 * * ? </value> -->
+			<value> 0 30 23 * * ? </value>
+		</property>
+	</bean>
+
+	<bean id="mobileAndEmailRemainderTrigger" class="org.springframework.scheduling.quartz.CronTriggerFactoryBean">
+		<property name="jobDetail" ref="mobileAndEmailRemainderBatchJob" />
+		<property name="cronExpression">
+			<value>0 0 7 * * ?</value>
+		</property>
+	</bean>
+
+	<!-- Message GUID tracking -->
+	<bean id="messagesGuidCodeBatchJobTrigger" class="org.springframework.scheduling.quartz.CronTriggerFactoryBean">
+		<property name="jobDetail" ref="messagesGuidCodeBatchJob" />
+		<property name="cronExpression">
+			<value> 0 0/60 * * * ? </value>
+		</property>
+	</bean>
+
+	<!-- Student Marks Procedure tracking -->
+	<!-- <bean id="studentMarksProcedureBatchJobTrigger" class="org.springframework.scheduling.quartz.CronTriggerFactoryBean">
+		<property name="jobDetail" ref="studentMarksProcedureBatchJob" />
+		<property name="cronExpression">
+			<value> 0 0/60 * * * ? </value>
+		</property>
+	</bean> -->
+	<!-- Parent Credentials Creation -->
+	<bean id="parentCredetialsCreationBatchJobTrigger" class="org.springframework.scheduling.quartz.CronTriggerFactoryBean">
+		<property name="jobDetail" ref="parentCredetialsCreationBatchJob" />
+		<property name="cronExpression">
+			<value> 0 0/60 * * * ? </value>
+		</property>
+	</bean>
+	<bean id="mobileAndEmailTop5StudentsDetailsBatchJobTrigger" class="org.springframework.scheduling.quartz.CronTriggerFactoryBean">
+		<property name="jobDetail" ref="mobileAndEmailTop5StudentsDetailsBatchJob" />
+		<property name="cronExpression">
+			<value>0 0 7 * * ?</value>
+			<!-- <value>0 0/60 * * * ?</value> -->
+		</property>
+	</bean>
+
+	<!-- A list of Triggers to be scheduled and executed by Quartz -->
+	<!-- <bean class="org.springframework.scheduling.quartz.SchedulerFactoryBean" lazy-init="false">
+		<property name="triggers">
+			<list>
+				<ref bean="cronTrigger" />
+				<ref bean="mobileAndEmailTop5StudentsDetailsBatchJobTrigger" />
+				<ref bean="mobileAndEmailRemainderTrigger" />
+				<ref bean="messagesGuidCodeBatchJobTrigger" />
+				<ref bean="parentCredetialsCreationBatchJobTrigger" />
+				<ref bean="studentMarksProcedureBatchJobTrigger" />
+			</list>
+		</property>
+		<property name="applicationContextSchedulerContextKey">
+			<value>applicationContext</value>
+		</property>
+	</bean> -->
+
+	<bean id="contextAware" class="com.spring.context.SpringContextAware" />
+	<!-- <bean id="smsAspect" class="com.hyniva.sms.aspect.SMSLoggingAspect"/>
+ -->
+ <bean id="smsLookUpDataCache" class="com.hyniva.common.cache.SMSLookUpDataCache" />
+</beans>
+

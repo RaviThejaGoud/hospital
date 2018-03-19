@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created using JasperAssistant (http://www.jasperassistant.com) -->
+<!DOCTYPE jasperReport PUBLIC "-//JasperReports//DTD Report Design//EN" "http://jasperreports.sourceforge.net/dtds/jasperreport.dtd">
+
+<jasperReport name="SimpleMaster" language="java" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="30" bottomMargin="30">
+<property name="com.jasperassistant.designer.GridWidth" value="12"/>
+<property name="com.jasperassistant.designer.GridHeight" value="12"/>
+<property name="com.jasperassistant.designer.SnapToGrid" value="false"/>
+<property name="com.jasperassistant.designer.Grid" value="false"/>
+<parameter name="SIMPLE_DATA" class="java.util.HashMap">
+</parameter>
+<field name="master" class="java.lang.String">
+</field>
+<field name="id" class="java.lang.String">
+</field>
+<field name="id2" class="java.lang.String">
+</field>
+<title>
+<band height="107">
+<textField>
+<reportElement positionType="Float" x="79" y="8" width="167" height="30"/>
+<textElement/>
+<textFieldExpression class="java.lang.String"><![CDATA[$P{SIMPLE_DATA}.get("title")]]></textFieldExpression>
+</textField>
+<textField>
+<reportElement positionType="Float" x="86" y="63" width="190" height="32"/>
+<textElement/>
+<textFieldExpression class="java.lang.String"><![CDATA[$F{master}]]></textFieldExpression>
+</textField>
+</band>
+</title>
+<detail>
+<band height="100">
+<subreport>
+<reportElement positionType="Float" x="67" y="18" width="168" height="47"/>
+<subreportParameter name="id">
+<subreportParameterExpression><![CDATA[$P{SIMPLE_DATA}.get($F{id})]]></subreportParameterExpression>
+</subreportParameter>
+<dataSourceExpression><![CDATA[$P{SIMPLE_DATA}.get($F{id})]]></dataSourceExpression>
+<subreportExpression class="java.lang.String"><![CDATA["/home/ubuntu355/Tomcat6.0/webapps/sms/jasper/subreport/simpleSubreport.jasper"]]></subreportExpression>
+</subreport>
+<subreport isUsingCache="true">
+<reportElement positionType="Float" x="249" y="18" width="168" height="47"/>
+<subreportParameter name="id2">
+<subreportParameterExpression><![CDATA[$P{SIMPLE_DATA}.get($F{id2})]]></subreportParameterExpression>
+</subreportParameter>
+<dataSourceExpression><![CDATA[$P{SIMPLE_DATA}.get($F{id2})]]></dataSourceExpression>
+<subreportExpression class="java.lang.String"><![CDATA["/home/ubuntu355/Tomcat6.0/webapps/sms/jasper/subreport/simpleSubreport2.jasper"]]></subreportExpression>
+</subreport>
+</band>
+</detail>
+</jasperReport>

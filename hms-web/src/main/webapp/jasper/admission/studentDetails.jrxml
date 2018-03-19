@@ -1,0 +1,327 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="studentDetails" pageWidth="1600" pageHeight="842" columnWidth="1600" leftMargin="0" rightMargin="0" topMargin="0" bottomMargin="0">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="694"/>
+	<property name="ireport.y" value="0"/>
+	<style name="Title" forecolor="#FFFFFF" fontName="Times New Roman" fontSize="50" isBold="false" pdfFontName="Times-Bold"/>
+	<style name="SubTitle" forecolor="#CCCCCC" fontName="Times New Roman" fontSize="18" isBold="false" pdfFontName="Times-Roman"/>
+	<style name="Column header" forecolor="#666666" fontName="Times New Roman" fontSize="14" isBold="true" pdfFontName="Times-Roman"/>
+	<style name="Detail" mode="Transparent" fontName="Times New Roman" pdfFontName="Times-Roman"/>
+	<style name="Row" mode="Transparent" fontName="Times New Roman" pdfFontName="Times-Roman">
+		<conditionalStyle>
+			<conditionExpression><![CDATA[$V{REPORT_COUNT}%2 == 0]]></conditionExpression>
+			<style mode="Opaque" backcolor="#F0EFEF"/>
+		</conditionalStyle>
+	</style>
+	<field name="firstName" class="java.lang.String"/>
+	<field name="lastName" class="java.lang.String"/>
+	<field name="fatherName" class="java.lang.String"/>
+	<field name="motherName" class="java.lang.String"/>
+	<field name="parentEmail" class="java.lang.String"/>
+	<field name="dateOfBirth" class="java.lang.String"/>
+	<field name="gender" class="java.lang.String"/>
+	<field name="phoneNumber" class="java.lang.String"/>
+	<field name="mobileNumber" class="java.lang.String"/>
+	<field name="addressLine1" class="java.lang.String"/>
+	<field name="addressLine2" class="java.lang.String"/>
+	<field name="city" class="java.lang.String"/>
+	<field name="state" class="java.lang.String"/>
+	<field name="postalCode" class="java.lang.String"/>
+	<field name="academicYear" class="java.lang.String"/>
+	<field name="className" class="java.lang.String"/>
+	<field name="section" class="java.lang.String"/>
+	<field name="bloodGroup" class="java.lang.String"/>
+	<field name="applicationNumber" class="java.lang.String"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band splitType="Stretch"/>
+	</title>
+	<pageHeader>
+		<band splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="20" splitType="Stretch">
+			<staticText>
+				<reportElement style="Column header" x="1260" y="0" width="100" height="18" forecolor="#000000"/>
+				<textElement>
+					<font fontName="Droid Sans" isBold="false"/>
+				</textElement>
+				<text><![CDATA[Academic Year]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="1360" y="0" width="100" height="18" forecolor="#000000"/>
+				<textElement>
+					<font fontName="Droid Sans" isBold="false"/>
+				</textElement>
+				<text><![CDATA[CassName]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="500" y="0" width="70" height="18" forecolor="#000000"/>
+				<textElement>
+					<font fontName="Droid Sans" isBold="false"/>
+				</textElement>
+				<text><![CDATA[DOB]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="1460" y="0" width="40" height="18" forecolor="#000000"/>
+				<textElement>
+					<font fontName="Droid Sans" isBold="false"/>
+				</textElement>
+				<text><![CDATA[Section]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="0" y="0" width="100" height="18" forecolor="#000000"/>
+				<textElement>
+					<font fontName="Droid Sans" isBold="false"/>
+				</textElement>
+				<text><![CDATA[First Name]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="860" y="0" width="100" height="18" forecolor="#000000"/>
+				<textElement>
+					<font fontName="Droid Sans" isBold="false"/>
+				</textElement>
+				<text><![CDATA[Address Line1]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="100" y="0" width="100" height="18" forecolor="#000000"/>
+				<textElement>
+					<font fontName="Droid Sans" isBold="false"/>
+				</textElement>
+				<text><![CDATA[Last Name]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="680" y="0" width="90" height="18" forecolor="#000000"/>
+				<textElement>
+					<font fontName="Droid Sans" isBold="false"/>
+				</textElement>
+				<text><![CDATA[Phone Number]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="1190" y="0" width="70" height="18" forecolor="#000000"/>
+				<textElement>
+					<font fontName="Droid Sans" isBold="false"/>
+				</textElement>
+				<text><![CDATA[PostalCode]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="400" y="0" width="100" height="18" forecolor="#000000"/>
+				<textElement>
+					<font fontName="Droid Sans" isBold="false"/>
+				</textElement>
+				<text><![CDATA[Parent Email]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="300" y="0" width="100" height="18" forecolor="#000000"/>
+				<textElement>
+					<font fontName="Droid Sans" isBold="false"/>
+				</textElement>
+				<text><![CDATA[Mother Name]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="200" y="0" width="100" height="18" forecolor="#000000"/>
+				<textElement>
+					<font fontName="Droid Sans" isBold="false"/>
+				</textElement>
+				<text><![CDATA[Father Name]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="1060" y="0" width="100" height="18" forecolor="#000000"/>
+				<textElement>
+					<font fontName="Droid Sans" isBold="false"/>
+				</textElement>
+				<text><![CDATA[City]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="1160" y="0" width="30" height="18" forecolor="#000000"/>
+				<textElement>
+					<font fontName="Droid Sans" isBold="false"/>
+				</textElement>
+				<text><![CDATA[State]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="610" y="0" width="70" height="18" forecolor="#000000"/>
+				<textElement>
+					<font fontName="Droid Sans" isBold="false"/>
+				</textElement>
+				<text><![CDATA[BG]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="960" y="0" width="100" height="18" forecolor="#000000"/>
+				<textElement>
+					<font fontName="Droid Sans" isBold="false"/>
+				</textElement>
+				<text><![CDATA[Address Line2]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="770" y="0" width="90" height="18" forecolor="#000000"/>
+				<textElement>
+					<font fontName="Droid Sans" isBold="false"/>
+				</textElement>
+				<text><![CDATA[Mobile Number]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="570" y="0" width="40" height="18" forecolor="#000000"/>
+				<textElement>
+					<font fontName="Droid Sans" isBold="false"/>
+				</textElement>
+				<text><![CDATA[Gender]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="1500" y="0" width="81" height="18" forecolor="#000000"/>
+				<textElement>
+					<font fontName="Droid Sans" isBold="false"/>
+				</textElement>
+				<text><![CDATA[Application Number]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="22" splitType="Stretch">
+			<textField isStretchWithOverflow="true">
+				<reportElement style="Detail" positionType="Float" x="300" y="0" width="100" height="20"/>
+				<textElement>
+					<font fontName="Droid Sans" size="14"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{motherName}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true">
+				<reportElement style="Detail" positionType="Float" x="1160" y="0" width="30" height="20"/>
+				<textElement>
+					<font fontName="Droid Sans" size="14"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{state}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true">
+				<reportElement style="Detail" positionType="Float" x="770" y="0" width="90" height="20"/>
+				<textElement>
+					<font fontName="Droid Sans" size="14"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{mobileNumber}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true">
+				<reportElement style="Detail" positionType="Float" x="500" y="0" width="70" height="20"/>
+				<textElement>
+					<font fontName="Droid Sans" size="14"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{dateOfBirth}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true">
+				<reportElement style="Detail" positionType="Float" x="1060" y="0" width="100" height="20"/>
+				<textElement>
+					<font fontName="Droid Sans" size="14"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{city}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true">
+				<reportElement style="Detail" positionType="Float" x="1260" y="0" width="100" height="20"/>
+				<textElement>
+					<font fontName="Droid Sans" size="14"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{academicYear}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true">
+				<reportElement style="Detail" positionType="Float" x="100" y="0" width="100" height="20"/>
+				<textElement>
+					<font fontName="Droid Sans" size="14"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{lastName}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true">
+				<reportElement style="Detail" positionType="Float" x="1360" y="0" width="100" height="20"/>
+				<textElement>
+					<font fontName="Droid Sans" size="14"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{className}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true">
+				<reportElement style="Detail" positionType="Float" x="610" y="0" width="70" height="20"/>
+				<textElement>
+					<font fontName="Droid Sans" size="14"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{bloodGroup}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true">
+				<reportElement style="Detail" positionType="Float" x="680" y="0" width="90" height="20"/>
+				<textElement>
+					<font fontName="Droid Sans" size="14"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{phoneNumber}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true">
+				<reportElement style="Detail" positionType="Float" x="1460" y="0" width="40" height="20"/>
+				<textElement>
+					<font fontName="Droid Sans" size="14"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{section}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true">
+				<reportElement style="Detail" positionType="Float" x="860" y="0" width="100" height="20"/>
+				<textElement>
+					<font fontName="Droid Sans" size="14"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{addressLine1}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true">
+				<reportElement style="Detail" positionType="Float" x="200" y="0" width="100" height="20"/>
+				<textElement>
+					<font fontName="Droid Sans" size="14"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{fatherName}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true">
+				<reportElement style="Detail" positionType="Float" x="400" y="0" width="100" height="20"/>
+				<textElement>
+					<font fontName="Droid Sans" size="14"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{parentEmail}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true">
+				<reportElement style="Detail" positionType="Float" x="570" y="0" width="40" height="20"/>
+				<textElement>
+					<font fontName="Droid Sans" size="14"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{gender}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true">
+				<reportElement style="Detail" positionType="Float" x="1190" y="0" width="70" height="20"/>
+				<textElement>
+					<font fontName="Droid Sans" size="14"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{postalCode}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true">
+				<reportElement style="Detail" positionType="Float" x="0" y="0" width="100" height="20"/>
+				<textElement>
+					<font fontName="Droid Sans" size="14"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{firstName}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true">
+				<reportElement style="Detail" positionType="Float" x="960" y="0" width="100" height="18"/>
+				<textElement>
+					<font fontName="Droid Sans" size="14"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{addressLine2}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true">
+				<reportElement style="Detail" positionType="Float" x="1500" y="0" width="81" height="20"/>
+				<textElement>
+					<font fontName="Droid Sans" size="14"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{applicationNumber}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="211" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band splitType="Stretch"/>
+	</summary>
+</jasperReport>

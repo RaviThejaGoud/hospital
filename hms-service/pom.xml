@@ -1,0 +1,135 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<parent>
+		<groupId>com</groupId>
+		<artifactId>hms</artifactId>
+		<version>0.0.1-SNAPSHOT</version>
+		<!-- <relativePath>../hms</relativePath> -->
+	</parent>
+	<artifactId>hms-service</artifactId>
+	<name>hms Service</name>
+
+	<build>
+		<sourceDirectory>src/main/java</sourceDirectory>
+		<resources>
+			<resource>
+				<directory>src/main/resources</directory>
+				<filtering>true</filtering>
+				<excludes>
+					<exclude>packaged/*.properties</exclude>
+				</excludes>
+			</resource>
+			<resource>
+				<directory>src/main/resources</directory>
+				<filtering>false</filtering>
+				<includes>
+					<include>packaged/*.properties</include>
+				</includes>
+			</resource>
+			<resource>
+				<directory>src/main/java</directory>
+				<includes>
+					<include>**/*.xml</include>
+				</includes>
+			</resource>
+		</resources>
+
+		<plugins>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-compiler-plugin</artifactId>
+				<version>3.0</version>
+				<configuration>
+					<source>${maven.compiler.source}</source>
+					<target>${maven.compiler.target}</target>
+					<encoding>${project.build.sourceEncoding}</encoding>
+				</configuration>
+			</plugin>
+		</plugins>
+	</build>
+
+	<dependencies>
+		<!-- SM Dependencies -->
+		<dependency>
+			<groupId>${project.groupId}</groupId>
+			<artifactId>hms-common</artifactId>
+			<version>${project.version}</version>
+			<scope>compile</scope>
+		</dependency>
+		<dependency>
+			<groupId>${project.groupId}</groupId>
+			<artifactId>hms-bom</artifactId>
+			<version>${project.version}</version>
+			<scope>compile</scope>
+		</dependency>
+		<dependency>
+			<groupId>${project.groupId}</groupId>
+			<artifactId>hms-data</artifactId>
+			<version>${project.version}</version>
+			<scope>compile</scope>
+		</dependency>
+
+		<dependency>
+			<groupId>commons-collections</groupId>
+			<artifactId>commons-collections</artifactId>
+			<version>${commons.collections.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>net.sf.ehcache</groupId>
+			<artifactId>ehcache-core</artifactId>
+			<version>${ehcache.version}</version>
+		</dependency>
+	
+		<dependency>
+			<groupId>org.apache.velocity</groupId>
+			<artifactId>velocity</artifactId>
+			<version>${velocity.version}</version>
+		</dependency>
+		
+		<!-- JSON Parser -->
+		<dependency>
+			<groupId>org.codehaus.jackson</groupId>
+			<artifactId>jackson-jaxrs</artifactId>
+			<version>1.9.11</version>
+		</dependency>
+		<!-- Sending the Android Mobile Notification Dependencies -->
+		<dependency>
+			<groupId>com.ganyo</groupId>
+			<artifactId>gcm-server</artifactId>
+			<version>1.0.2</version>
+		</dependency>
+		<dependency>
+			<groupId>sendsms</groupId>
+			<artifactId>sendsms</artifactId>
+			<version>1.0</version>
+			<scope>system</scope>
+			<systemPath>${hms.internal.jar}/lib/sendsms.jar</systemPath>
+		</dependency> 
+		<dependency>
+		  	<groupId>com.googlecode.json-simple</groupId>
+		  	<artifactId>json-simple</artifactId>
+		  	<version>1.1.1</version>
+		</dependency>
+		<dependency>
+		  	<groupId>com.google.firebase</groupId>
+		  	<artifactId>firebase-server-sdk</artifactId>
+		  	<version>3.0.0</version>
+		</dependency>
+		
+		<!-- Add barcode WebJars -->       
+		<dependency>
+			<groupId>com.google.zxing</groupId>
+			<artifactId>javase</artifactId>
+			<version>3.2.1</version>
+		</dependency>
+		<dependency>
+			<groupId>BarCode</groupId>
+			<artifactId>BarCode</artifactId>
+			<version>1.0</version>
+			<scope>system</scope>
+			<systemPath>${hms.internal.jar}/lib/BarCode.jar</systemPath>
+		</dependency>
+		
+	</dependencies>
+</project>

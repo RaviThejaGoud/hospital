@@ -1,0 +1,246 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<fields templateEngineKind="Velocity" >
+        <description><![CDATA[]]></description>
+        <field name="stu.tcSerialNumber" list="false" imageName="" syntaxKind="">
+                <description><![CDATA[It gives serial number assigned to student.]]></description>
+        </field>
+        <field name="stu.sslcNumber" list="false" imageName="" syntaxKind="">
+                <description><![CDATA[]]></description>
+        </field>
+        <field name="stu.tmrNumber" list="false" imageName="" syntaxKind="">
+                <description><![CDATA[]]></description>
+        </field>
+        <field name="stu.admissionNumber" list="false" imageName="" syntaxKind="">
+                <description><![CDATA[]]></description>
+        </field>
+        <field name="stu.tcEducationalDistrict" list="false" imageName="" syntaxKind="">
+                <description><![CDATA[]]></description>
+        </field>
+        <field name="stu.tcRevenueDistrict" list="false" imageName="" syntaxKind="">
+                <description><![CDATA[]]></description>
+        </field>
+        <field name="stu.tCPersonFullName" list="false" imageName="" syntaxKind="">
+                <description><![CDATA[]]></description>
+        </field>
+        <field name="stu.nationalityAndReligion" list="false" imageName="" syntaxKind="">
+                <description><![CDATA[]]></description>
+        </field>
+        <field name="stu.NationalityAndReligionAndCast" list="false" imageName="" syntaxKind="">
+                <description><![CDATA[]]></description>
+        </field>
+        <field name="stu.castName" list="false" imageName="" syntaxKind="">
+                <description><![CDATA[]]></description>
+        </field>
+        <field name="stu.subCastName" list="false" imageName="" syntaxKind="">
+                <description><![CDATA[]]></description>
+        </field>
+        <field name="stu.genderDesc" list="false" imageName="" syntaxKind="">
+                <description><![CDATA[]]></description>
+        </field>
+        <field name="stu.dateOfBirthInWords" list="false" imageName="" syntaxKind="">
+                <description><![CDATA[]]></description>
+        </field>
+        <field name="stu.studentDateOfJoingInWords" list="false" imageName="" syntaxKind="">
+                <description><![CDATA[]]></description>
+        </field>
+        <field name="stu.identification1" list="false" imageName="" syntaxKind="">
+                <description><![CDATA[]]></description>
+        </field>
+        <field name="stu.identification2" list="false" imageName="" syntaxKind="">
+                <description><![CDATA[]]></description>
+        </field>
+        <field name="stu.medium" list="false" imageName="" syntaxKind="">
+                <description><![CDATA[]]></description>
+        </field>
+        <field name="stu.fatherName" list="false" imageName="" syntaxKind="">
+                <description><![CDATA[]]></description>
+        </field>
+        <field name="stu.organizationName" list="false" imageName="" syntaxKind="">
+                <description><![CDATA[]]></description>
+        </field>
+        <field name="stu.className" list="false" imageName="" syntaxKind="">
+                <description><![CDATA[]]></description>
+        </field>
+        <field name="stu.tcMediumOfStudy" list="false" imageName="" syntaxKind="">
+                <description><![CDATA[]]></description>
+        </field>
+        <field name="stu.serialNumberWithAcademicYear" list="false" imageName="" syntaxKind="">
+                <description><![CDATA[]]></description>
+        </field>
+        <field name="stu.registerNumber" list="false" imageName="" syntaxKind="">
+                <description><![CDATA[]]></description>
+        </field>
+        <field name="stu.organizationCustAddressLineCityAndPostalCode" list="false" imageName="" syntaxKind="">
+                <description><![CDATA[]]></description>
+        </field>
+        <field name="stu.fatherOrMotherName" list="false" imageName="" syntaxKind="">
+                <description><![CDATA[]]></description>
+        </field>
+        <field name="stu.communityName" list="false" imageName="" syntaxKind="">
+                <description><![CDATA[]]></description>
+        </field>
+        <field name="stu.mostBackwardClass" list="false" imageName="" syntaxKind="">
+                <description><![CDATA[]]></description>
+        </field>
+        <field name="stu.backwardClass" list="false" imageName="" syntaxKind="">
+                <description><![CDATA[]]></description>
+        </field>
+         <field name="stu.adiDravidarOrSCorST" list="false" imageName="" syntaxKind="">
+                <description><![CDATA[]]></description>
+        </field>
+        <field name="stu.dateOfAdmissionAndStandard" list="false" imageName="" syntaxKind="">
+                <description><![CDATA[]]></description>
+        </field>
+        <field name="stu.classNameWithWords" list="false" imageName="" syntaxKind="">
+                <description><![CDATA[]]></description>
+        </field>
+        <field name="stu.educationType" list="false" imageName="" syntaxKind="">
+                <description><![CDATA[]]></description>
+        </field>
+        <field name="stu.scholarShipInfo" list="false" imageName="" syntaxKind="">
+                <description><![CDATA[]]></description>
+        </field>
+        <field name="stu.relievingDateStr" list="false" imageName="" syntaxKind="">
+                <description><![CDATA[]]></description>
+        </field>
+        <field name="stu.generalEducationSubjects" list="false" imageName="" syntaxKind="">
+                <description><![CDATA[]]></description>
+        </field>
+         <field name="stu.vocationalEducationSubjects" list="false" imageName="" syntaxKind="">
+                <description><![CDATA[]]></description>
+        </field>
+        <field name="stu.organizationAddressLineCityAndPostalCode" list="false" imageName="" syntaxKind="">
+                <description><![CDATA[]]></description>
+        </field>
+        <field name="stu.affiliationNumber" list="false" imageName="" syntaxKind="">
+                <description><![CDATA[]]></description>
+        </field>
+        <field name="stu.motherName" list="false" imageName="" syntaxKind="">
+                <description><![CDATA[]]></description>
+        </field>
+        <field name="stu.nationality" list="false" imageName="" syntaxKind="">
+                <description><![CDATA[]]></description>
+        </field>
+        <field name="stu.schoolCode" list="false" imageName="" syntaxKind="">
+                <description><![CDATA[]]></description>
+        </field>
+        <field name="stu.studDateOfBirthInFigures" list="false" imageName="" syntaxKind="">
+                <description><![CDATA[]]></description>
+        </field>
+        <field name="stu.dateOfBirthInWordsWithOutDate" list="false" imageName="" syntaxKind="">
+                <description><![CDATA[]]></description>
+        </field>
+        <field name="stu.courseAcademicYears" list="false" imageName="" syntaxKind="">
+                <description><![CDATA[If student joined in 2007 year and current year is 2012. This field gives result like 2007-2012. ]]></description>
+        </field>
+        <field name="stu.studiedClasses" list="false" imageName="" syntaxKind="">
+                <description><![CDATA[If student joined school in VI class and current year student is studying X class. This field gives result like VI - X. ]]></description>
+        </field>
+        <field name="stu.tcAppliedDateStr" list="false" imageName="" syntaxKind="">
+                <description><![CDATA[]]></description>
+        </field>
+        <field name="stu.tcIssuedDateStr" list="false" imageName="" syntaxKind="">
+                <description><![CDATA[]]></description>
+        </field>
+        <field name="stu.studentSubCastName" list="false"  imageName="" syntaxKind="">
+        	<description><![CDATA[]]></description>
+        </field>
+        <field name="stu.tcBookNumber" list="false"  imageName="" syntaxKind="">
+        	<description><![CDATA[It gives book number of the TC.]]></description>
+        </field>
+        <field name="stu.sCorSTorOBC" list="false"  imageName="" syntaxKind="">
+        	<description><![CDATA[If cast name is SC/ST/OBC it return that value else it returns "".]]></description>
+        </field>
+        <field name="stu.dateOfJoiningStr" list="false"  imageName="" syntaxKind="">
+        	<description><![CDATA[]]></description>
+        </field>
+        <field name="stu.classJoinedStr" list="false"  imageName="" syntaxKind="">
+        	<description><![CDATA[It returns studied class names in the following format Nursery to I.]]></description>
+        </field>
+        <field name="stu.dateOfJoiningYear" list="false"  imageName="" syntaxKind="">
+        	<description><![CDATA[It returns studied classes years like 2012 to 2013.]]></description>
+        </field>
+        <field name="stu.personFullName" list="false" imageName="" syntaxKind="">
+                <description><![CDATA[]]></description>
+        </field>
+        <field name="stu.academicYear" list="false" imageName="" syntaxKind="">
+                <description><![CDATA[]]></description>
+        </field>
+        <field name="stu.dateOfBirthStr" list="false" imageName="" syntaxKind="">
+                <description><![CDATA[]]></description>
+        </field>
+        <field name="stu.toDayDate" list="false" imageName="" syntaxKind="">
+                <description><![CDATA[]]></description>
+        </field>
+        <field name="stu.studentJoiningYear" list="false" imageName="" syntaxKind="">
+                <description><![CDATA[]]></description>
+        </field>
+        <field name="stu.studentCompletionYear" list="false" imageName="" syntaxKind="">
+                <description><![CDATA[]]></description>
+        </field>
+         <field name="stu.motherToung" list="false" imageName="" syntaxKind="">
+                <description><![CDATA[]]></description>
+        </field>
+        <field name="stu.clName" list="false" imageName="" syntaxKind="">
+                <description><![CDATA[]]></description>
+        </field>
+        <field name="stu.dobStr" list="false" imageName="" syntaxKind="">
+                <description><![CDATA[]]></description>
+        </field>
+        <field name="stu.djStr" list="false" imageName="" syntaxKind="">
+                <description><![CDATA[]]></description>
+        </field>
+        <field name="stu.year" list="false" imageName="" syntaxKind="">
+                <description><![CDATA[]]></description>
+        </field>
+         <field name="stu.stName" list="false" imageName="" syntaxKind="">
+                <description><![CDATA[]]></description>
+        </field>
+         <field name="stu.cityName" list="false" imageName="" syntaxKind="">
+                <description><![CDATA[]]></description>
+        </field>
+         <field name="stu.state" list="false" imageName="" syntaxKind="">
+                <description><![CDATA[]]></description>
+        </field>
+         <field name="stu.psCode" list="false" imageName="" syntaxKind="">
+                <description><![CDATA[]]></description>
+        </field>
+        <field name="stu.religion" list="false" imageName="" syntaxKind="">
+                <description><![CDATA[]]></description>
+        </field>
+         <field name="stu.adNo" list="false" imageName="" syntaxKind="">
+                <description><![CDATA[]]></description>
+        </field>
+         <field name="stu.clJoStr" list="false" imageName="" syntaxKind="">
+                <description><![CDATA[]]></description>
+        </field>
+        <field name="stu.cityStr" list="false" imageName="" syntaxKind="">
+                <description><![CDATA[]]></description>
+        </field>
+        <field name="stu.stNameStr" list="false" imageName="" syntaxKind="">
+                <description><![CDATA[]]></description>
+        </field>
+        <field name="stu.studentDateOfBirthInWords" list="false" imageName="" syntaxKind="">
+                <description><![CDATA[]]></description>
+        </field>
+         <field name="stu.castAndSubCastName" list="false" imageName="" syntaxKind="">
+                <description><![CDATA[]]></description>
+        </field>
+         <field name="stu.studentAddress" list="false" imageName="" syntaxKind="">
+                <description><![CDATA[]]></description>
+        </field>
+         <field name="stu.scorSt" list="false" imageName="" syntaxKind="">
+                <description><![CDATA[]]></description>
+        </field>
+        <field name="stu.stuCastName" list="false" imageName="" syntaxKind="">
+                <description><![CDATA[]]></description>
+        </field>
+          <field name="stu.slNo" list="false" imageName="" syntaxKind="">
+                <description><![CDATA[]]></description>
+        </field>
+        <field name="stu.POBStr" list="false" imageName="" syntaxKind="">
+                <description><![CDATA[]]></description>
+        </field>
+        
+        
+</fields>

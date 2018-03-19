@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app version="2.5" xmlns="http://java.sun.com/xml/ns/javaee"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd">
+	<context-param>
+		<param-name>contextConfigLocation</param-name>
+		<param-value>
+			classpath*:/sms-dao.xml
+			classpath*:/sms-struts.xml
+			classpath*:/sms-security.xml
+		</param-value>		
+	</context-param>
+	<context-param>
+	  <param-name>hostUrl</param-name>
+	  <param-value>http://localhost:8080/sms-web</param-value>
+	</context-param>
+
+	<servlet>
+		<servlet-name>sms-api</servlet-name>
+		<servlet-class>org.springframework.web.servlet.DispatcherServlet</servlet-class>
+		 <init-param>
+            <param-name>publishEvents</param-name>
+            <param-value>false</param-value>
+        </init-param>
+		<load-on-startup>1</load-on-startup>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>sms-api</servlet-name>
+		<url-pattern>/api/*</url-pattern>
+	</servlet-mapping>
+	<listener>
+		<listener-class>org.springframework.web.context.ContextLoaderListener</listener-class>
+	</listener>
+	
+	<filter> <!-- Get spring to keep the session open for the whole request -->
+		<filter-name>openSessionInViewFilter</filter-name>
+		<filter-class>org.springframework.orm.hibernate4.support.OpenSessionInViewFilter</filter-class>
+		<init-param>
+	      <param-name>flushMode</param-name>
+	      <param-value>AUTO</param-value>
+	    </init-param>
+	</filter>
+	<filter-mapping>
+		<filter-name>openSessionInViewFilter</filter-name>
+		<url-pattern>/*</url-pattern>
+	</filter-mapping>
+  <filter>
+		<filter-name>springSecurityFilterChain</filter-name>
+		<filter-class>org.springframework.web.filter.DelegatingFilterProxy</filter-class>
+	</filter>
+	<filter>
+		<filter-name>StrutsPrepareFilter</filter-name>
+   		<filter-class>org.apache.struts2.dispatcher.ng.filter.StrutsPrepareFilter</filter-class>
+	</filter>
+	
+	<filter>
+        <filter-name>sitemesh</filter-name>
+        <filter-class>com.opensymphony.module.sitemesh.filter.PageFilter</filter-class>
+    </filter>
+	<filter>
+		  <filter-name>StrutsExecuteFilter</filter-name>
+   			<filter-class>org.apache.struts2.dispatcher.ng.filter.StrutsExecuteFilter</filter-class>
+	</filter>
+	<filter>
+   		 <filter-name>AuthenticationFilter</filter-name>
+   		 <filter-class>com.hyniva.sms.api.RestAuthenticationFilter</filter-class>
+ 	 </filter>
+ 	 <filter-mapping>
+    	<filter-name>AuthenticationFilter</filter-name>
+    	<url-pattern>/api/*</url-pattern>
+ 	 </filter-mapping>
+	<filter-mapping>
+		<filter-name>springSecurityFilterChain</filter-name>
+		<url-pattern>/*</url-pattern>
+	</filter-mapping>
+	
+	<filter-mapping>
+		<filter-name>StrutsPrepareFilter</filter-name>
+		<url-pattern>/*</url-pattern>
+	</filter-mapping>
+	
+	<filter-mapping>
+		<filter-name>sitemesh</filter-name>
+		<url-pattern>/*</url-pattern>
+	</filter-mapping>
+	
+	<filter-mapping>
+		<filter-name>StrutsExecuteFilter</filter-name>
+		<url-pattern>/*</url-pattern>
+	</filter-mapping>
+	<listener>
+		<listener-class>
+			org.springframework.web.util.IntrospectorCleanupListener</listener-class>
+	</listener>
+	<listener>
+		<listener-class>
+			org.springframework.web.context.request.RequestContextListener</listener-class>
+	</listener>
+	<listener>
+	    <listener-class>
+	      org.springframework.security.web.session.HttpSessionEventPublisher
+	    </listener-class>
+	  </listener>
+
+	<!-- <servlet>
+		<description>JAX-WS endpoint - WebService</description>
+		<display-name>WebService</display-name>
+		<servlet-name>WebService</servlet-name>
+		<servlet-class>
+			com.sun.xml.ws.transport.http.servlet.WSServlet
+		</servlet-class>
+		<load-on-startup>1</load-on-startup>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>WebService</servlet-name>
+		<url-pattern>/WebServicePort</url-pattern>
+	</servlet-mapping> -->
+	<session-config>
+    		<session-timeout>60</session-timeout> <!-- in minutes -->
+  	</session-config>
+  	
+	<error-page>
+		<error-code>500</error-code>
+		<location>/error.jsp</location>
+	</error-page>
+	<error-page>
+		<error-code>400</error-code>
+		<location>/login.jsp</location>
+	</error-page>
+	<error-page>
+		<error-code>403</error-code>
+		<location>/403.jsp</location>
+	</error-page>
+	<error-page>
+		<error-code>404</error-code>
+		<location>/404.jsp</location>
+	</error-page>
+
+	<welcome-file-list>
+		<welcome-file>login.jsp</welcome-file>
+	</welcome-file-list>
+	<!-- <listener>
+		<listener-class>
+			com.sun.xml.ws.transport.http.servlet.WSServletContextListener
+		</listener-class>
+	</listener>	 -->
+	<servlet>
+ 	 <servlet-name>Jersey REST Service</servlet-name>
+		<servlet-class>
+		  com.sun.jersey.spi.container.servlet.ServletContainer
+		</servlet-class>
+		  <init-param>
+		    <param-name>com.sun.jersey.config.property.packages</param-name>
+		    <param-value>com.urt.sms.ws.restful</param-value>
+		  </init-param>
+		  <init-param>
+				<param-name>com.sun.jersey.api.json.POJOMappingFeature</param-name>
+				<param-value>true</param-value>
+		</init-param>
+	  <load-on-startup>1</load-on-startup>
+  </servlet>
+<servlet-mapping>
+  <servlet-name>Jersey REST Service</servlet-name>
+  <url-pattern>/rest/*</url-pattern>
+</servlet-mapping>
+</web-app>

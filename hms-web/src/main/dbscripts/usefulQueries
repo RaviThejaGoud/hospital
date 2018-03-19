@@ -1,0 +1,63 @@
+
+1. For providing multi branch option we need to do following steps.
+------------------------------------------------------------------
+
+
+Step 1:- 
+              insert record into masterCustomer table.
+              ex:- insert into masterCustomer (id,version,contactNumber,custEmail,organization,status) values(1,0,8025440141,'admin@eazyschol.in','Upper Room Schools','Y');
+
+Step 2:-
+          Update customer table of masterCustId column using this masterCustId value. Suppose if SVMS(custId=2) and SVGHSS(custId=15) are two customers if these two school are belonging to same school. We need to update masterCustId column of these two customers.
+         ex :- update customer set masterCustId=1 where id in(2,15);
+ 
+Step 3 :-
+         Then insert records into UserBranches table. Based on these values user can access multiple customers.
+           ex :- insert into UserBranches(2,2);
+                  insert into UserBranches values (2,15);
+
+           Here first value is the userId, second value is the customerId. So UserId 2 can access customerId 2 and 15 data. 
+------------------------------------------------------------
+2. Fee Payments Update/Delete
+
+Please find below steps to delete student payments for particular customer
+
+
+1) Soft/hard delete the records in below tables
+
+Soft:
+update studentFeePaidDetails set deleteStatus='Y', deleteDescription='As per customer Requested' where custId=204;
+update studentPayment set deleteStatus='Y' , deleteDescription='As per customer Requested' where custId=204;
+
+2) update the feePaidStatus column to 'N'
+
+update student set feePaidStatus ='N'  where custId=204;
+
+3) If we want to set the invoice number from 1, run the below query
+
+update studentPayment set invoiceNumber=0 where custId=204;
+
+
+4) To get max invoice number. 
+select max(invoiceNumber) from studentPayment where custId=204;
+--------------------------------------------------------
+
+3. Delete Staff quires from DB
+
+
+Please follow this order below when you want to delete the staff from DB directly
+
+delete from staffstatutory where staffId=1;
+delete from salary where staffId=1;
+delete  from staff where id=1;
+
+delete from messagedetailstracking where accountId=1;
+delete from UserRoles where userId=1;
+delete from Account where id=1;
+delete from Person where id=1;
+delete from Address where id in(1,2);
+-------------------------------
+           
+           
+           
+           

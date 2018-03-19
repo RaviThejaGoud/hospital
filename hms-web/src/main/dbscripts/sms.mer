@@ -1,0 +1,1929 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ERDiagram version="1.1">
+  <Connection session="mysql" database="sms" />
+  <Drawing gridVisible="false" snapOn="false" fastRouting="false" labelsVisible="true" />
+  <Tables>
+    <Table name="account">
+      <Drawing expanded="false" location="486,-39" dimensions="215,502" />
+      <Columns>
+        <Column name="id" primary_key="true" foreign_key="false" required="true" unique="true">
+          <Data type="bigint" size="20" />
+        </Column>
+        <Column name="createdBy" primary_key="false" foreign_key="false" required="false" unique="false">
+          <Data type="varchar" size="255" />
+        </Column>
+        <Column name="createdDate" primary_key="false" foreign_key="false" required="false" unique="false">
+          <Data type="datetime" size="19" />
+        </Column>
+        <Column name="lastAccessDate" primary_key="false" foreign_key="false" required="false" unique="false">
+          <Data type="datetime" size="19" />
+        </Column>
+        <Column name="lastUpdatedBy" primary_key="false" foreign_key="false" required="false" unique="false">
+          <Data type="varchar" size="255" />
+        </Column>
+        <Column name="lastUpdatedDate" primary_key="false" foreign_key="false" required="false" unique="false">
+          <Data type="datetime" size="19" />
+        </Column>
+        <Column name="version" primary_key="false" foreign_key="false" required="false" unique="false">
+          <Data type="int" size="11" />
+        </Column>
+        <Column name="accountExpired" primary_key="false" foreign_key="false" required="false" unique="false">
+          <Data type="char" size="1" />
+        </Column>
+        <Column name="accountLocked" primary_key="false" foreign_key="false" required="false" unique="false">
+          <Data type="char" size="1" />
+        </Column>
+        <Column name="credentialsExpired" primary_key="false" foreign_key="false" required="false" unique="false">
+          <Data type="char" size="1" />
+        </Column>
+        <Column name="custId" primary_key="false" foreign_key="false" required="true" unique="false">
+          <Data type="bigint" size="20" />
+        </Column>
+        <Column name="accountEnabled" primary_key="false" foreign_key="false" required="false" unique="false">
+          <Data type="char" size="1" />
+        </Column>
+        <Column name="password" primary_key="false" foreign_key="false" required="true" unique="false">
+          <Data type="varchar" size="128" />
+        </Column>
+        <Column name="passwordHint" primary_key="false" foreign_key="false" required="false" unique="false">
+          <Data type="varchar" size="255" />
+        </Column>
+        <Column name="sharePrivacy" primary_key="false" foreign_key="false" required="false" unique="false">
+          <Data type="char" size="1" />
+        </Column>
+        <Column name="userOnlineNow" primary_key="false" foreign_key="false" required="false" unique="false">
+          <Data type="char" size="1" />
+        </Column>
+        <Column name="username" primary_key="false" foreign_key="false" required="true" unique="true">
+          <Data type="varchar" size="128" />
+        </Column>
+        <Column name="caddressId" primary_key="false" foreign_key="true" required="false" unique="false">
+          <Data type="bigint" size="20" />
+        </Column>
+        <Column name="personId" primary_key="false" foreign_key="true" required="false" unique="false">
+          <Data type="bigint" size="20" />
+        </Column>
+        <Column name="paddressId" primary_key="false" foreign_key="true" required="false" unique="false">
+          <Data type="bigint" size="20" />
+        </Column>
+        <Column name="pcontactId" primary_key="false" foreign_key="true" required="false" unique="false">
+          <Data type="bigint" size="20" />
+        </Column>
+        <Column name="imageId" primary_key="false" foreign_key="true" required="false" unique="false">
+          <Data type="bigint" size="20" />
+        </Column>
+        <Column name="scontactId" primary_key="false" foreign_key="true" required="false" unique="false">
+          <Data type="bigint" size="20" />
+        </Column>
+        <Column name="taddressId" primary_key="false" foreign_key="true" required="false" unique="false">
+          <Data type="bigint" size="20" />
+        </Column>
+      </Columns>
+    </Table>
+    <Table name="accountassociatedperson">
+      <Drawing expanded="false" location="20,-243" dimensions="207,309" />
+      <Columns>
+        <Column name="id" primary_key="true" foreign_key="false" required="true" unique="true">
+          <Data type="bigint" size="20" />
+        </Column>
+        <Column name="createdBy" primary_key="false" foreign_key="false" required="false" unique="false">
+          <Data type="varchar" size="255" />
+        </Column>
+        <Column name="createdDate" primary_key="false" foreign_key="false" required="false" unique="false">
+          <Data type="datetime" size="19" />
+        </Column>
+        <Column name="lastAccessDate" primary_key="false" foreign_key="false" required="false" unique="false">
+          <Data type="datetime" size="19" />
+        </Column>
+        <Column name="lastUpdatedBy" primary_key="false" foreign_key="false" required="false" unique="false">
+          <Data type="varchar" size="255" />
+        </Column>
+        <Column name="lastUpdatedDate" primary_key="false" foreign_key="false" required="false" unique="false">
+          <Data type="datetime" size="19" />
+        </Column>
+        <Column name="version" primary_key="false" foreign_key="false" required="false" unique="false">
+          <Data type="int" size="11" />
+        </Column>
+        <Column name="dateOfBirth" primary_key="false" foreign_key="false" required="false" unique="false">
+          <Data type="datetime" size="19" />
+        </Column>
+        <Column name="descriptionLine1" primary_key="false" foreign_key="false" required="false" unique="false">
+          <Data type="varchar" size="255" />
+        </Column>
+        <Column name="descriptionLine2" primary_key="false" foreign_key="false" required="false" unique="false">
+          <Data type="varchar" size="255" />
+        </Column>
+        <Column name="descriptionLine3" primary_key="false" foreign_key="false" required="false" unique="false">
+          <Data type="varchar" size="255" />
+        </Column>
+        <Column name="formalName" primary_key="false" foreign_key="false" required="false" unique="false">
+          <Data type="varchar" size="255" />
+        </Column>
+        <Column name="picFilePath" primary_key="false" foreign_key="false" required="false" unique="false">
+          <Data type="varchar" size="255" />
+        </Column>
+        <Column name="relationship" primary_key="false" foreign_key="false" required="true" unique="false">
+          <Data type="varchar" size="64" />
+        </Column>
+      </Columns>
+    </Table>
+    <Table name="address">
+      <Drawing expanded="false" location="854,238" dimensions="271,729" />
+      <Columns>
+        <Column name="id" primary_key="true" foreign_key="false" required="true" unique="true">
+          <Data type="bigint" size="20" />
+        </Column>
+        <Column name="createdBy" primary_key="false" foreign_key="false" required="false" unique="false">
+          <Data type="varchar" size="255" />
+        </Column>
+        <Column name="createdDate" primary_key="false" foreign_key="false" required="false" unique="false">
+          <Data type="datetime" size="19" />
+        </Column>
+        <Column name="lastAccessDate" primary_key="false" foreign_key="false" required="false" unique="false">
+          <Data type="datetime" size="19" />
+        </Column>
+        <Column name="lastUpdatedBy" primary_key="false" foreign_key="false" required="false" unique="false">
+          <Data type="varchar" size="255" />
+        </Column>
+        <Column name="lastUpdatedDate" primary_key="false" foreign_key="false" required="false" unique="false">
+          <Data type="datetime" size="19" />
+        </Column>
+        <Column name="version" primary_key="false" foreign_key="false" required="false" unique="false">
+          <Data type="int" size="11" />
+        </Column>
+        <Column name="accuracy" primary_key="false" foreign_key="false" required="false" unique="false">
+          <Data type="varchar" size="32" />
+        </Column>
+        <Column name="addressLine1" primary_key="false" foreign_key="false" required="false" unique="false">
+          <Data type="varchar" size="128" />
+        </Column>
+        <Column name="addressLine2" primary_key="false" foreign_key="false" required="false" unique="false">
+          <Data type="varchar" size="64" />
+        </Column>
+        <Column name="addressLine3" primary_key="false" foreign_key="false" required="false" unique="false">
+          <Data type="varchar" size="64" />
+        </Column>
+        <Column name="addressType" primary_key="false" foreign_key="false" required="false" unique="false">
+          <Data type="varchar" size="1" />
+        </Column>
+        <Column name="addressUsage" primary_key="false" foreign_key="false" required="false" unique="false">
+          <Data type="varchar" size="16" />
+        </Column>
+        <Column name="apartmentNumber" primary_key="false" foreign_key="false" required="false" unique="false">
+          <Data type="varchar" size="10" />
+        </Column>
+        <Column name="boxNumber" primary_key="false" foreign_key="false" required="false" unique="false">
+          <Data type="varchar" size="10" />
+        </Column>
+        <Column name="city" primary_key="false" foreign_key="false" required="false" unique="false">
+          <Data type="varchar" size="64" />
+        </Column>
+        <Column name="country" primary_key="false" foreign_key="false" required="false" unique="false">
+          <Data type="varchar" size="64" />
+        </Column>
+        <Column name="distance" primary_key="false" foreign_key="false" required="false" unique="false">
+          <Data type="varchar" size="32" />
+        </Column>
+        <Column name="duration" primary_key="false" foreign_key="false" required="false" unique="false">
+          <Data type="datetime" size="19" />
+        </Column>
+        <Column name="effectiveDate" primary_key="false" foreign_key="false" required="false" unique="false">
+          <Data type="datetime" size="19" />
+        </Column>
+        <Column name="email" primary_key="false" foreign_key="false" required="false" unique="false">
+          <Data type="varchar" size="128" />
+        </Column>
+        <Column name="endDate" primary_key="false" foreign_key="false" required="false" unique="false">
+          <Data type="datetime" size="19" />
+        </Column>
+        <Column name="latitude" primary_key="false" foreign_key="false" required="false" unique="false">
+          <Data type="varchar" size="32" />
+        </Column>
+        <Column name="longitude" primary_key="false" foreign_key="false" required="false" unique="false">
+          <Data type="varchar" size="32" />
+        </Column>
+        <Column name="postalCode" primary_key="false" foreign_key="false" required="false" unique="false">
+          <Data type="varchar" size="12" />
+        </Column>
+        <Column name="ruralRoute" primary_key="false" foreign_key="false" required="false" unique="false">
+          <Data type="varchar" size="64" />
+        </Column>
+        <Column name="state" primary_key="false" foreign_key="false" required="false" unique="false">
+          <Data type="varchar" size="3" />
+        </Column>
+        <Column name="streetName" primary_key="false" foreign_key="false" required="false" unique="false">
+          <Data type="varchar" size="128" />
+        </Column>
+        <Column name="streetNumber" primary_key="false" foreign_key="false" required="false" unique="false">
+          <Data type="varchar" size="10" />
+        </Column>
+        <Column name="streetPostDirection" primary_key="false" foreign_key="false" required="false" unique="false">
+          <Data type="longtext" size="2147483647" />
+        </Column>
+        <Column name="streetType" primary_key="false" foreign_key="false" required="false" unique="false">
+          <Data type="varchar" size="64" />
+        </Column>
+        <Column name="suiteNumber" primary_key="false" foreign_key="false" required="false" unique="false">
+          <Data type="varchar" size="64" />
+        </Column>
+        <Column name="timeDuration" primary_key="false" foreign_key="false" required="false" unique="false">
+          <Data type="varchar" size="32" />
+        </Column>
+        <Column name="url" primary_key="false" foreign_key="false" required="false" unique="false">
+          <Data type="longtext" size="2147483647" />
+        </Column>
+        <Column name="zipCodeSupplement" primary_key="false" foreign_key="false" required="false" unique="false">
+          <Data type="varchar" size="6" />
+        </Column>
+      </Columns>
+    </Table>
+    <Table name="attachment">
+      <Drawing expanded="false" location="2022,1529" dimensions="251,329" />
+      <Columns>
+        <Column name="id" primary_key="true" foreign_key="false" required="true" unique="true">
+          <Data type="bigint" size="20" />
+        </Column>
+        <Column name="createdBy" primary_key="false" foreign_key="false" required="false" unique="false">
+          <Data type="varchar" size="255" />
+        </Column>
+        <Column name="createdDate" primary_key="false" foreign_key="false" required="false" unique="false">
+          <Data type="datetime" size="19" />
+        </Column>
+        <Column name="lastAccessDate" primary_key="false" foreign_key="false" required="false" unique="false">
+          <Data type="datetime" size="19" />
+        </Column>
+        <Column name="lastUpdatedBy" primary_key="false" foreign_key="false" required="false" unique="false">
+          <Data type="varchar" size="255" />
+        </Column>
+        <Column name="lastUpdatedDate" primary_key="false" foreign_key="false" required="false" unique="false">
+          <Data type="datetime" size="19" />
+        </Column>
+        <Column name="version" primary_key="false" foreign_key="false" required="false" unique="false">
+          <Data type="int" size="11" />
+        </Column>
+        <Column name="name" primary_key="false" foreign_key="false" required="false" unique="false">
+          <Data type="varchar" size="124" />
+        </Column>
+        <Column name="filePath" primary_key="false" foreign_key="false" required="false" unique="false">
+          <Data type="longtext" size="2147483647" />
+        </Column>
+        <Column name="fileSize" primary_key="false" foreign_key="false" required="false" unique="false">
+          <Data type="longtext" size="2147483647" />
+        </Column>
+        <Column name="fileType" primary_key="false" foreign_key="false" required="false" unique="false">
+          <Data type="varchar" size="40" />
+        </Column>
+        <Column name="fileTypePath" primary_key="false" foreign_key="false" required="false" unique="false">
+          <Data type="longtext" size="2147483647" />
+        </Column>
+        <Column name="fileUsed" primary_key="false" foreign_key="false" required="false" unique="false">
+          <Data type="varchar" size="50" />
+        </Column>
+        <Column name="mapFile" primary_key="false" foreign_key="false" required="false" unique="false">
+          <Data type="varchar" size="255" />
+        </Column>
+        <Column name="thumbNail" primary_key="false" foreign_key="false" required="false" unique="false">
+          <Data type="varchar" size="255" />
+        </Column>
+      </Columns>
+    </Table>
+    <Table name="attendance">
+      <Drawing expanded="false" location="179,277" dimensions="207,247" />
+      <Columns>
+        <Column name="id" primary_key="true" foreign_key="false" required="true" unique="true">
+          <Data type="bigint" size="20" />
+        </Column>
+        <Column name="createdBy" primary_key="false" foreign_key="false" required="false" unique="false">
+          <Data type="varchar" size="255" />
+        </Column>
+        <Column name="createdDate" primary_key="false" foreign_key="false" required="false" unique="false">
+          <Data type="datetime" size="19" />
+        </Column>
+        <Column name="lastAccessDate" primary_key="false" foreign_key="false" required="false" unique="false">
+          <Data type="datetime" size="19" />
+        </Column>
+        <Column name="lastUpdatedBy" primary_key="false" foreign_key="false" required="false" unique="false">
+          <Data type="varchar" size="255" />
+        </Column>
+        <Column name="lastUpdatedDate" primary_key="false" foreign_key="false" required="false" unique="false">
+          <Data type="datetime" size="19" />
+        </Column>
+        <Column name="version" primary_key="false" foreign_key="false" required="false" unique="false">
+          <Data type="int" size="11" />
+        </Column>
+        <Column name="attendanceDate" primary_key="false" foreign_key="false" required="false" unique="false">
+          <Data type="datetime" size="19" />
+        </Column>
+        <Column name="status" primary_key="false" foreign_key="false" required="false" unique="false">
+          <Data type="varchar" size="255" />
+        </Column>
+        <Column name="periodId" primary_key="false" foreign_key="true" required="false" unique="false">
+          <Data type="bigint" size="20" />
+        </Column>
+        <Column name="studentId" primary_key="false" foreign_key="true" required="false" unique="false">
+          <Data type="bigint" size="20" />
+        </Column>
+      </Columns>
+    </Table>
+    <Table name="calendarevent">
+      <Drawing expanded="false" location="1182,249" dimensions="251,346" />
+      <Columns>
+        <Column name="id" primary_key="true" foreign_key="false" required="true" unique="true">
+          <Data type="bigint" size="20" />
+        </Column>
+        <Column name="createdBy" primary_key="false" foreign_key="false" required="false" unique="false">
+          <Data type="varchar" size="255" />
+        </Column>
+        <Column name="createdDate" primary_key="false" foreign_key="false" required="false" unique="false">
+          <Data type="datetime" size="19" />
+        </Column>
+        <Column name="lastAccessDate" primary_key="false" foreign_key="false" required="false" unique="false">
+          <Data type="datetime" size="19" />
+        </Column>
+        <Column name="lastUpdatedBy" primary_key="false" foreign_key="false" required="false" unique="false">
+          <Data type="varchar" size="255" />
+        </Column>
+        <Column name="lastUpdatedDate" primary_key="false" foreign_key="false" required="false" unique="false">
+          <Data type="datetime" size="19" />
+        </Column>
+        <Column name="version" primary_key="false" foreign_key="false" required="false" unique="false">
+          <Data type="int" size="11" />
+        </Column>
+        <Column name="accountId" primary_key="false" foreign_key="false" required="false" unique="false">
+          <Data type="bigint" size="20" />
+        </Column>
+        <Column name="custId" primary_key="false" foreign_key="false" required="false" unique="false">
+          <Data type="bigint" size="20" />
+        </Column>
+        <Column name="endDate" primary_key="false" foreign_key="false" required="false" unique="false">
+          <Data type="datetime" size="19" />
+        </Column>
+        <Column name="message" primary_key="false" foreign_key="false" required="false" unique="false">
+          <Data type="longtext" size="2147483647" />
+        </Column>
+        <Column name="startDate" primary_key="false" foreign_key="false" required="false" unique="false">
+          <Data type="datetime" size="19" />
+        </Column>
+        <Column name="title" primary_key="false" foreign_key="false" required="false" unique="false">
+          <Data type="varchar" size="128" />
+        </Column>
+        <Column name="addressId" primary_key="false" foreign_key="true" required="false" unique="false">
+          <Data type="bigint" size="20" />
+        </Column>
+        <Column name="categoryId" primary_key="false" foreign_key="true" required="false" unique="false">
+          <Data type="bigint" size="20" />
+        </Column>
+        <Column name="recId" primary_key="false" foreign_key="true" required="false" unique="false">
+          <Data type="bigint" size="20" />
+        </Column>
+      </Columns>
+    </Table>
+    <Table name="calendarsettings">
+      <Drawing expanded="false" location="18,-162" dimensions="207,249" />
+      <Columns>
+        <Column name="id" primary_key="true" foreign_key="false" required="true" unique="true">
+          <Data type="bigint" size="20" />
+        </Column>
+        <Column name="createdBy" primary_key="false" foreign_key="false" required="false" unique="false">
+          <Data type="varchar" size="255" />
+        </Column>
+        <Column name="createdDate" primary_key="false" foreign_key="false" required="false" unique="false">
+          <Data type="datetime" size="19" />
+        </Column>
+        <Column name="lastAccessDate" primary_key="false" foreign_key="false" required="false" unique="false">
+          <Data type="datetime" size="19" />
+        </Column>
+        <Column name="lastUpdatedBy" primary_key="false" foreign_key="false" required="false" unique="false">
+          <Data type="varchar" size="255" />
+        </Column>
+        <Column name="lastUpdatedDate" primary_key="false" foreign_key="false" required="false" unique="false">
+          <Data type="datetime" size="19" />
+        </Column>
+        <Column name="version" primary_key="false" foreign_key="false" required="false" unique="false">
+          <Data type="int" size="11" />
+        </Column>
+        <Column name="calendarView" primary_key="false" foreign_key="false" required="false" unique="false">
+          <Data type="varchar" size="255" />
+        </Column>
+        <Column name="custId" primary_key="false" foreign_key="false" required="true" unique="false">
+          <Data type="bigint" size="20" />
+        </Column>
+        <Column name="eventsAddress" primary_key="false" foreign_key="false" required="false" unique="false">
+          <Data type="varchar" size="255" />
+        </Column>
+        <Column name="eventsThreshold" primary_key="false" foreign_key="false" required="false" unique="false">
+          <Data type="varchar" size="255" />
+        </Column>
+      </Columns>
+    </Table>
+    <Table name="category">
+      <Drawing expanded="false" location="1268,350" dimensions="207,229" />
+      <Columns>
+        <Column name="id" primary_key="true" foreign_key="false" required="true" unique="true">
+          <Data type="bigint" size="20" />
+        </Column>
+        <Column name="createdBy" primary_key="false" foreign_key="false" required="false" unique="false">
+          <Data type="varchar" size="255" />
+        </Column>
+        <Column name="createdDate" primary_key="false" foreign_key="false" required="false" unique="false">
+          <Data type="datetime" size="19" />
+        </Column>
+        <Column name="lastAccessDate" primary_key="false" foreign_key="false" required="false" unique="false">
+          <Data type="datetime" size="19" />
+        </Column>
+        <Column name="lastUpdatedBy" primary_key="false" foreign_key="false" required="false" unique="false">
+          <Data type="varchar" size="255" />
+        </Column>
+        <Column name="lastUpdatedDate" primary_key="false" foreign_key="false" required="false" unique="false">
+          <Data type="datetime" size="19" />
+        </Column>
+        <Column name="version" primary_key="false" foreign_key="false" required="false" unique="false">
+          <Data type="int" size="11" />
+        </Column>
+        <Column name="custId" primary_key="false" foreign_key="false" required="false" unique="false">
+          <Data type="bigint" size="20" />
+        </Column>
+        <Column name="description" primary_key="false" foreign_key="false" required="false" unique="false">
+          <Data type="varchar" size="255" />
+        </Column>
+        <Column name="name" primary_key="false" foreign_key="false" required="false" unique="false">
+          <Data type="varchar" size="255" />
+        </Column>
+      </Columns>
+    </Table>
+    <Table name="classsubject">
+      <Drawing expanded="false" location="288,568" dimensions="155,68" />
+      <Columns>
+        <Column name="classId" primary_key="true" foreign_key="true" required="true" unique="false">
+          <Data type="bigint" size="20" />
+        </Column>
+        <Column name="subjectId" primary_key="true" foreign_key="true" required="true" unique="false">
+          <Data type="bigint" size="20" />
+        </Column>
+      </Columns>
+    </Table>
+    <Table name="classteacher">
+      <Drawing expanded="false" location="536,717" dimensions="210,346" />
+      <Columns>
+        <Column name="id" primary_key="true" foreign_key="false" required="true" unique="true">
+          <Data type="bigint" size="20" />
+        </Column>
+        <Column name="createdBy" primary_key="false" foreign_key="false" required="false" unique="false">
+          <Data type="varchar" size="255" />
+        </Column>
+        <Column name="createdDate" primary_key="false" foreign_key="false" required="false" unique="false">
+          <Data type="datetime" size="19" />
+        </Column>
+        <Column name="lastAccessDate" primary_key="false" foreign_key="false" required="false" unique="false">
+          <Data type="datetime" size="19" />
+        </Column>
+        <Column name="lastUpdatedBy" primary_key="false" foreign_key="false" required="false" unique="false">
+          <Data type="varchar" size="255" />
+        </Column>
+        <Column name="lastUpdatedDate" primary_key="false" foreign_key="false" required="false" unique="false">
+          <Data type="datetime" size="19" />
+        </Column>
+        <Column name="version" primary_key="false" foreign_key="false" required="false" unique="false">
+          <Data type="int" size="11" />
+        </Column>
+        <Column name="academicYear" primary_key="false" foreign_key="false" required="false" unique="false">
+          <Data type="varchar" size="255" />
+        </Column>
+        <Column name="ct" primary_key="false" foreign_key="false" required="false" unique="false">
+          <Data type="varchar" size="255" />
+        </Column>
+        <Column name="custId" primary_key="false" foreign_key="false" required="true" unique="false">
+          <Data type="bigint" size="20" />
+        </Column>
+        <Column name="teacherId" primary_key="false" foreign_key="true" required="false" unique="false">
+          <Data type="bigint" size="20" />
+        </Column>
+        <Column name="studyClassId" primary_key="false" foreign_key="true" required="false" unique="false">
+          <Data type="bigint" size="20" />
+        </Column>
+        <Column name="studySubjectId" primary_key="false" foreign_key="true" required="false" unique="false">
+          <Data type="bigint" size="20" />
+        </Column>
+        <Column name="score" primary_key="false" foreign_key="false" required="false" unique="false">
+          <Data type="int" size="11" />
+        </Column>
+        <Column name="student" primary_key="false" foreign_key="false" required="false" unique="false">
+          <Data type="tinyblob" size="255" />
+        </Column>
+        <Column name="testType" primary_key="false" foreign_key="false" required="false" unique="false">
+          <Data type="varchar" size="255" />
+        </Column>
+      </Columns>
+    </Table>
+    <Table name="contacts">
+      <Drawing expanded="false" location="365,-218" dimensions="236,329" />
+      <Columns>
+        <Column name="id" primary_key="true" foreign_key="false" required="true" unique="true">
+          <Data type="bigint" size="20" />
+        </Column>
+        <Column name="createdBy" primary_key="false" foreign_key="false" required="false" unique="false">
+          <Data type="varchar" size="255" />
+        </Column>
+        <Column name="createdDate" primary_key="false" foreign_key="false" required="false" unique="false">
+          <Data type="datetime" size="19" />
+        </Column>
+        <Column name="lastAccessDate" primary_key="false" foreign_key="false" required="false" unique="false">
+          <Data type="datetime" size="19" />
+        </Column>
+        <Column name="lastUpdatedBy" primary_key="false" foreign_key="false" required="false" unique="false">
+          <Data type="varchar" size="255" />
+        </Column>
+        <Column name="lastUpdatedDate" primary_key="false" foreign_key="false" required="false" unique="false">
+          <Data type="datetime" size="19" />
+        </Column>
+        <Column name="version" primary_key="false" foreign_key="false" required="false" unique="false">
+          <Data type="int" size="11" />
+        </Column>
+        <Column name="areaCode" primary_key="false" foreign_key="false" required="false" unique="false">
+          <Data type="varchar" size="255" />
+        </Column>
+        <Column name="domestic" primary_key="false" foreign_key="false" required="true" unique="false">
+          <Data type="bit" size="1" />
+        </Column>
+        <Column name="extension" primary_key="false" foreign_key="false" required="false" unique="false">
+          <Data type="varchar" size="255" />
+        </Column>
+        <Column name="fax" primary_key="false" foreign_key="false" required="false" unique="false">
+          <Data type="varchar" size="255" />
+        </Column>
+        <Column name="foreignPhoneNumber" primary_key="false" foreign_key="false" required="false" unique="false">
+          <Data type="varchar" size="255" />
+        </Column>
+        <Column name="phoneNumberPrefix" primary_key="false" foreign_key="false" required="false" unique="false">
+          <Data type="varchar" size="255" />
+        </Column>
+        <Column name="phoneNumberSuffix" primary_key="false" foreign_key="false" required="false" unique="false">
+          <Data type="varchar" size="255" />
+        </Column>
+        <Column name="usageType" primary_key="false" foreign_key="false" required="false" unique="false">
+          <Data type="varchar" size="10" />
+        </Column>
+      </Columns>
+    </Table>
+    <Table name="customer">
+      <Drawing expanded="false" location="619,-124" dimensions="226,469" />
+      <Columns>
+        <Column name="id" primary_key="true" foreign_key="false" required="true" unique="true">
+          <Data type="bigint" size="20" />
+        </Column>
+        <Column name="createdBy" primary_key="false" foreign_key="false" required="false" unique="false">
+          <Data type="varchar" size="255" />
+        </Column>
+        <Column name="createdDate" primary_key="false" foreign_key="false" required="false" unique="false">
+          <Data type="datetime" size="19" />
+        </Column>
+        <Column name="lastAccessDate" primary_key="false" foreign_key="false" required="false" unique="false">
+          <Data type="datetime" size="19" />
+        </Column>
+        <Column name="lastUpdatedBy" primary_key="false" foreign_key="false" required="false" unique="false">
+          <Data type="varchar" size="255" />
+        </Column>
+        <Column name="lastUpdatedDate" primary_key="false" foreign_key="false" required="false" unique="false">
+          <Data type="datetime" size="19" />
+        </Column>
+        <Column name="version" primary_key="false" foreign_key="false" required="false" unique="false">
+          <Data type="int" size="11" />
+        </Column>
+        <Column name="accountType" primary_key="false" foreign_key="false" required="false" unique="false">
+          <Data type="varchar" size="5" />
+        </Column>
+        <Column name="constantContactAPI" primary_key="false" foreign_key="false" required="false" unique="false">
+          <Data type="varchar" size="250" />
+        </Column>
+        <Column name="constantContactPW" primary_key="false" foreign_key="false" required="false" unique="false">
+          <Data type="varchar" size="250" />
+        </Column>
+        <Column name="constantContactUN" primary_key="false" foreign_key="false" required="false" unique="false">
+          <Data type="varchar" size="250" />
+        </Column>
+        <Column name="custEmail" primary_key="false" foreign_key="false" required="true" unique="true">
+          <Data type="varchar" size="128" />
+        </Column>
+        <Column name="customerName" primary_key="false" foreign_key="false" required="false" unique="false">
+          <Data type="varchar" size="128" />
+        </Column>
+        <Column name="customerStatus" primary_key="false" foreign_key="false" required="false" unique="false">
+          <Data type="varchar" size="5" />
+        </Column>
+        <Column name="firstName" primary_key="false" foreign_key="false" required="false" unique="false">
+          <Data type="varchar" size="128" />
+        </Column>
+        <Column name="lastName" primary_key="false" foreign_key="false" required="false" unique="false">
+          <Data type="varchar" size="128" />
+        </Column>
+        <Column name="mailChimpAPI" primary_key="false" foreign_key="false" required="false" unique="false">
+          <Data type="varchar" size="250" />
+        </Column>
+        <Column name="mailChimpPW" primary_key="false" foreign_key="false" required="false" unique="false">
+          <Data type="varchar" size="250" />
+        </Column>
+        <Column name="mailChimpUN" primary_key="false" foreign_key="false" required="false" unique="false">
+          <Data type="varchar" size="250" />
+        </Column>
+        <Column name="organization" primary_key="false" foreign_key="false" required="false" unique="false">
+          <Data type="varchar" size="128" />
+        </Column>
+        <Column name="status" primary_key="false" foreign_key="false" required="true" unique="false">
+          <Data type="char" size="1" />
+        </Column>
+        <Column name="subscriptionType" primary_key="false" foreign_key="false" required="false" unique="false">
+          <Data type="varchar" size="5" />
+        </Column>
+      </Columns>
+    </Table>
+    <Table name="emailtemplate">
+      <Drawing expanded="false" location="19,-201" dimensions="251,289" />
+      <Columns>
+        <Column name="id" primary_key="true" foreign_key="false" required="true" unique="true">
+          <Data type="bigint" size="20" />
+        </Column>
+        <Column name="createdBy" primary_key="false" foreign_key="false" required="false" unique="false">
+          <Data type="varchar" size="255" />
+        </Column>
+        <Column name="createdDate" primary_key="false" foreign_key="false" required="false" unique="false">
+          <Data type="datetime" size="19" />
+        </Column>
+        <Column name="lastAccessDate" primary_key="false" foreign_key="false" required="false" unique="false">
+          <Data type="datetime" size="19" />
+        </Column>
+        <Column name="lastUpdatedBy" primary_key="false" foreign_key="false" required="false" unique="false">
+          <Data type="varchar" size="255" />
+        </Column>
+        <Column name="lastUpdatedDate" primary_key="false" foreign_key="false" required="false" unique="false">
+          <Data type="datetime" size="19" />
+        </Column>
+        <Column name="version" primary_key="false" foreign_key="false" required="false" unique="false">
+          <Data type="int" size="11" />
+        </Column>
+        <Column name="footer" primary_key="false" foreign_key="false" required="false" unique="false">
+          <Data type="longtext" size="2147483647" />
+        </Column>
+        <Column name="fromEmail" primary_key="false" foreign_key="false" required="false" unique="false">
+          <Data type="varchar" size="255" />
+        </Column>
+        <Column name="messageBody" primary_key="false" foreign_key="false" required="false" unique="false">
+          <Data type="longtext" size="2147483647" />
+        </Column>
+        <Column name="salutation" primary_key="false" foreign_key="false" required="false" unique="false">
+          <Data type="varchar" size="255" />
+        </Column>
+        <Column name="subject" primary_key="false" foreign_key="false" required="false" unique="false">
+          <Data type="varchar" size="255" />
+        </Column>
+        <Column name="type" primary_key="false" foreign_key="false" required="false" unique="false">
+          <Data type="varchar" size="255" />
+        </Column>
+      </Columns>
+    </Table>
+    <Table name="fee">
+      <Drawing expanded="false" location="1918,1121" dimensions="214,329" />
+      <Columns>
+        <Column name="id" primary_key="true" foreign_key="false" required="true" unique="true">
+          <Data type="bigint" size="20" />
+        </Column>
+        <Column name="createdBy" primary_key="false" foreign_key="false" required="false" unique="false">
+          <Data type="varchar" size="255" />
+        </Column>
+        <Column name="createdDate" primary_key="false" foreign_key="false" required="false" unique="false">
+          <Data type="datetime" size="19" />
+        </Column>
+        <Column name="lastAccessDate" primary_key="false" foreign_key="false" required="false" unique="false">
+          <Data type="datetime" size="19" />
+        </Column>
+        <Column name="lastUpdatedBy" primary_key="false" foreign_key="false" required="false" unique="false">
+          <Data type="varchar" size="255" />
+        </Column>
+        <Column name="lastUpdatedDate" primary_key="false" foreign_key="false" required="false" unique="false">
+          <Data type="datetime" size="19" />
+        </Column>
+        <Column name="version" primary_key="false" foreign_key="false" required="false" unique="false">
+          <Data type="int" size="11" />
+        </Column>
+        <Column name="custId" primary_key="false" foreign_key="false" required="true" unique="false">
+          <Data type="bigint" size="20" />
+        </Column>
+        <Column name="description" primary_key="false" foreign_key="false" required="false" unique="false">
+          <Data type="varchar" size="255" />
+        </Column>
+        <Column name="endMonth" primary_key="false" foreign_key="false" required="false" unique="false">
+          <Data type="varchar" size="255" />
+        </Column>
+        <Column name="paymentAmount" primary_key="false" foreign_key="false" required="true" unique="false">
+          <Data type="double" size="22" />
+        </Column>
+        <Column name="paymentType" primary_key="false" foreign_key="false" required="false" unique="false">
+          <Data type="varchar" size="255" />
+        </Column>
+        <Column name="startMonth" primary_key="false" foreign_key="false" required="false" unique="false">
+          <Data type="varchar" size="255" />
+        </Column>
+        <Column name="termCount" primary_key="false" foreign_key="false" required="true" unique="false">
+          <Data type="int" size="11" />
+        </Column>
+        <Column name="type" primary_key="false" foreign_key="false" required="false" unique="false">
+          <Data type="varchar" size="255" />
+        </Column>
+      </Columns>
+    </Table>
+    <Table name="paymenttransactions">
+      <Drawing expanded="false" location="1983,1575" dimensions="207,349" />
+      <Columns>
+        <Column name="id" primary_key="true" foreign_key="false" required="true" unique="true">
+          <Data type="bigint" size="20" />
+        </Column>
+        <Column name="createdBy" primary_key="false" foreign_key="false" required="false" unique="false">
+          <Data type="varchar" size="255" />
+        </Column>
+        <Column name="createdDate" primary_key="false" foreign_key="false" required="false" unique="false">
+          <Data type="datetime" size="19" />
+        </Column>
+        <Column name="lastAccessDate" primary_key="false" foreign_key="false" required="false" unique="false">
+          <Data type="datetime" size="19" />
+        </Column>
+        <Column name="lastUpdatedBy" primary_key="false" foreign_key="false" required="false" unique="false">
+          <Data type="varchar" size="255" />
+        </Column>
+        <Column name="lastUpdatedDate" primary_key="false" foreign_key="false" required="false" unique="false">
+          <Data type="datetime" size="19" />
+        </Column>
+        <Column name="version" primary_key="false" foreign_key="false" required="false" unique="false">
+          <Data type="int" size="11" />
+        </Column>
+        <Column name="amount" primary_key="false" foreign_key="false" required="false" unique="false">
+          <Data type="varchar" size="45" />
+        </Column>
+        <Column name="customerId" primary_key="false" foreign_key="false" required="false" unique="false">
+          <Data type="bigint" size="20" />
+        </Column>
+        <Column name="payerId" primary_key="false" foreign_key="false" required="false" unique="false">
+          <Data type="varchar" size="45" />
+        </Column>
+        <Column name="productId" primary_key="false" foreign_key="false" required="false" unique="false">
+          <Data type="varchar" size="255" />
+        </Column>
+        <Column name="profileId" primary_key="false" foreign_key="false" required="false" unique="false">
+          <Data type="varchar" size="45" />
+        </Column>
+        <Column name="profileStatus" primary_key="false" foreign_key="false" required="false" unique="false">
+          <Data type="varchar" size="45" />
+        </Column>
+        <Column name="token" primary_key="false" foreign_key="false" required="false" unique="false">
+          <Data type="varchar" size="45" />
+        </Column>
+        <Column name="tanDate" primary_key="false" foreign_key="false" required="false" unique="false">
+          <Data type="datetime" size="19" />
+        </Column>
+        <Column name="transactionId" primary_key="false" foreign_key="false" required="false" unique="false">
+          <Data type="varchar" size="255" />
+        </Column>
+      </Columns>
+    </Table>
+    <Table name="period">
+      <Drawing expanded="false" location="69,426" dimensions="207,328" />
+      <Columns>
+        <Column name="id" primary_key="true" foreign_key="false" required="true" unique="true">
+          <Data type="bigint" size="20" />
+        </Column>
+        <Column name="createdBy" primary_key="false" foreign_key="false" required="false" unique="false">
+          <Data type="varchar" size="255" />
+        </Column>
+        <Column name="createdDate" primary_key="false" foreign_key="false" required="false" unique="false">
+          <Data type="datetime" size="19" />
+        </Column>
+        <Column name="lastAccessDate" primary_key="false" foreign_key="false" required="false" unique="false">
+          <Data type="datetime" size="19" />
+        </Column>
+        <Column name="lastUpdatedBy" primary_key="false" foreign_key="false" required="false" unique="false">
+          <Data type="varchar" size="255" />
+        </Column>
+        <Column name="lastUpdatedDate" primary_key="false" foreign_key="false" required="false" unique="false">
+          <Data type="datetime" size="19" />
+        </Column>
+        <Column name="version" primary_key="false" foreign_key="false" required="false" unique="false">
+          <Data type="int" size="11" />
+        </Column>
+        <Column name="academicYear" primary_key="false" foreign_key="false" required="false" unique="false">
+          <Data type="varchar" size="255" />
+        </Column>
+        <Column name="custId" primary_key="false" foreign_key="false" required="true" unique="false">
+          <Data type="bigint" size="20" />
+        </Column>
+        <Column name="description" primary_key="false" foreign_key="false" required="false" unique="false">
+          <Data type="varchar" size="255" />
+        </Column>
+        <Column name="endTime" primary_key="false" foreign_key="false" required="false" unique="false">
+          <Data type="varchar" size="255" />
+        </Column>
+        <Column name="periodCount" primary_key="false" foreign_key="false" required="true" unique="false">
+          <Data type="bigint" size="20" />
+        </Column>
+        <Column name="startTime" primary_key="false" foreign_key="false" required="false" unique="false">
+          <Data type="varchar" size="255" />
+        </Column>
+        <Column name="status" primary_key="false" foreign_key="false" required="false" unique="false">
+          <Data type="varchar" size="255" />
+        </Column>
+        <Column name="classId" primary_key="false" foreign_key="true" required="false" unique="false">
+          <Data type="bigint" size="20" />
+        </Column>
+      </Columns>
+    </Table>
+    <Table name="person">
+      <Drawing expanded="false" location="663,58" dimensions="236,529" />
+      <Columns>
+        <Column name="id" primary_key="true" foreign_key="false" required="true" unique="true">
+          <Data type="bigint" size="20" />
+        </Column>
+        <Column name="createdBy" primary_key="false" foreign_key="false" required="false" unique="false">
+          <Data type="varchar" size="255" />
+        </Column>
+        <Column name="createdDate" primary_key="false" foreign_key="false" required="false" unique="false">
+          <Data type="datetime" size="19" />
+        </Column>
+        <Column name="lastAccessDate" primary_key="false" foreign_key="false" required="false" unique="false">
+          <Data type="datetime" size="19" />
+        </Column>
+        <Column name="lastUpdatedBy" primary_key="false" foreign_key="false" required="false" unique="false">
+          <Data type="varchar" size="255" />
+        </Column>
+        <Column name="lastUpdatedDate" primary_key="false" foreign_key="false" required="false" unique="false">
+          <Data type="datetime" size="19" />
+        </Column>
+        <Column name="version" primary_key="false" foreign_key="false" required="false" unique="false">
+          <Data type="int" size="11" />
+        </Column>
+        <Column name="citizenship" primary_key="false" foreign_key="false" required="false" unique="false">
+          <Data type="varchar" size="32" />
+        </Column>
+        <Column name="studyClass" primary_key="false" foreign_key="false" required="false" unique="false">
+          <Data type="varchar" size="255" />
+        </Column>
+        <Column name="dateOfBirth" primary_key="false" foreign_key="false" required="false" unique="false">
+          <Data type="varchar" size="12" />
+        </Column>
+        <Column name="empId" primary_key="false" foreign_key="false" required="false" unique="false">
+          <Data type="varchar" size="10" />
+        </Column>
+        <Column name="firstName" primary_key="false" foreign_key="false" required="false" unique="false">
+          <Data type="varchar" size="128" />
+        </Column>
+        <Column name="gender" primary_key="false" foreign_key="false" required="false" unique="false">
+          <Data type="varchar" size="1" />
+        </Column>
+        <Column name="height" primary_key="false" foreign_key="false" required="false" unique="false">
+          <Data type="double" size="22" />
+        </Column>
+        <Column name="lastName" primary_key="false" foreign_key="false" required="false" unique="false">
+          <Data type="varchar" size="128" />
+        </Column>
+        <Column name="maritalStatus" primary_key="false" foreign_key="false" required="false" unique="false">
+          <Data type="varchar" size="32" />
+        </Column>
+        <Column name="middleName" primary_key="false" foreign_key="false" required="false" unique="false">
+          <Data type="varchar" size="64" />
+        </Column>
+        <Column name="mothersMaidenName" primary_key="false" foreign_key="false" required="false" unique="false">
+          <Data type="varchar" size="32" />
+        </Column>
+        <Column name="passwordHint" primary_key="false" foreign_key="false" required="false" unique="false">
+          <Data type="varchar" size="255" />
+        </Column>
+        <Column name="passportExpireDate" primary_key="false" foreign_key="false" required="false" unique="false">
+          <Data type="datetime" size="19" />
+        </Column>
+        <Column name="passportNumber" primary_key="false" foreign_key="false" required="false" unique="false">
+          <Data type="varchar" size="16" />
+        </Column>
+        <Column name="personalTitle" primary_key="false" foreign_key="false" required="false" unique="false">
+          <Data type="varchar" size="10" />
+        </Column>
+        <Column name="socialSecurityNumber" primary_key="false" foreign_key="false" required="false" unique="false">
+          <Data type="varchar" size="14" />
+        </Column>
+        <Column name="suffix" primary_key="false" foreign_key="false" required="false" unique="false">
+          <Data type="varchar" size="20" />
+        </Column>
+        <Column name="weight" primary_key="false" foreign_key="false" required="false" unique="false">
+          <Data type="double" size="22" />
+        </Column>
+      </Columns>
+    </Table>
+    <Table name="productprice">
+      <Drawing expanded="false" location="1724,1525" dimensions="214,248" />
+      <Columns>
+        <Column name="id" primary_key="true" foreign_key="false" required="true" unique="true">
+          <Data type="bigint" size="20" />
+        </Column>
+        <Column name="createdBy" primary_key="false" foreign_key="false" required="false" unique="false">
+          <Data type="varchar" size="255" />
+        </Column>
+        <Column name="createdDate" primary_key="false" foreign_key="false" required="false" unique="false">
+          <Data type="datetime" size="19" />
+        </Column>
+        <Column name="lastAccessDate" primary_key="false" foreign_key="false" required="false" unique="false">
+          <Data type="datetime" size="19" />
+        </Column>
+        <Column name="lastUpdatedBy" primary_key="false" foreign_key="false" required="false" unique="false">
+          <Data type="varchar" size="255" />
+        </Column>
+        <Column name="lastUpdatedDate" primary_key="false" foreign_key="false" required="false" unique="false">
+          <Data type="datetime" size="19" />
+        </Column>
+        <Column name="version" primary_key="false" foreign_key="false" required="false" unique="false">
+          <Data type="int" size="11" />
+        </Column>
+        <Column name="productCost" primary_key="false" foreign_key="false" required="true" unique="false">
+          <Data type="double" size="22" />
+        </Column>
+        <Column name="productLevelId" primary_key="false" foreign_key="false" required="false" unique="false">
+          <Data type="bigint" size="20" />
+        </Column>
+        <Column name="subscriptionType" primary_key="false" foreign_key="false" required="true" unique="false">
+          <Data type="varchar" size="2" />
+        </Column>
+        <Column name="productId" primary_key="false" foreign_key="true" required="false" unique="false">
+          <Data type="bigint" size="20" />
+        </Column>
+      </Columns>
+    </Table>
+    <Table name="productsublevels">
+      <Drawing expanded="false" location="17,-92" dimensions="207,249" />
+      <Columns>
+        <Column name="id" primary_key="true" foreign_key="false" required="true" unique="true">
+          <Data type="bigint" size="20" />
+        </Column>
+        <Column name="createdBy" primary_key="false" foreign_key="false" required="false" unique="false">
+          <Data type="varchar" size="255" />
+        </Column>
+        <Column name="createdDate" primary_key="false" foreign_key="false" required="false" unique="false">
+          <Data type="datetime" size="19" />
+        </Column>
+        <Column name="lastAccessDate" primary_key="false" foreign_key="false" required="false" unique="false">
+          <Data type="datetime" size="19" />
+        </Column>
+        <Column name="lastUpdatedBy" primary_key="false" foreign_key="false" required="false" unique="false">
+          <Data type="varchar" size="255" />
+        </Column>
+        <Column name="lastUpdatedDate" primary_key="false" foreign_key="false" required="false" unique="false">
+          <Data type="datetime" size="19" />
+        </Column>
+        <Column name="version" primary_key="false" foreign_key="false" required="false" unique="false">
+          <Data type="int" size="11" />
+        </Column>
+        <Column name="levelName" primary_key="false" foreign_key="false" required="false" unique="false">
+          <Data type="varchar" size="45" />
+        </Column>
+        <Column name="monthCost" primary_key="false" foreign_key="false" required="false" unique="false">
+          <Data type="double" size="22" />
+        </Column>
+        <Column name="productId" primary_key="false" foreign_key="false" required="false" unique="false">
+          <Data type="bigint" size="20" />
+        </Column>
+        <Column name="yearCost" primary_key="false" foreign_key="false" required="false" unique="false">
+          <Data type="double" size="22" />
+        </Column>
+      </Columns>
+    </Table>
+    <Table name="recevent">
+      <Drawing expanded="false" location="1377,332" dimensions="207,289" />
+      <Columns>
+        <Column name="id" primary_key="true" foreign_key="false" required="true" unique="true">
+          <Data type="bigint" size="20" />
+        </Column>
+        <Column name="createdBy" primary_key="false" foreign_key="false" required="false" unique="false">
+          <Data type="varchar" size="255" />
+        </Column>
+        <Column name="createdDate" primary_key="false" foreign_key="false" required="false" unique="false">
+          <Data type="datetime" size="19" />
+        </Column>
+        <Column name="lastAccessDate" primary_key="false" foreign_key="false" required="false" unique="false">
+          <Data type="datetime" size="19" />
+        </Column>
+        <Column name="lastUpdatedBy" primary_key="false" foreign_key="false" required="false" unique="false">
+          <Data type="varchar" size="255" />
+        </Column>
+        <Column name="lastUpdatedDate" primary_key="false" foreign_key="false" required="false" unique="false">
+          <Data type="datetime" size="19" />
+        </Column>
+        <Column name="version" primary_key="false" foreign_key="false" required="false" unique="false">
+          <Data type="int" size="11" />
+        </Column>
+        <Column name="endDate" primary_key="false" foreign_key="false" required="false" unique="false">
+          <Data type="datetime" size="19" />
+        </Column>
+        <Column name="eventLength" primary_key="false" foreign_key="false" required="false" unique="false">
+          <Data type="bigint" size="20" />
+        </Column>
+        <Column name="eventPid" primary_key="false" foreign_key="false" required="true" unique="false">
+          <Data type="bigint" size="20" />
+        </Column>
+        <Column name="recType" primary_key="false" foreign_key="false" required="false" unique="false">
+          <Data type="varchar" size="30" />
+        </Column>
+        <Column name="repeatOn" primary_key="false" foreign_key="false" required="false" unique="false">
+          <Data type="varchar" size="60" />
+        </Column>
+        <Column name="startDate" primary_key="false" foreign_key="false" required="false" unique="false">
+          <Data type="datetime" size="19" />
+        </Column>
+      </Columns>
+    </Table>
+    <Table name="role">
+      <Drawing expanded="false" location="279,-35" dimensions="207,209" />
+      <Columns>
+        <Column name="id" primary_key="true" foreign_key="false" required="true" unique="true">
+          <Data type="bigint" size="20" />
+        </Column>
+        <Column name="createdBy" primary_key="false" foreign_key="false" required="false" unique="false">
+          <Data type="varchar" size="255" />
+        </Column>
+        <Column name="createdDate" primary_key="false" foreign_key="false" required="false" unique="false">
+          <Data type="datetime" size="19" />
+        </Column>
+        <Column name="lastAccessDate" primary_key="false" foreign_key="false" required="false" unique="false">
+          <Data type="datetime" size="19" />
+        </Column>
+        <Column name="lastUpdatedBy" primary_key="false" foreign_key="false" required="false" unique="false">
+          <Data type="varchar" size="255" />
+        </Column>
+        <Column name="lastUpdatedDate" primary_key="false" foreign_key="false" required="false" unique="false">
+          <Data type="datetime" size="19" />
+        </Column>
+        <Column name="version" primary_key="false" foreign_key="false" required="false" unique="false">
+          <Data type="int" size="11" />
+        </Column>
+        <Column name="description" primary_key="false" foreign_key="false" required="false" unique="false">
+          <Data type="varchar" size="128" />
+        </Column>
+        <Column name="name" primary_key="false" foreign_key="false" required="true" unique="false">
+          <Data type="varchar" size="45" />
+        </Column>
+      </Columns>
+    </Table>
+    <Table name="signupaccount">
+      <Drawing expanded="false" location="1536,1517" dimensions="242,769" />
+      <Columns>
+        <Column name="id" primary_key="true" foreign_key="false" required="true" unique="true">
+          <Data type="bigint" size="20" />
+        </Column>
+        <Column name="createdBy" primary_key="false" foreign_key="false" required="false" unique="false">
+          <Data type="varchar" size="255" />
+        </Column>
+        <Column name="createdDate" primary_key="false" foreign_key="false" required="false" unique="false">
+          <Data type="datetime" size="19" />
+        </Column>
+        <Column name="lastAccessDate" primary_key="false" foreign_key="false" required="false" unique="false">
+          <Data type="datetime" size="19" />
+        </Column>
+        <Column name="lastUpdatedBy" primary_key="false" foreign_key="false" required="false" unique="false">
+          <Data type="varchar" size="255" />
+        </Column>
+        <Column name="lastUpdatedDate" primary_key="false" foreign_key="false" required="false" unique="false">
+          <Data type="datetime" size="19" />
+        </Column>
+        <Column name="version" primary_key="false" foreign_key="false" required="false" unique="false">
+          <Data type="int" size="11" />
+        </Column>
+        <Column name="accuracy" primary_key="false" foreign_key="false" required="false" unique="false">
+          <Data type="varchar" size="32" />
+        </Column>
+        <Column name="amountWithOutTax" primary_key="false" foreign_key="false" required="true" unique="false">
+          <Data type="double" size="22" />
+        </Column>
+        <Column name="city" primary_key="false" foreign_key="false" required="false" unique="false">
+          <Data type="varchar" size="255" />
+        </Column>
+        <Column name="expressCheckoutToken" primary_key="false" foreign_key="false" required="false" unique="false">
+          <Data type="varchar" size="255" />
+        </Column>
+        <Column name="firstName" primary_key="false" foreign_key="false" required="false" unique="false">
+          <Data type="varchar" size="128" />
+        </Column>
+        <Column name="lastName" primary_key="false" foreign_key="false" required="false" unique="false">
+          <Data type="varchar" size="128" />
+        </Column>
+        <Column name="latitude" primary_key="false" foreign_key="false" required="false" unique="false">
+          <Data type="varchar" size="32" />
+        </Column>
+        <Column name="longitude" primary_key="false" foreign_key="false" required="false" unique="false">
+          <Data type="varchar" size="32" />
+        </Column>
+        <Column name="nextPaymentDate" primary_key="false" foreign_key="false" required="false" unique="false">
+          <Data type="varchar" size="255" />
+        </Column>
+        <Column name="organization" primary_key="false" foreign_key="false" required="false" unique="false">
+          <Data type="varchar" size="255" />
+        </Column>
+        <Column name="password" primary_key="false" foreign_key="false" required="false" unique="false">
+          <Data type="varchar" size="255" />
+        </Column>
+        <Column name="payerId" primary_key="false" foreign_key="false" required="false" unique="false">
+          <Data type="varchar" size="255" />
+        </Column>
+        <Column name="payerStatus" primary_key="false" foreign_key="false" required="false" unique="false">
+          <Data type="varchar" size="255" />
+        </Column>
+        <Column name="paymentType" primary_key="false" foreign_key="false" required="false" unique="false">
+          <Data type="varchar" size="255" />
+        </Column>
+        <Column name="phoneNumber" primary_key="false" foreign_key="false" required="false" unique="false">
+          <Data type="varchar" size="255" />
+        </Column>
+        <Column name="postalCode" primary_key="false" foreign_key="false" required="false" unique="false">
+          <Data type="varchar" size="255" />
+        </Column>
+        <Column name="productIds" primary_key="false" foreign_key="false" required="false" unique="false">
+          <Data type="varchar" size="50" />
+        </Column>
+        <Column name="productNames" primary_key="false" foreign_key="false" required="false" unique="false">
+          <Data type="varchar" size="128" />
+        </Column>
+        <Column name="profileId" primary_key="false" foreign_key="false" required="false" unique="false">
+          <Data type="varchar" size="255" />
+        </Column>
+        <Column name="profileStartDate" primary_key="false" foreign_key="false" required="false" unique="false">
+          <Data type="varchar" size="255" />
+        </Column>
+        <Column name="profileStatus" primary_key="false" foreign_key="false" required="false" unique="false">
+          <Data type="varchar" size="255" />
+        </Column>
+        <Column name="renewDate" primary_key="false" foreign_key="false" required="false" unique="false">
+          <Data type="varchar" size="255" />
+        </Column>
+        <Column name="state" primary_key="false" foreign_key="false" required="false" unique="false">
+          <Data type="varchar" size="255" />
+        </Column>
+        <Column name="status" primary_key="false" foreign_key="false" required="false" unique="false">
+          <Data type="varchar" size="2" />
+        </Column>
+        <Column name="streetPostDirection" primary_key="false" foreign_key="false" required="false" unique="false">
+          <Data type="varchar" size="255" />
+        </Column>
+        <Column name="subscriptionType" primary_key="false" foreign_key="false" required="false" unique="false">
+          <Data type="varchar" size="10" />
+        </Column>
+        <Column name="taxPercentage" primary_key="false" foreign_key="false" required="true" unique="false">
+          <Data type="double" size="22" />
+        </Column>
+        <Column name="transactionId" primary_key="false" foreign_key="false" required="false" unique="false">
+          <Data type="varchar" size="255" />
+        </Column>
+        <Column name="transactionType" primary_key="false" foreign_key="false" required="false" unique="false">
+          <Data type="varchar" size="255" />
+        </Column>
+        <Column name="username" primary_key="false" foreign_key="false" required="false" unique="false">
+          <Data type="varchar" size="255" />
+        </Column>
+      </Columns>
+    </Table>
+    <Table name="staff">
+      <Drawing expanded="false" location="480,789" dimensions="207,269" />
+      <Columns>
+        <Column name="id" primary_key="true" foreign_key="false" required="true" unique="true">
+          <Data type="bigint" size="20" />
+        </Column>
+        <Column name="createdBy" primary_key="false" foreign_key="false" required="false" unique="false">
+          <Data type="varchar" size="255" />
+        </Column>
+        <Column name="createdDate" primary_key="false" foreign_key="false" required="false" unique="false">
+          <Data type="datetime" size="19" />
+        </Column>
+        <Column name="lastAccessDate" primary_key="false" foreign_key="false" required="false" unique="false">
+          <Data type="datetime" size="19" />
+        </Column>
+        <Column name="lastUpdatedBy" primary_key="false" foreign_key="false" required="false" unique="false">
+          <Data type="varchar" size="255" />
+        </Column>
+        <Column name="lastUpdatedDate" primary_key="false" foreign_key="false" required="false" unique="false">
+          <Data type="datetime" size="19" />
+        </Column>
+        <Column name="version" primary_key="false" foreign_key="false" required="false" unique="false">
+          <Data type="int" size="11" />
+        </Column>
+        <Column name="academicYear" primary_key="false" foreign_key="false" required="false" unique="false">
+          <Data type="varchar" size="255" />
+        </Column>
+        <Column name="accountId" primary_key="false" foreign_key="false" required="true" unique="false">
+          <Data type="bigint" size="20" />
+        </Column>
+        <Column name="custId" primary_key="false" foreign_key="false" required="true" unique="false">
+          <Data type="bigint" size="20" />
+        </Column>
+        <Column name="qualification" primary_key="false" foreign_key="false" required="false" unique="false">
+          <Data type="varchar" size="255" />
+        </Column>
+        <Column name="status" primary_key="false" foreign_key="false" required="false" unique="false">
+          <Data type="varchar" size="255" />
+        </Column>
+      </Columns>
+    </Table>
+    <Table name="state">
+      <Drawing expanded="false" location="1578,2712" dimensions="207,209" />
+      <Columns>
+        <Column name="id" primary_key="true" foreign_key="false" required="true" unique="true">
+          <Data type="bigint" size="20" />
+        </Column>
+        <Column name="createdBy" primary_key="false" foreign_key="false" required="false" unique="false">
+          <Data type="varchar" size="255" />
+        </Column>
+        <Column name="createdDate" primary_key="false" foreign_key="false" required="false" unique="false">
+          <Data type="datetime" size="19" />
+        </Column>
+        <Column name="lastAccessDate" primary_key="false" foreign_key="false" required="false" unique="false">
+          <Data type="datetime" size="19" />
+        </Column>
+        <Column name="lastUpdatedBy" primary_key="false" foreign_key="false" required="false" unique="false">
+          <Data type="varchar" size="255" />
+        </Column>
+        <Column name="lastUpdatedDate" primary_key="false" foreign_key="false" required="false" unique="false">
+          <Data type="datetime" size="19" />
+        </Column>
+        <Column name="version" primary_key="false" foreign_key="false" required="false" unique="false">
+          <Data type="int" size="11" />
+        </Column>
+        <Column name="stateCode" primary_key="false" foreign_key="false" required="false" unique="false">
+          <Data type="varchar" size="20" />
+        </Column>
+        <Column name="stateName" primary_key="false" foreign_key="false" required="false" unique="false">
+          <Data type="varchar" size="100" />
+        </Column>
+      </Columns>
+    </Table>
+    <Table name="student">
+      <Drawing expanded="false" location="219,390" dimensions="207,289" />
+      <Columns>
+        <Column name="id" primary_key="true" foreign_key="false" required="true" unique="true">
+          <Data type="bigint" size="20" />
+        </Column>
+        <Column name="createdBy" primary_key="false" foreign_key="false" required="false" unique="false">
+          <Data type="varchar" size="255" />
+        </Column>
+        <Column name="createdDate" primary_key="false" foreign_key="false" required="false" unique="false">
+          <Data type="datetime" size="19" />
+        </Column>
+        <Column name="lastAccessDate" primary_key="false" foreign_key="false" required="false" unique="false">
+          <Data type="datetime" size="19" />
+        </Column>
+        <Column name="lastUpdatedBy" primary_key="false" foreign_key="false" required="false" unique="false">
+          <Data type="varchar" size="255" />
+        </Column>
+        <Column name="lastUpdatedDate" primary_key="false" foreign_key="false" required="false" unique="false">
+          <Data type="datetime" size="19" />
+        </Column>
+        <Column name="version" primary_key="false" foreign_key="false" required="false" unique="false">
+          <Data type="int" size="11" />
+        </Column>
+        <Column name="academicYear" primary_key="false" foreign_key="false" required="false" unique="false">
+          <Data type="varchar" size="255" />
+        </Column>
+        <Column name="accountId" primary_key="false" foreign_key="false" required="true" unique="false">
+          <Data type="bigint" size="20" />
+        </Column>
+        <Column name="classId" primary_key="false" foreign_key="false" required="true" unique="false">
+          <Data type="bigint" size="20" />
+        </Column>
+        <Column name="custId" primary_key="false" foreign_key="false" required="true" unique="false">
+          <Data type="bigint" size="20" />
+        </Column>
+        <Column name="rollNumber" primary_key="false" foreign_key="false" required="false" unique="false">
+          <Data type="varchar" size="255" />
+        </Column>
+        <Column name="status" primary_key="false" foreign_key="false" required="false" unique="false">
+          <Data type="varchar" size="255" />
+        </Column>
+      </Columns>
+    </Table>
+    <Table name="studyclass">
+      <Drawing expanded="false" location="134,495" dimensions="207,249" />
+      <Columns>
+        <Column name="id" primary_key="true" foreign_key="false" required="true" unique="true">
+          <Data type="bigint" size="20" />
+        </Column>
+        <Column name="createdBy" primary_key="false" foreign_key="false" required="false" unique="false">
+          <Data type="varchar" size="255" />
+        </Column>
+        <Column name="createdDate" primary_key="false" foreign_key="false" required="false" unique="false">
+          <Data type="datetime" size="19" />
+        </Column>
+        <Column name="lastAccessDate" primary_key="false" foreign_key="false" required="false" unique="false">
+          <Data type="datetime" size="19" />
+        </Column>
+        <Column name="lastUpdatedBy" primary_key="false" foreign_key="false" required="false" unique="false">
+          <Data type="varchar" size="255" />
+        </Column>
+        <Column name="lastUpdatedDate" primary_key="false" foreign_key="false" required="false" unique="false">
+          <Data type="datetime" size="19" />
+        </Column>
+        <Column name="version" primary_key="false" foreign_key="false" required="false" unique="false">
+          <Data type="int" size="11" />
+        </Column>
+        <Column name="className" primary_key="false" foreign_key="false" required="false" unique="false">
+          <Data type="varchar" size="255" />
+        </Column>
+        <Column name="custId" primary_key="false" foreign_key="false" required="true" unique="false">
+          <Data type="bigint" size="20" />
+        </Column>
+        <Column name="description" primary_key="false" foreign_key="false" required="false" unique="false">
+          <Data type="varchar" size="255" />
+        </Column>
+        <Column name="section" primary_key="false" foreign_key="false" required="false" unique="false">
+          <Data type="varchar" size="255" />
+        </Column>
+      </Columns>
+    </Table>
+    <Table name="studysubject">
+      <Drawing expanded="false" location="360,653" dimensions="207,229" />
+      <Columns>
+        <Column name="id" primary_key="true" foreign_key="false" required="true" unique="true">
+          <Data type="bigint" size="20" />
+        </Column>
+        <Column name="createdBy" primary_key="false" foreign_key="false" required="false" unique="false">
+          <Data type="varchar" size="255" />
+        </Column>
+        <Column name="createdDate" primary_key="false" foreign_key="false" required="false" unique="false">
+          <Data type="datetime" size="19" />
+        </Column>
+        <Column name="lastAccessDate" primary_key="false" foreign_key="false" required="false" unique="false">
+          <Data type="datetime" size="19" />
+        </Column>
+        <Column name="lastUpdatedBy" primary_key="false" foreign_key="false" required="false" unique="false">
+          <Data type="varchar" size="255" />
+        </Column>
+        <Column name="lastUpdatedDate" primary_key="false" foreign_key="false" required="false" unique="false">
+          <Data type="datetime" size="19" />
+        </Column>
+        <Column name="version" primary_key="false" foreign_key="false" required="false" unique="false">
+          <Data type="int" size="11" />
+        </Column>
+        <Column name="custId" primary_key="false" foreign_key="false" required="true" unique="false">
+          <Data type="bigint" size="20" />
+        </Column>
+        <Column name="description" primary_key="false" foreign_key="false" required="false" unique="false">
+          <Data type="varchar" size="255" />
+        </Column>
+        <Column name="name" primary_key="false" foreign_key="false" required="false" unique="false">
+          <Data type="varchar" size="255" />
+        </Column>
+      </Columns>
+    </Table>
+    <Table name="subscription">
+      <Drawing expanded="false" location="607,-272" dimensions="213,368" />
+      <Columns>
+        <Column name="id" primary_key="true" foreign_key="false" required="true" unique="true">
+          <Data type="bigint" size="20" />
+        </Column>
+        <Column name="createdBy" primary_key="false" foreign_key="false" required="false" unique="false">
+          <Data type="varchar" size="255" />
+        </Column>
+        <Column name="createdDate" primary_key="false" foreign_key="false" required="false" unique="false">
+          <Data type="datetime" size="19" />
+        </Column>
+        <Column name="lastAccessDate" primary_key="false" foreign_key="false" required="false" unique="false">
+          <Data type="datetime" size="19" />
+        </Column>
+        <Column name="lastUpdatedBy" primary_key="false" foreign_key="false" required="false" unique="false">
+          <Data type="varchar" size="255" />
+        </Column>
+        <Column name="lastUpdatedDate" primary_key="false" foreign_key="false" required="false" unique="false">
+          <Data type="datetime" size="19" />
+        </Column>
+        <Column name="version" primary_key="false" foreign_key="false" required="false" unique="false">
+          <Data type="int" size="11" />
+        </Column>
+        <Column name="amount" primary_key="false" foreign_key="false" required="false" unique="false">
+          <Data type="double" size="22" />
+        </Column>
+        <Column name="nextPaymentDate" primary_key="false" foreign_key="false" required="false" unique="false">
+          <Data type="datetime" size="19" />
+        </Column>
+        <Column name="paymentStatus" primary_key="false" foreign_key="false" required="false" unique="false">
+          <Data type="varchar" size="5" />
+        </Column>
+        <Column name="productId" primary_key="false" foreign_key="false" required="true" unique="false">
+          <Data type="bigint" size="20" />
+        </Column>
+        <Column name="profileId" primary_key="false" foreign_key="false" required="false" unique="false">
+          <Data type="varchar" size="128" />
+        </Column>
+        <Column name="profileStartDate" primary_key="false" foreign_key="false" required="false" unique="false">
+          <Data type="datetime" size="19" />
+        </Column>
+        <Column name="status" primary_key="false" foreign_key="false" required="true" unique="false">
+          <Data type="varchar" size="5" />
+        </Column>
+        <Column name="subscriptionType" primary_key="false" foreign_key="false" required="false" unique="false">
+          <Data type="varchar" size="2" />
+        </Column>
+        <Column name="userId" primary_key="false" foreign_key="false" required="false" unique="false">
+          <Data type="bigint" size="20" />
+        </Column>
+        <Column name="custId" primary_key="false" foreign_key="true" required="false" unique="false">
+          <Data type="bigint" size="20" />
+        </Column>
+      </Columns>
+    </Table>
+    <Table name="timetable">
+      <Drawing expanded="false" location="666,623" dimensions="207,268" />
+      <Columns>
+        <Column name="id" primary_key="true" foreign_key="false" required="true" unique="true">
+          <Data type="bigint" size="20" />
+        </Column>
+        <Column name="createdBy" primary_key="false" foreign_key="false" required="false" unique="false">
+          <Data type="varchar" size="255" />
+        </Column>
+        <Column name="createdDate" primary_key="false" foreign_key="false" required="false" unique="false">
+          <Data type="datetime" size="19" />
+        </Column>
+        <Column name="lastAccessDate" primary_key="false" foreign_key="false" required="false" unique="false">
+          <Data type="datetime" size="19" />
+        </Column>
+        <Column name="lastUpdatedBy" primary_key="false" foreign_key="false" required="false" unique="false">
+          <Data type="varchar" size="255" />
+        </Column>
+        <Column name="lastUpdatedDate" primary_key="false" foreign_key="false" required="false" unique="false">
+          <Data type="datetime" size="19" />
+        </Column>
+        <Column name="version" primary_key="false" foreign_key="false" required="false" unique="false">
+          <Data type="int" size="11" />
+        </Column>
+        <Column name="custId" primary_key="false" foreign_key="false" required="true" unique="false">
+          <Data type="bigint" size="20" />
+        </Column>
+        <Column name="endTime" primary_key="false" foreign_key="false" required="false" unique="false">
+          <Data type="varchar" size="255" />
+        </Column>
+        <Column name="entryDate" primary_key="false" foreign_key="false" required="false" unique="false">
+          <Data type="datetime" size="19" />
+        </Column>
+        <Column name="startTime" primary_key="false" foreign_key="false" required="false" unique="false">
+          <Data type="varchar" size="255" />
+        </Column>
+        <Column name="classTeacherId" primary_key="false" foreign_key="true" required="false" unique="false">
+          <Data type="bigint" size="20" />
+        </Column>
+      </Columns>
+    </Table>
+    <Table name="transport">
+      <Drawing expanded="false" location="22,-274" dimensions="208,309" />
+      <Columns>
+        <Column name="id" primary_key="true" foreign_key="false" required="true" unique="true">
+          <Data type="bigint" size="20" />
+        </Column>
+        <Column name="createdBy" primary_key="false" foreign_key="false" required="false" unique="false">
+          <Data type="varchar" size="255" />
+        </Column>
+        <Column name="createdDate" primary_key="false" foreign_key="false" required="false" unique="false">
+          <Data type="datetime" size="19" />
+        </Column>
+        <Column name="lastAccessDate" primary_key="false" foreign_key="false" required="false" unique="false">
+          <Data type="datetime" size="19" />
+        </Column>
+        <Column name="lastUpdatedBy" primary_key="false" foreign_key="false" required="false" unique="false">
+          <Data type="varchar" size="255" />
+        </Column>
+        <Column name="lastUpdatedDate" primary_key="false" foreign_key="false" required="false" unique="false">
+          <Data type="datetime" size="19" />
+        </Column>
+        <Column name="version" primary_key="false" foreign_key="false" required="false" unique="false">
+          <Data type="int" size="11" />
+        </Column>
+        <Column name="boardingPoints" primary_key="false" foreign_key="false" required="false" unique="false">
+          <Data type="varchar" size="255" />
+        </Column>
+        <Column name="custId" primary_key="false" foreign_key="false" required="true" unique="false">
+          <Data type="bigint" size="20" />
+        </Column>
+        <Column name="driver" primary_key="false" foreign_key="false" required="false" unique="false">
+          <Data type="varchar" size="255" />
+        </Column>
+        <Column name="helper" primary_key="false" foreign_key="false" required="false" unique="false">
+          <Data type="varchar" size="255" />
+        </Column>
+        <Column name="routeDescription" primary_key="false" foreign_key="false" required="false" unique="false">
+          <Data type="varchar" size="255" />
+        </Column>
+        <Column name="status" primary_key="false" foreign_key="false" required="false" unique="false">
+          <Data type="varchar" size="255" />
+        </Column>
+        <Column name="vehicleNumber" primary_key="false" foreign_key="false" required="false" unique="false">
+          <Data type="varchar" size="255" />
+        </Column>
+      </Columns>
+    </Table>
+    <Table name="urtproduct">
+      <Drawing expanded="false" location="1836,1646" dimensions="207,289" />
+      <Columns>
+        <Column name="id" primary_key="true" foreign_key="false" required="true" unique="true">
+          <Data type="bigint" size="20" />
+        </Column>
+        <Column name="createdBy" primary_key="false" foreign_key="false" required="false" unique="false">
+          <Data type="varchar" size="255" />
+        </Column>
+        <Column name="createdDate" primary_key="false" foreign_key="false" required="false" unique="false">
+          <Data type="datetime" size="19" />
+        </Column>
+        <Column name="lastAccessDate" primary_key="false" foreign_key="false" required="false" unique="false">
+          <Data type="datetime" size="19" />
+        </Column>
+        <Column name="lastUpdatedBy" primary_key="false" foreign_key="false" required="false" unique="false">
+          <Data type="varchar" size="255" />
+        </Column>
+        <Column name="lastUpdatedDate" primary_key="false" foreign_key="false" required="false" unique="false">
+          <Data type="datetime" size="19" />
+        </Column>
+        <Column name="version" primary_key="false" foreign_key="false" required="false" unique="false">
+          <Data type="int" size="11" />
+        </Column>
+        <Column name="link" primary_key="false" foreign_key="false" required="true" unique="false">
+          <Data type="varchar" size="255" />
+        </Column>
+        <Column name="menuName" primary_key="false" foreign_key="false" required="true" unique="false">
+          <Data type="varchar" size="255" />
+        </Column>
+        <Column name="name" primary_key="false" foreign_key="false" required="true" unique="false">
+          <Data type="varchar" size="128" />
+        </Column>
+        <Column name="role" primary_key="false" foreign_key="false" required="false" unique="false">
+          <Data type="varchar" size="255" />
+        </Column>
+        <Column name="status" primary_key="false" foreign_key="false" required="true" unique="false">
+          <Data type="char" size="1" />
+        </Column>
+        <Column name="urlName" primary_key="false" foreign_key="false" required="true" unique="false">
+          <Data type="varchar" size="128" />
+        </Column>
+      </Columns>
+    </Table>
+    <Table name="userimage">
+      <Drawing expanded="false" location="352,180" dimensions="251,329" />
+      <Columns>
+        <Column name="id" primary_key="true" foreign_key="false" required="true" unique="true">
+          <Data type="bigint" size="20" />
+        </Column>
+        <Column name="createdBy" primary_key="false" foreign_key="false" required="false" unique="false">
+          <Data type="varchar" size="255" />
+        </Column>
+        <Column name="createdDate" primary_key="false" foreign_key="false" required="false" unique="false">
+          <Data type="datetime" size="19" />
+        </Column>
+        <Column name="lastAccessDate" primary_key="false" foreign_key="false" required="false" unique="false">
+          <Data type="datetime" size="19" />
+        </Column>
+        <Column name="lastUpdatedBy" primary_key="false" foreign_key="false" required="false" unique="false">
+          <Data type="varchar" size="255" />
+        </Column>
+        <Column name="lastUpdatedDate" primary_key="false" foreign_key="false" required="false" unique="false">
+          <Data type="datetime" size="19" />
+        </Column>
+        <Column name="version" primary_key="false" foreign_key="false" required="false" unique="false">
+          <Data type="int" size="11" />
+        </Column>
+        <Column name="mapFile" primary_key="false" foreign_key="false" required="false" unique="false">
+          <Data type="varchar" size="255" />
+        </Column>
+        <Column name="name" primary_key="false" foreign_key="false" required="false" unique="false">
+          <Data type="varchar" size="255" />
+        </Column>
+        <Column name="path" primary_key="false" foreign_key="false" required="false" unique="false">
+          <Data type="longtext" size="2147483647" />
+        </Column>
+        <Column name="size" primary_key="false" foreign_key="false" required="false" unique="false">
+          <Data type="bigint" size="20" />
+        </Column>
+        <Column name="thumbNail" primary_key="false" foreign_key="false" required="false" unique="false">
+          <Data type="varchar" size="255" />
+        </Column>
+        <Column name="type" primary_key="false" foreign_key="false" required="false" unique="false">
+          <Data type="varchar" size="255" />
+        </Column>
+        <Column name="typePath" primary_key="false" foreign_key="false" required="false" unique="false">
+          <Data type="varchar" size="255" />
+        </Column>
+        <Column name="usageType" primary_key="false" foreign_key="false" required="true" unique="false">
+          <Data type="char" size="1" />
+        </Column>
+      </Columns>
+    </Table>
+    <Table name="userroles">
+      <Drawing expanded="false" location="283,-135" dimensions="139,68" />
+      <Columns>
+        <Column name="userId" primary_key="true" foreign_key="true" required="true" unique="false">
+          <Data type="bigint" size="20" />
+        </Column>
+        <Column name="roleId" primary_key="true" foreign_key="true" required="true" unique="false">
+          <Data type="bigint" size="20" />
+        </Column>
+      </Columns>
+    </Table>
+    <Table name="vw_productdetailsbycustomer">
+      <Drawing expanded="false" location="18,-128" dimensions="228,229" />
+      <Columns>
+        <Column name="productId" primary_key="true" foreign_key="false" required="true" unique="true">
+          <Data type="bigint" size="20" />
+        </Column>
+        <Column name="amount" primary_key="false" foreign_key="false" required="true" unique="false">
+          <Data type="double" size="22" />
+        </Column>
+        <Column name="custId" primary_key="false" foreign_key="false" required="true" unique="false">
+          <Data type="bigint" size="20" />
+        </Column>
+        <Column name="nextPaymentDate" primary_key="false" foreign_key="false" required="false" unique="false">
+          <Data type="datetime" size="19" />
+        </Column>
+        <Column name="productLink" primary_key="false" foreign_key="false" required="false" unique="false">
+          <Data type="varchar" size="255" />
+        </Column>
+        <Column name="productName" primary_key="false" foreign_key="false" required="false" unique="false">
+          <Data type="varchar" size="250" />
+        </Column>
+        <Column name="status" primary_key="false" foreign_key="false" required="true" unique="false">
+          <Data type="varchar" size="5" />
+        </Column>
+        <Column name="subscriptionId" primary_key="false" foreign_key="false" required="false" unique="false">
+          <Data type="bigint" size="20" />
+        </Column>
+        <Column name="subscriptionType" primary_key="false" foreign_key="false" required="false" unique="false">
+          <Data type="varchar" size="250" />
+        </Column>
+        <Column name="urlName" primary_key="false" foreign_key="false" required="false" unique="false">
+          <Data type="varchar" size="255" />
+        </Column>
+      </Columns>
+    </Table>
+  </Tables>
+  <Relationships>
+    <Relationship name="FK1D0C220D36896FA8">
+      <Details primary_table="address" foreign_table="account">
+        <PrimaryKeys>
+          <ColumnName name="id" />
+        </PrimaryKeys>
+        <ForeignKeys>
+          <ColumnName name="paddressId" />
+        </ForeignKeys>
+      </Details>
+      <Drawing routingType="0" />
+    </Relationship>
+    <Relationship name="FK1D0C220DFF1AE8DB">
+      <Details primary_table="userimage" foreign_table="account">
+        <PrimaryKeys>
+          <ColumnName name="id" />
+        </PrimaryKeys>
+        <ForeignKeys>
+          <ColumnName name="imageId" />
+        </ForeignKeys>
+      </Details>
+      <Drawing routingType="0" />
+    </Relationship>
+    <Relationship name="FK1D0C220DCECEB115">
+      <Details primary_table="address" foreign_table="account">
+        <PrimaryKeys>
+          <ColumnName name="id" />
+        </PrimaryKeys>
+        <ForeignKeys>
+          <ColumnName name="caddressId" />
+        </ForeignKeys>
+      </Details>
+      <Drawing routingType="0" />
+    </Relationship>
+    <Relationship name="FK1D0C220DD5BBFC14">
+      <Details primary_table="contacts" foreign_table="account">
+        <PrimaryKeys>
+          <ColumnName name="id" />
+        </PrimaryKeys>
+        <ForeignKeys>
+          <ColumnName name="scontactId" />
+        </ForeignKeys>
+      </Details>
+      <Drawing routingType="0" />
+    </Relationship>
+    <Relationship name="FK1D0C220D9D5F05F0">
+      <Details primary_table="person" foreign_table="account">
+        <PrimaryKeys>
+          <ColumnName name="id" />
+        </PrimaryKeys>
+        <ForeignKeys>
+          <ColumnName name="personId" />
+        </ForeignKeys>
+      </Details>
+      <Drawing routingType="0" />
+    </Relationship>
+    <Relationship name="FK1D0C220D7AF3424">
+      <Details primary_table="address" foreign_table="account">
+        <PrimaryKeys>
+          <ColumnName name="id" />
+        </PrimaryKeys>
+        <ForeignKeys>
+          <ColumnName name="taddressId" />
+        </ForeignKeys>
+      </Details>
+      <Drawing routingType="0" />
+    </Relationship>
+    <Relationship name="FK1D0C220DF8DFA8B7">
+      <Details primary_table="contacts" foreign_table="account">
+        <PrimaryKeys>
+          <ColumnName name="id" />
+        </PrimaryKeys>
+        <ForeignKeys>
+          <ColumnName name="pcontactId" />
+        </ForeignKeys>
+      </Details>
+      <Drawing routingType="0" />
+    </Relationship>
+    <Relationship name="FK7117E2E93006E154">
+      <Details primary_table="student" foreign_table="attendance">
+        <PrimaryKeys>
+          <ColumnName name="id" />
+        </PrimaryKeys>
+        <ForeignKeys>
+          <ColumnName name="studentId" />
+        </ForeignKeys>
+      </Details>
+      <Drawing routingType="0" />
+    </Relationship>
+    <Relationship name="FK7117E2E9E7B53D7A">
+      <Details primary_table="period" foreign_table="attendance">
+        <PrimaryKeys>
+          <ColumnName name="id" />
+        </PrimaryKeys>
+        <ForeignKeys>
+          <ColumnName name="periodId" />
+        </ForeignKeys>
+      </Details>
+      <Drawing routingType="0" />
+    </Relationship>
+    <Relationship name="FK7395DDFC865BD9C1">
+      <Details primary_table="recevent" foreign_table="calendarevent">
+        <PrimaryKeys>
+          <ColumnName name="id" />
+        </PrimaryKeys>
+        <ForeignKeys>
+          <ColumnName name="recId" />
+        </ForeignKeys>
+      </Details>
+      <Drawing routingType="0" />
+    </Relationship>
+    <Relationship name="FK7395DDFC5667F218">
+      <Details primary_table="address" foreign_table="calendarevent">
+        <PrimaryKeys>
+          <ColumnName name="id" />
+        </PrimaryKeys>
+        <ForeignKeys>
+          <ColumnName name="addressId" />
+        </ForeignKeys>
+      </Details>
+      <Drawing routingType="1">
+        <Bendpoints>
+          <Point location="1236,384" />
+          <Point location="901,380" />
+        </Bendpoints>
+      </Drawing>
+    </Relationship>
+    <Relationship name="FK7395DDFC22193C3">
+      <Details primary_table="category" foreign_table="calendarevent">
+        <PrimaryKeys>
+          <ColumnName name="id" />
+        </PrimaryKeys>
+        <ForeignKeys>
+          <ColumnName name="categoryId" />
+        </ForeignKeys>
+      </Details>
+      <Drawing routingType="0" />
+    </Relationship>
+    <Relationship name="FK9C9580B44875E9C7">
+      <Details primary_table="studysubject" foreign_table="classsubject">
+        <PrimaryKeys>
+          <ColumnName name="id" />
+        </PrimaryKeys>
+        <ForeignKeys>
+          <ColumnName name="subjectId" />
+        </ForeignKeys>
+      </Details>
+      <Drawing routingType="0" />
+    </Relationship>
+    <Relationship name="FK9C9580B443E3F45F">
+      <Details primary_table="studyclass" foreign_table="classsubject">
+        <PrimaryKeys>
+          <ColumnName name="id" />
+        </PrimaryKeys>
+        <ForeignKeys>
+          <ColumnName name="classId" />
+        </ForeignKeys>
+      </Details>
+      <Drawing routingType="1">
+        <Bendpoints>
+          <Point location="326,688" />
+          <Point location="210,688" />
+        </Bendpoints>
+      </Drawing>
+    </Relationship>
+    <Relationship name="FKAC51A34ADA0C8276">
+      <Details primary_table="studyclass" foreign_table="classteacher">
+        <PrimaryKeys>
+          <ColumnName name="id" />
+        </PrimaryKeys>
+        <ForeignKeys>
+          <ColumnName name="studyClassId" />
+        </ForeignKeys>
+      </Details>
+      <Drawing routingType="0" />
+    </Relationship>
+    <Relationship name="FKAC51A34AF6B34E1E">
+      <Details primary_table="studysubject" foreign_table="classteacher">
+        <PrimaryKeys>
+          <ColumnName name="id" />
+        </PrimaryKeys>
+        <ForeignKeys>
+          <ColumnName name="studySubjectId" />
+        </ForeignKeys>
+      </Details>
+      <Drawing routingType="0" />
+    </Relationship>
+    <Relationship name="FKAC51A34ACCB62A0">
+      <Details primary_table="staff" foreign_table="classteacher">
+        <PrimaryKeys>
+          <ColumnName name="id" />
+        </PrimaryKeys>
+        <ForeignKeys>
+          <ColumnName name="teacherId" />
+        </ForeignKeys>
+      </Details>
+      <Drawing routingType="0" />
+    </Relationship>
+    <Relationship name="FKC4E375C143E3F45F">
+      <Details primary_table="studyclass" foreign_table="period">
+        <PrimaryKeys>
+          <ColumnName name="id" />
+        </PrimaryKeys>
+        <ForeignKeys>
+          <ColumnName name="classId" />
+        </ForeignKeys>
+      </Details>
+      <Drawing routingType="0" />
+    </Relationship>
+    <Relationship name="FK3BA4B19A6F64731B">
+      <Details primary_table="urtproduct" foreign_table="productprice">
+        <PrimaryKeys>
+          <ColumnName name="id" />
+        </PrimaryKeys>
+        <ForeignKeys>
+          <ColumnName name="productId" />
+        </ForeignKeys>
+      </Details>
+      <Drawing routingType="0" />
+    </Relationship>
+    <Relationship name="FK1456591D1EE54C84">
+      <Details primary_table="customer" foreign_table="subscription">
+        <PrimaryKeys>
+          <ColumnName name="id" />
+        </PrimaryKeys>
+        <ForeignKeys>
+          <ColumnName name="custId" />
+        </ForeignKeys>
+      </Details>
+      <Drawing routingType="0" />
+    </Relationship>
+    <Relationship name="FK18BB101C25630AC">
+      <Details primary_table="classteacher" foreign_table="timetable">
+        <PrimaryKeys>
+          <ColumnName name="id" />
+        </PrimaryKeys>
+        <ForeignKeys>
+          <ColumnName name="classTeacherId" />
+        </ForeignKeys>
+      </Details>
+      <Drawing routingType="0" />
+    </Relationship>
+    <Relationship name="FK8AF57992B6DDEAB2">
+      <Details primary_table="role" foreign_table="userroles">
+        <PrimaryKeys>
+          <ColumnName name="id" />
+        </PrimaryKeys>
+        <ForeignKeys>
+          <ColumnName name="roleId" />
+        </ForeignKeys>
+      </Details>
+      <Drawing routingType="0" />
+    </Relationship>
+    <Relationship name="FK8AF57992BC33401C">
+      <Details primary_table="account" foreign_table="userroles">
+        <PrimaryKeys>
+          <ColumnName name="id" />
+        </PrimaryKeys>
+        <ForeignKeys>
+          <ColumnName name="userId" />
+        </ForeignKeys>
+      </Details>
+      <Drawing routingType="1">
+        <Bendpoints>
+          <Point location="342,28" />
+        </Bendpoints>
+      </Drawing>
+    </Relationship>
+  </Relationships>
+</ERDiagram>
+

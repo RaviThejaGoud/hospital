@@ -1,0 +1,254 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="govtSchoolReports" pageWidth="742" pageHeight="595" orientation="Landscape" columnWidth="702" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" whenResourceMissingType="Empty">
+	<property name="ireport.zoom" value="1.5"/>
+	<property name="ireport.x" value="385"/>
+	<property name="ireport.y" value="0"/>
+	<style name="Title" forecolor="#FFFFFF" fontName="Times New Roman" fontSize="50" isBold="false" pdfFontName="Times-Bold"/>
+	<style name="SubTitle" forecolor="#CCCCCC" fontName="Times New Roman" fontSize="18" isBold="false" pdfFontName="Times-Roman"/>
+	<style name="Column header" forecolor="#666666" fontName="Times New Roman" fontSize="14" isBold="true" pdfFontName="Times-Roman"/>
+	<style name="Detail" mode="Transparent" fontName="Times New Roman" pdfFontName="Times-Roman"/>
+	<style name="Row" mode="Transparent" fontName="Times New Roman" pdfFontName="Times-Roman">
+		<conditionalStyle>
+			<conditionExpression><![CDATA[$V{REPORT_COUNT}%2 == 0]]></conditionExpression>
+			<style mode="Opaque" backcolor="#F0EFEF"/>
+		</conditionalStyle>
+	</style>
+	<queryString language="SQL">
+		<![CDATA[]]>
+	</queryString>
+	<field name="stateName" class="java.lang.String"/>
+	<field name="districtName" class="java.lang.String"/>
+	<field name="mandalName" class="java.lang.String"/>
+	<field name="organization" class="java.lang.String"/>
+	<field name="organizationSubTypeId" class="java.lang.Long"/>
+	<field name="stateId" class="java.lang.Long"/>
+	<field name="districtId" class="java.lang.Long"/>
+	<field name="mandalId" class="java.lang.Long"/>
+	<field name="villageName" class="java.lang.String"/>
+	<field name="roleName" class="java.lang.String"/>
+	<field name="custId" class="java.lang.Long"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="69" splitType="Stretch">
+			<textField isBlankWhenNull="true">
+				<reportElement x="1" y="34" width="702" height="18" forecolor="#0000FF"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Droid Sans" size="8"/>
+				</textElement>
+			</textField>
+			<staticText>
+				<reportElement style="Column header" x="273" y="8" width="108" height="19" forecolor="#990099" backcolor="#14322C"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Droid Sans" size="11" isBold="true"/>
+				</textElement>
+				<text><![CDATA[School Report For]]></text>
+			</staticText>
+			<textField isBlankWhenNull="true">
+				<reportElement x="2" y="51" width="702" height="18" forecolor="#0000FF"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Droid Sans" size="8"/>
+				</textElement>
+			</textField>
+			<staticText>
+				<reportElement style="Column header" x="1" y="29" width="696" height="35" forecolor="#0000FF" backcolor="#14322C"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="Droid Sans" size="11" isBold="true"/>
+				</textElement>
+				<text><![CDATA[School Category : - (1)Primary, (2)Primary with Upper Primary,(3)Primary with Upper primary and secondary/higher secondary,(4)Upper primary only,(5)Upper primary with secondary/higher secondary]]></text>
+			</staticText>
+			<textField isBlankWhenNull="true">
+				<reportElement mode="Transparent" x="377" y="8" width="100" height="19" forecolor="#990099" backcolor="#14322C"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle" rotation="None" lineSpacing="Single" markup="none">
+					<font fontName="Droid Sans" size="11" isBold="true" isItalic="false" isUnderline="false" isStrikeThrough="false" pdfFontName="Times-Roman" pdfEncoding="Cp1252" isPdfEmbedded="false"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{roleName}]]></textFieldExpression>
+			</textField>
+		</band>
+	</title>
+	<pageHeader>
+		<band splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="26" splitType="Stretch">
+			<staticText>
+				<reportElement style="Column header" x="143" y="0" width="85" height="18" forecolor="#000000" backcolor="#14322C"/>
+				<textElement textAlignment="Justified" verticalAlignment="Bottom">
+					<font fontName="Droid Sans" size="10" isBold="true"/>
+				</textElement>
+				<text><![CDATA[District Name]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="1" y="-1" width="69" height="18" forecolor="#000000" backcolor="#14322C"/>
+				<textElement textAlignment="Justified" verticalAlignment="Bottom">
+					<font fontName="Droid Sans" size="10" isBold="true"/>
+				</textElement>
+				<text><![CDATA[School Code]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="229" y="-1" width="104" height="18" forecolor="#000000" backcolor="#14322C"/>
+				<textElement textAlignment="Justified" verticalAlignment="Bottom">
+					<font fontName="Droid Sans" size="10" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Block Name]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="74" y="-1" width="63" height="18" forecolor="#000000" backcolor="#14322C"/>
+				<textElement textAlignment="Justified" verticalAlignment="Bottom">
+					<font fontName="Droid Sans" size="10" isBold="true"/>
+				</textElement>
+				<text><![CDATA[State Name]]></text>
+			</staticText>
+			<line>
+				<reportElement positionType="FixRelativeToBottom" x="0" y="18" width="702" height="1">
+					<property name="net.sf.jasperreports.export.pdf.tag.h1" value="start"/>
+				</reportElement>
+			</line>
+			<staticText>
+				<reportElement style="Column header" x="335" y="-2" width="100" height="20" forecolor="#000000" backcolor="#14322C"/>
+				<textElement textAlignment="Justified" verticalAlignment="Bottom">
+					<font fontName="Droid Sans" size="10" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Village Name]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="436" y="-2" width="83" height="20" forecolor="#000000" backcolor="#14322C"/>
+				<textElement textAlignment="Justified" verticalAlignment="Bottom">
+					<font fontName="Droid Sans" size="10" isBold="true"/>
+				</textElement>
+				<text><![CDATA[School Name]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="568" y="-1" width="50" height="20" forecolor="#000000" backcolor="#14322C"/>
+				<textElement verticalAlignment="Bottom">
+					<font fontName="Droid Sans" size="10" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Students]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="620" y="-1" width="34" height="20" forecolor="#000000" backcolor="#14322C"/>
+				<textElement textAlignment="Justified" verticalAlignment="Bottom">
+					<font fontName="Droid Sans" size="10" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Mess]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="654" y="0" width="43" height="20" forecolor="#000000" backcolor="#14322C"/>
+				<textElement textAlignment="Justified" verticalAlignment="Bottom">
+					<font fontName="Droid Sans" size="10" isBold="true"/>
+				</textElement>
+				<text><![CDATA[No Mess]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="518" y="0" width="49" height="18" forecolor="#000000" backcolor="#14322C"/>
+				<textElement textAlignment="Justified" verticalAlignment="Bottom">
+					<font fontName="Droid Sans" size="10" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Category]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="18" splitType="Stretch">
+			<textField pattern="" isBlankWhenNull="true">
+				<reportElement style="Row" positionType="Float" stretchType="RelativeToBandHeight" mode="Transparent" x="64" y="1" width="77" height="16" forecolor="#000000" backcolor="#FFFFFF"/>
+				<textElement textAlignment="Justified" verticalAlignment="Middle" rotation="None" lineSpacing="Single" markup="none">
+					<font fontName="SansSerif" size="10" isBold="false" isItalic="false" isUnderline="false" isStrikeThrough="false" pdfFontName="Helvetica" pdfEncoding="Cp1252" isPdfEmbedded="false"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{stateName}]]></textFieldExpression>
+			</textField>
+			<textField pattern="" isBlankWhenNull="true">
+				<reportElement style="Row" positionType="Float" mode="Transparent" x="0" y="1" width="64" height="16" forecolor="#000000" backcolor="#FFFFFF"/>
+				<textElement textAlignment="Justified" verticalAlignment="Middle" rotation="None" lineSpacing="Single" markup="none">
+					<font fontName="SansSerif" size="10" isBold="false" isItalic="false" isUnderline="false" isStrikeThrough="false" pdfFontName="Helvetica" pdfEncoding="Cp1252" isPdfEmbedded="false"/>
+				</textElement>
+				<textFieldExpression class="java.lang.Long"><![CDATA[$F{custId}]]></textFieldExpression>
+			</textField>
+			<line>
+				<reportElement positionType="FixRelativeToBottom" x="0" y="17" width="702" height="1" isPrintInFirstWholeBand="true" forecolor="#E6E6E6">
+					<property name="net.sf.jasperreports.export.pdf.tag.h1" value="start"/>
+				</reportElement>
+				<graphicElement>
+					<pen lineWidth="0.75" lineStyle="Dotted"/>
+				</graphicElement>
+			</line>
+			<textField pattern="" isBlankWhenNull="true">
+				<reportElement stretchType="RelativeToTallestObject" x="144" y="1" width="85" height="17"/>
+				<textElement verticalAlignment="Middle"/>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{districtName}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement stretchType="RelativeToBandHeight" x="229" y="1" width="104" height="17"/>
+				<textElement textAlignment="Justified" verticalAlignment="Middle">
+					<font isStrikeThrough="false"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{mandalName}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement stretchType="RelativeToBandHeight" x="336" y="0" width="99" height="17"/>
+				<textElement textAlignment="Justified" verticalAlignment="Middle"/>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{villageName}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement stretchType="RelativeToBandHeight" x="436" y="1" width="82" height="16"/>
+				<textElement verticalAlignment="Middle"/>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{organization}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement stretchType="RelativeToBandHeight" x="567" y="1" width="50" height="17"/>
+				<textElement verticalAlignment="Middle"/>
+				<textFieldExpression class="java.lang.Long"><![CDATA[$F{stateId}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement stretchType="RelativeToBandHeight" x="618" y="1" width="36" height="17"/>
+				<textElement verticalAlignment="Middle"/>
+				<textFieldExpression class="java.lang.Long"><![CDATA[$F{districtId}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement stretchType="RelativeToBandHeight" x="654" y="1" width="39" height="17"/>
+				<textElement verticalAlignment="Middle"/>
+				<textFieldExpression class="java.lang.Long"><![CDATA[$F{mandalId}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement stretchType="RelativeToBandHeight" x="519" y="1" width="48" height="16"/>
+				<textElement verticalAlignment="Middle"/>
+				<textFieldExpression class="java.lang.Long"><![CDATA[$F{organizationSubTypeId}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="19" splitType="Stretch">
+			<frame>
+				<reportElement mode="Opaque" x="0" y="0" width="702" height="19" forecolor="#D0B48E"/>
+				<textField evaluationTime="Report">
+					<reportElement style="Column header" x="657" y="0" width="40" height="19" forecolor="#000000"/>
+					<textElement verticalAlignment="Bottom">
+						<font fontName="Droid Sans" size="9" isBold="false"/>
+					</textElement>
+					<textFieldExpression class="java.lang.String"><![CDATA[" " + $V{PAGE_NUMBER}]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement style="Column header" x="578" y="0" width="80" height="19" forecolor="#000000"/>
+					<textElement textAlignment="Right" verticalAlignment="Bottom">
+						<font fontName="Droid Sans" size="9" isBold="false"/>
+					</textElement>
+					<textFieldExpression class="java.lang.String"><![CDATA["Page "+$V{PAGE_NUMBER}+" of"]]></textFieldExpression>
+				</textField>
+				<textField pattern="dd MMMMM yyyy">
+					<reportElement style="Column header" x="2" y="0" width="197" height="19" forecolor="#000000"/>
+					<textElement verticalAlignment="Bottom">
+						<font fontName="Droid Sans" size="9" isBold="false"/>
+					</textElement>
+					<textFieldExpression class="java.util.Date"><![CDATA[new java.util.Date()]]></textFieldExpression>
+				</textField>
+			</frame>
+		</band>
+	</pageFooter>
+	<summary>
+		<band splitType="Stretch"/>
+	</summary>
+</jasperReport>

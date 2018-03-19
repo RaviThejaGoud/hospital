@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<fields templateEngineKind="Velocity" >
+        <description><![CDATA[]]></description>
+        <field name="tRF.personFullName" list="true" imageName="" syntaxKind="">
+                <description><![CDATA[]]></description>
+        </field>
+        <field name="tRF.classNameAndSection" list="true" imageName="" syntaxKind="">
+                <description><![CDATA[]]></description>
+        </field>
+        <field name="tRF.streetName" list="true" imageName="" syntaxKind="">
+                <description><![CDATA[]]></description>
+        </field>
+        <field name="tRF.city" list="true" imageName="" syntaxKind="">
+                <description><![CDATA[]]></description>
+        </field>
+        <field name="tRF.postalCode" list="true" imageName="" syntaxKind="">
+                <description><![CDATA[]]></description>
+        </field>
+         <field name="tRF.boardingPointName" list="true" imageName="" syntaxKind="">
+                <description><![CDATA[]]></description>
+        </field>
+         <field name="tRF.mobileNumber" list="true" imageName="" syntaxKind="">
+                <description><![CDATA[It gives serial number assigned to student.]]></description>
+        </field>
+        <field name="tRF.boardingPointFeeAmount" list="true" imageName="" syntaxKind="">
+                <description><![CDATA[It gives serial number assigned to student.]]></description>
+        </field>
+         <field name="tRF.vehicleNumber" list="true" imageName="" syntaxKind="">
+                <description><![CDATA[]]></description>
+        </field>
+        <field name="tRF.routeName" list="true" imageName="" syntaxKind="">
+                <description><![CDATA[]]></description>
+        </field>
+        <field name="logo.studentLogo" list="true"  imageName="" syntaxKind="">
+        	<description><![CDATA[]]></description>
+        </field>        
+</fields>

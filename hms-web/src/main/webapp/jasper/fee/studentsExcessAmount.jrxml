@@ -1,0 +1,201 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="studentInvoiceDefaultersFeeReceiptS" pageWidth="595" pageHeight="842" columnWidth="535" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20">
+	<property name="ireport.zoom" value="1.3995221406291998"/>
+	<property name="ireport.x" value="97"/>
+	<property name="ireport.y" value="0"/>
+	<style name="Title" forecolor="#FFFFFF" fontName="Times New Roman" fontSize="50" isBold="false" pdfFontName="Times-Bold"/>
+	<style name="SubTitle" forecolor="#666666" fontName="Times New Roman" fontSize="18" isBold="false" pdfFontName="Times-Roman"/>
+	<style name="Column header" forecolor="#666666" fontName="Times New Roman" fontSize="14" isBold="true" pdfFontName="Times-Roman"/>
+	<style name="Detail" mode="Transparent" fontName="Times New Roman" pdfFontName="Times-Roman"/>
+	<field name="fullName" class="java.lang.String"/>
+	<field name="rollNumber" class="java.lang.Integer"/>
+	<field name="mobileNumber" class="java.lang.String"/>
+	<field name="classSection" class="java.lang.String"/>
+	<field name="remainingExcessAmount" class="java.lang.Double"/>
+	<field name="anyId" class="java.lang.String"/>
+	<field name="customerName" class="java.lang.String"/>
+	<field name="totalAmount" class="java.lang.Double"/>
+	<field name="admissionNumber" class="java.lang.String"/>
+	<field name="className" class="java.lang.String"/>
+	<group name="classSection">
+		<groupExpression><![CDATA[$F{classSection}]]></groupExpression>
+		<groupHeader>
+			<band height="35">
+				<textField isBlankWhenNull="true">
+					<reportElement style="SubTitle" mode="Opaque" x="303" y="2" width="109" height="16" forecolor="#0000FF" backcolor="#FFFFFF"/>
+					<textElement textAlignment="Left">
+						<font fontName="Droid Sans" size="12" isBold="true"/>
+					</textElement>
+					<textFieldExpression class="java.lang.String"><![CDATA[$F{classSection}]]></textFieldExpression>
+				</textField>
+				<staticText>
+					<reportElement style="Column header" positionType="Float" mode="Opaque" x="177" y="2" width="123" height="14" forecolor="#0000FF"/>
+					<textElement textAlignment="Right">
+						<font fontName="Droid Sans" size="12" isBold="true" pdfFontName="Helvetica"/>
+					</textElement>
+					<text><![CDATA[Class Name :]]></text>
+				</staticText>
+				<staticText>
+					<reportElement style="Column header" positionType="Float" mode="Opaque" x="197" y="22" width="116" height="12" forecolor="#000000"/>
+					<textElement>
+						<font fontName="Droid Sans" size="9" isBold="true" pdfFontName="Helvetica"/>
+					</textElement>
+					<text><![CDATA[Student Name]]></text>
+				</staticText>
+				<staticText>
+					<reportElement style="Column header" positionType="Float" mode="Opaque" x="313" y="22" width="124" height="12" forecolor="#000000"/>
+					<textElement>
+						<font fontName="Droid Sans" size="9" isBold="true" pdfFontName="Helvetica"/>
+					</textElement>
+					<text><![CDATA[Mobile Number]]></text>
+				</staticText>
+				<staticText>
+					<reportElement style="Column header" positionType="Float" mode="Opaque" x="437" y="22" width="117" height="12" forecolor="#000000"/>
+					<textElement>
+						<font fontName="Droid Sans" size="9" isBold="true" pdfFontName="Helvetica"/>
+					</textElement>
+					<text><![CDATA[Excess Amount]]></text>
+				</staticText>
+				<line>
+					<reportElement positionType="FixRelativeToBottom" x="0" y="19" width="555" height="1"/>
+				</line>
+				<line>
+					<reportElement positionType="FixRelativeToBottom" x="0" y="19" width="1" height="12">
+						<property name="net.sf.jasperreports.export.pdf.tag.h1" value="start"/>
+					</reportElement>
+				</line>
+				<line>
+					<reportElement positionType="FixRelativeToBottom" x="0" y="34" width="555" height="1"/>
+					<graphicElement>
+						<pen lineWidth="0.5" lineStyle="Solid"/>
+					</graphicElement>
+				</line>
+				<staticText>
+					<reportElement style="Column header" positionType="Float" mode="Opaque" x="5" y="21" width="104" height="13" forecolor="#000000"/>
+					<textElement>
+						<font fontName="Droid Sans" size="9" isBold="true" pdfFontName="Helvetica" isPdfEmbedded="false"/>
+					</textElement>
+					<text><![CDATA[Admission Number]]></text>
+				</staticText>
+				<staticText>
+					<reportElement style="Column header" positionType="Float" mode="Opaque" x="109" y="21" width="88" height="13" forecolor="#000000"/>
+					<textElement>
+						<font fontName="Droid Sans" size="9" isBold="true" pdfFontName="Helvetica" isPdfEmbedded="false"/>
+					</textElement>
+					<text><![CDATA[Roll Number]]></text>
+				</staticText>
+			</band>
+		</groupHeader>
+		<groupFooter>
+			<band/>
+		</groupFooter>
+	</group>
+	<title>
+		<band height="51" splitType="Stretch">
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement x="0" y="4" width="553" height="15" forecolor="#0000FF"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Droid Sans" size="12" isBold="true"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{customerName}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement x="0" y="20" width="553" height="16" forecolor="#0000FF"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Droid Sans" size="8"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{anyId}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement mode="Transparent" x="0" y="35" width="553" height="15" forecolor="#0000FF" backcolor="#FFFFFF"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Droid Sans" size="9" isBold="true" isUnderline="false"/>
+				</textElement>
+				<text><![CDATA[Students Excess Amount]]></text>
+			</staticText>
+		</band>
+	</title>
+	<pageHeader>
+		<band splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band splitType="Stretch"/>
+	</columnHeader>
+	<detail>
+		<band height="12" splitType="Stretch">
+			<textField isBlankWhenNull="true">
+				<reportElement style="Detail" positionType="Float" mode="Opaque" x="197" y="1" width="116" height="10" isRemoveLineWhenBlank="true" isPrintInFirstWholeBand="true"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Droid Sans" size="7" isBold="false" pdfFontName="Helvetica"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{fullName}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement style="Detail" positionType="Float" mode="Opaque" x="313" y="1" width="124" height="10" isRemoveLineWhenBlank="true" isPrintInFirstWholeBand="true"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Droid Sans" size="7" isBold="false" pdfFontName="Helvetica"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{mobileNumber}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement style="Detail" positionType="Float" mode="Opaque" x="437" y="1" width="117" height="10" isRemoveLineWhenBlank="true" isPrintInFirstWholeBand="true"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Droid Sans" size="7" isBold="false" pdfFontName="Helvetica"/>
+				</textElement>
+				<textFieldExpression class="java.lang.Double"><![CDATA[$F{remainingExcessAmount}]]></textFieldExpression>
+			</textField>
+			<line>
+				<reportElement positionType="FixRelativeToBottom" x="0" y="-13" width="1" height="24">
+					<property name="net.sf.jasperreports.export.pdf.tag.h1" value="start"/>
+				</reportElement>
+			</line>
+			<line>
+				<reportElement positionType="FixRelativeToBottom" x="0" y="11" width="555" height="1">
+					<property name="net.sf.jasperreports.export.pdf.tag.h1" value="start"/>
+				</reportElement>
+				<graphicElement>
+					<pen lineWidth="0.5"/>
+				</graphicElement>
+			</line>
+			<line>
+				<reportElement positionType="FixRelativeToBottom" x="554" y="-15" width="1" height="26">
+					<property name="net.sf.jasperreports.export.pdf.tag.h1" value="start"/>
+				</reportElement>
+			</line>
+			<textField isBlankWhenNull="true">
+				<reportElement style="Detail" positionType="Float" mode="Opaque" x="5" y="0" width="104" height="10" isRemoveLineWhenBlank="true" isPrintInFirstWholeBand="true"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Droid Sans" size="7" isBold="false" pdfFontName="Helvetica"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{admissionNumber}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement style="Detail" positionType="Float" mode="Opaque" x="109" y="0" width="88" height="10" isRemoveLineWhenBlank="true" isPrintInFirstWholeBand="true"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Droid Sans" size="7" isBold="false" pdfFontName="Helvetica"/>
+				</textElement>
+				<textFieldExpression class="java.lang.Integer"><![CDATA[$F{rollNumber}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band splitType="Stretch"/>
+	</pageFooter>
+	<lastPageFooter>
+		<band height="30">
+			<staticText>
+				<reportElement style="Column header" x="409" y="10" width="142" height="15" forecolor="#333333"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle" rotation="None">
+					<font fontName="Droid Sans" size="8" isBold="false"/>
+				</textElement>
+				<text><![CDATA[Generated By : www.Eazyschool.com]]></text>
+			</staticText>
+		</band>
+	</lastPageFooter>
+	<summary>
+		<band splitType="Stretch"/>
+	</summary>
+</jasperReport>

@@ -1,0 +1,1 @@
+CREATE OR REPLACE view vw_fpsSettings as select dl.dealerId,dl.shopNo,dl.shopKey,dl.village,dl.mandal,dl.macAddress,dl.aadhaarNumber,dl.eid,dl.pincode,dl.district,dl.dealerName,dl.addressLine1,dl.mobileNumber,st.shopClosingTime,st.shopOpeningTime,st.settingStatus,st.stockClosingDate,st.stockOpeningDate from fpsDealer dl left join fpsSettings st on dl.shopKey = st.shopKey;  

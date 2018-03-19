@@ -1,0 +1,317 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="studentInvoiceDaysBetweenFeeReceipt" pageWidth="657" pageHeight="842" columnWidth="617" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20">
+	<property name="ireport.zoom" value="2.0"/>
+	<property name="ireport.x" value="608"/>
+	<property name="ireport.y" value="116"/>
+	<style name="Title" fontName="Arial" fontSize="26" isBold="true" pdfFontName="Helvetica-Bold"/>
+	<style name="SubTitle" forecolor="#666666" fontName="Arial" fontSize="18"/>
+	<style name="Column header" forecolor="#FFFFFF" fontName="Arial" fontSize="12" isBold="true"/>
+	<style name="Detail" fontName="Arial" fontSize="12"/>
+	<field name="studentPaymentId" class="java.lang.Long"/>
+	<field name="schoolTermId" class="java.lang.Long"/>
+	<field name="feeType" class="java.lang.String"/>
+	<field name="termName" class="java.lang.String"/>
+	<field name="paymentDate" class="java.sql.Timestamp"/>
+	<field name="paymentDateStr" class="java.lang.String"/>
+	<field name="paymentAmount" class="java.lang.Double"/>
+	<field name="rollNumber" class="java.lang.Long"/>
+	<field name="discountAmount" class="java.lang.Double"/>
+	<field name="anyTitle" class="java.lang.String"/>
+	<field name="fullPersonName" class="java.lang.String"/>
+	<field name="firstName" class="java.lang.String"/>
+	<field name="paymentType" class="java.lang.String"/>
+	<field name="anyId" class="java.lang.String"/>
+	<field name="customerName" class="java.lang.String"/>
+	<field name="todayDate" class="java.lang.String"/>
+	<field name="totalAmount" class="java.lang.Double"/>
+	<field name="admissionNumber" class="java.lang.String"/>
+	<field name="footer" class="java.lang.String"/>
+	<field name="className" class="java.lang.String"/>
+	<field name="feeAmount" class="java.lang.Double"/>
+	<field name="paidAmount" class="java.lang.Double"/>
+	<field name="tempString" class="java.lang.String"/>
+	<field name="balance" class="java.lang.String"/>
+	<group name="termName">
+		<groupExpression><![CDATA[$F{termName}]]></groupExpression>
+		<groupHeader>
+			<band height="32">
+				<textField isBlankWhenNull="true">
+					<reportElement style="SubTitle" mode="Opaque" x="293" y="0" width="248" height="14" forecolor="#392BF2" backcolor="#FFFFFF"/>
+					<textElement textAlignment="Left" verticalAlignment="Middle">
+						<font fontName="Droid Sans" size="11" isBold="true"/>
+					</textElement>
+					<textFieldExpression class="java.lang.String"><![CDATA[$F{termName}]]></textFieldExpression>
+				</textField>
+				<staticText>
+					<reportElement style="Column header" x="315" y="16" width="70" height="15" isPrintInFirstWholeBand="true" forecolor="#333333"/>
+					<textElement textAlignment="Left" verticalAlignment="Middle">
+						<font fontName="Droid Sans" size="9" isBold="true"/>
+					</textElement>
+					<text><![CDATA[Paid Amount]]></text>
+				</staticText>
+				<staticText>
+					<reportElement style="Column header" x="79" y="16" width="97" height="14" isPrintInFirstWholeBand="true" forecolor="#333333"/>
+					<textElement textAlignment="Left" verticalAlignment="Middle">
+						<font fontName="Droid Sans" size="9" isBold="true"/>
+					</textElement>
+					<text><![CDATA[Student Name]]></text>
+				</staticText>
+				<staticText>
+					<reportElement style="Column header" x="176" y="16" width="75" height="14" isPrintInFirstWholeBand="true" forecolor="#333333"/>
+					<textElement textAlignment="Left" verticalAlignment="Middle">
+						<font fontName="Droid Sans" size="9" isBold="true"/>
+					</textElement>
+					<text><![CDATA[Class & Section]]></text>
+				</staticText>
+				<line>
+					<reportElement positionType="FixRelativeToBottom" x="1" y="14" width="616" height="1" isPrintInFirstWholeBand="true">
+						<property name="net.sf.jasperreports.export.pdf.tag.h1" value="start"/>
+					</reportElement>
+				</line>
+				<line>
+					<reportElement positionType="FixRelativeToBottom" x="1" y="15" width="1" height="16" isPrintInFirstWholeBand="true">
+						<property name="net.sf.jasperreports.export.pdf.tag.h1" value="start"/>
+					</reportElement>
+				</line>
+				<line>
+					<reportElement positionType="FixRelativeToBottom" x="616" y="15" width="1" height="16" isPrintInFirstWholeBand="true">
+						<property name="net.sf.jasperreports.export.pdf.tag.h1" value="start"/>
+					</reportElement>
+				</line>
+				<line>
+					<reportElement positionType="FixRelativeToBottom" x="2" y="31" width="614" height="1" isPrintInFirstWholeBand="true"/>
+					<graphicElement>
+						<pen lineWidth="0.5" lineStyle="Solid"/>
+					</graphicElement>
+				</line>
+				<staticText>
+					<reportElement style="Column header" x="4" y="16" width="75" height="14" isPrintInFirstWholeBand="true" forecolor="#333333"/>
+					<textElement textAlignment="Left" verticalAlignment="Middle">
+						<font fontName="Droid Sans" size="9" isBold="true"/>
+					</textElement>
+					<text><![CDATA[Admission No]]></text>
+				</staticText>
+				<staticText>
+					<reportElement style="Column header" x="117" y="0" width="175" height="14" forecolor="#392BF2"/>
+					<textElement textAlignment="Right" verticalAlignment="Middle">
+						<font fontName="Droid Sans" size="11" isBold="true"/>
+					</textElement>
+					<text><![CDATA[Term Type : ]]></text>
+				</staticText>
+				<staticText>
+					<reportElement style="Column header" x="385" y="16" width="80" height="15" forecolor="#333333"/>
+					<textElement textAlignment="Left" verticalAlignment="Middle">
+						<font fontName="Droid Sans" size="9" isBold="true"/>
+					</textElement>
+					<text><![CDATA[Discount Amount]]></text>
+				</staticText>
+				<staticText>
+					<reportElement style="Column header" x="251" y="16" width="64" height="15" isPrintInFirstWholeBand="true" forecolor="#333333"/>
+					<textElement textAlignment="Left" verticalAlignment="Middle">
+						<font fontName="Droid Sans" size="9" isBold="true"/>
+					</textElement>
+					<text><![CDATA[Total Amount]]></text>
+				</staticText>
+				<staticText>
+					<reportElement style="Column header" x="530" y="16" width="86" height="15" forecolor="#333333"/>
+					<textElement textAlignment="Left" verticalAlignment="Middle">
+						<font fontName="Droid Sans" size="9" isBold="true"/>
+					</textElement>
+					<text><![CDATA[Due Amount]]></text>
+				</staticText>
+				<staticText>
+					<reportElement style="Column header" x="465" y="15" width="65" height="15" isPrintInFirstWholeBand="true" forecolor="#333333"/>
+					<textElement textAlignment="Left" verticalAlignment="Middle">
+						<font fontName="Droid Sans" size="9" isBold="true"/>
+					</textElement>
+					<text><![CDATA[Paid Date]]></text>
+				</staticText>
+			</band>
+		</groupHeader>
+		<groupFooter>
+			<band/>
+		</groupFooter>
+	</group>
+	<title>
+		<band height="47" splitType="Stretch">
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement x="1" y="3" width="616" height="15" forecolor="#0000FF"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Droid Sans" size="12" isBold="true"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{customerName}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement x="1" y="18" width="616" height="14" forecolor="#0000FF"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Droid Sans" size="8"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{anyId}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement x="1" y="33" width="616" height="14" forecolor="#0000FF"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Droid Sans" size="8"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{todayDate}]]></textFieldExpression>
+			</textField>
+		</band>
+	</title>
+	<pageHeader>
+		<band splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band splitType="Stretch"/>
+	</columnHeader>
+	<detail>
+		<band height="16" splitType="Stretch">
+			<textField isBlankWhenNull="true">
+				<reportElement style="Detail" mode="Transparent" x="79" y="1" width="97" height="12"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Droid Sans" size="7" isBold="false"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{firstName}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement style="Detail" mode="Transparent" x="176" y="1" width="75" height="12"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Droid Sans" size="7" isBold="false"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{className}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement style="Detail" mode="Transparent" x="315" y="1" width="70" height="12"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Droid Sans" size="7" isBold="false"/>
+				</textElement>
+				<textFieldExpression class="java.lang.Double"><![CDATA[$F{paymentAmount}]]></textFieldExpression>
+			</textField>
+			<line>
+				<reportElement positionType="FixRelativeToBottom" x="1" y="13" width="616" height="1">
+					<property name="net.sf.jasperreports.export.pdf.tag.h1" value="start"/>
+				</reportElement>
+				<graphicElement>
+					<pen lineWidth="0.5"/>
+				</graphicElement>
+			</line>
+			<line>
+				<reportElement positionType="FixRelativeToBottom" x="1" y="-2" width="1" height="15">
+					<property name="net.sf.jasperreports.export.pdf.tag.h1" value="start"/>
+				</reportElement>
+			</line>
+			<line>
+				<reportElement positionType="FixRelativeToBottom" x="616" y="-2" width="1" height="15">
+					<property name="net.sf.jasperreports.export.pdf.tag.h1" value="start"/>
+				</reportElement>
+			</line>
+			<textField isBlankWhenNull="true">
+				<reportElement style="Detail" mode="Transparent" x="3" y="1" width="75" height="12"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Droid Sans" size="7" isBold="false"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{admissionNumber}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement style="Detail" mode="Transparent" x="385" y="1" width="80" height="12"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Droid Sans" size="7" isBold="false"/>
+				</textElement>
+				<textFieldExpression class="java.lang.Double"><![CDATA[$F{discountAmount}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement style="Detail" mode="Transparent" x="251" y="1" width="64" height="12"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Droid Sans" size="7" isBold="false"/>
+				</textElement>
+				<textFieldExpression class="java.lang.Double"><![CDATA[$F{feeAmount}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement style="Detail" mode="Transparent" x="530" y="0" width="86" height="12"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Droid Sans" size="7" isBold="false"/>
+				</textElement>
+				<textFieldExpression class="java.lang.Double"><![CDATA[$F{paidAmount}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement style="Detail" mode="Transparent" x="465" y="2" width="65" height="12"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Droid Sans" size="7" isBold="false"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{paymentDateStr}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<pageFooter>
+		<band height="4" splitType="Stretch"/>
+	</pageFooter>
+	<lastPageFooter>
+		<band height="82">
+			<staticText>
+				<reportElement style="Column header" x="491" y="17" width="66" height="15" forecolor="#333333"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="Droid Sans" size="8" isBold="false"/>
+				</textElement>
+				<text><![CDATA[Paid Fee : ]]></text>
+			</staticText>
+			<textField isBlankWhenNull="true">
+				<reportElement style="Detail" mode="Transparent" x="564" y="32" width="50" height="15"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="Droid Sans" size="7" isBold="true"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{footer}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement style="Column header" x="465" y="32" width="92" height="15" forecolor="#333333"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="Droid Sans" size="8" isBold="false"/>
+				</textElement>
+				<text><![CDATA[Discount Amount : ]]></text>
+			</staticText>
+			<textField isBlankWhenNull="true">
+				<reportElement style="Detail" mode="Transparent" x="564" y="17" width="50" height="15"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="Droid Sans" size="7" isBold="true"/>
+				</textElement>
+				<textFieldExpression class="java.lang.Double"><![CDATA[$F{totalAmount}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement style="Column header" x="491" y="1" width="66" height="15" forecolor="#333333"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="Droid Sans" size="8" isBold="false"/>
+				</textElement>
+				<text><![CDATA[Total Amount : ]]></text>
+			</staticText>
+			<textField isBlankWhenNull="true">
+				<reportElement style="Detail" mode="Transparent" x="564" y="1" width="50" height="15"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="Droid Sans" size="7" isBold="true"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{tempString}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement style="Column header" x="465" y="47" width="92" height="15" forecolor="#333333"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="Droid Sans" size="8" isBold="false"/>
+				</textElement>
+				<text><![CDATA[Due Amount : ]]></text>
+			</staticText>
+			<textField isBlankWhenNull="true">
+				<reportElement style="Detail" mode="Transparent" x="564" y="48" width="50" height="15"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="Droid Sans" size="7" isBold="true"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{balance}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement style="Column header" x="468" y="62" width="146" height="15" forecolor="#333333"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle" rotation="None">
+					<font fontName="Droid Sans" size="8" isBold="false"/>
+				</textElement>
+				<text><![CDATA[Generated By : www.Eazyschool.com]]></text>
+			</staticText>
+		</band>
+	</lastPageFooter>
+	<summary>
+		<band splitType="Stretch"/>
+	</summary>
+</jasperReport>

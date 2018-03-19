@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:aop="http://www.springframework.org/schema/aop"
+	xmlns:tx="http://www.springframework.org/schema/tx"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:jpa="http://www.springframework.org/schema/data/jpa" 
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-4.1.xsd
+		http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop-4.1.xsd
+		http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx-4.1.xsd
+		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-4.1.xsd
+		http://www.springframework.org/schema/data/jpa http://www.springframework.org/schema/data/jpa/spring-jpa-1.3.xsd">
+	
+		
+  	<tx:annotation-driven transaction-manager="transactionManager" /> 
+
+	<bean id="dataSource" class="org.apache.commons.dbcp.BasicDataSource" destroy-method="close">
+	    <property name="driverClassName" value="com.mysql.jdbc.Driver"/>
+	    <property name="url" value="jdbc:mysql://localhost/smsdev?2?useUnicode=true&amp;characterEncoding=utf-8"/>
+	    <property name="username" value="smsdev"/>
+	    <property name="password" value="smsdev"/>
+	    <property name="maxIdle" value="5"/>
+	    <property name="maxActive" value="100"/>
+	    <property name="maxWait" value="1000"/>
+	    <property name="validationQuery" value="select 1"/>
+	    <property name="testOnBorrow" value="false"/>
+	    <property name="testWhileIdle" value="true"/>
+	    <property name="timeBetweenEvictionRunsMillis" value="1200000"/>
+	    <property name="minEvictableIdleTimeMillis" value="1800000"/>
+	    <property name="numTestsPerEvictionRun" value="5"/>
+	    <property name="removeAbandoned" value="true"/>
+        <property name="removeAbandonedTimeout" value="120"/>
+        <property name="defaultAutoCommit" value="true"/>
+	</bean>
+	
+	<bean id="persistenceExceptionTranslationPostProcessor"
+	    class="org.springframework.dao.annotation.PersistenceExceptionTranslationPostProcessor"/>
+	
+	<bean id="sessionFactory" class="org.springframework.orm.hibernate4.LocalSessionFactoryBean">
+	      <property name="dataSource" ref="dataSource" />
+	      <property name="packagesToScan" value="com.urt.persistence.model" />
+	      <property name="hibernateProperties">
+	         <props>
+                <prop key="hibernate.dialect">org.hibernate.dialect.MySQL5InnoDBDialect</prop>
+                <prop key="hibernate.current_session_context_class">org.springframework.orm.hibernate4.SpringSessionContext</prop>
+                <prop key="hibernate.query.substitutions">true 'Y', false 'N'</prop>
+                <prop key="hibernate.hbm2ddl.auto">update</prop>
+                <prop key="hibernate.cache.provider_class">org.hibernate.cache.EhCacheProvider</prop>
+                <prop key="hibernate.query.factory_class">org.hibernate.hql.internal.classic.ClassicQueryTranslatorFactory</prop>
+                <prop key="hibernate.connection.autocommit ">true</prop>
+                <prop key="hibernate.event.merge.entity_copy_observer">allow</prop>
+                <prop key="hibernate.enable_lazy_load_no_trans">true</prop>
+            </props>
+	      </property>
+   </bean>
+  
+	 <bean id="transactionManager" class="org.springframework.orm.hibernate4.HibernateTransactionManager" >
+	   <property name="sessionFactory" ref="sessionFactory" />
+	 </bean>	 
+	<bean id="dao" class="com.urt.persistence.impl.base.UniversalHibernateDao">
+		<property name="sessionFactory" ref="sessionFactory" />
+	</bean>
+	<bean id="userDao" class="com.urt.persistence.impl.user.UserDaoHibernate"  depends-on="dao">
+		<property name="sessionFactory" ref="sessionFactory" />
+	</bean>	
+	<bean id="studentDao" class="com.urt.persistence.impl.student.StudentDaoHibernate" depends-on="dao">
+		<property name="sessionFactory" ref="sessionFactory" />
+	</bean>	
+	<bean id="subscriptionDao" class="com.urt.persistence.impl.subscription.SubscriptionDaoHibernate" depends-on="dao">
+		<property name="sessionFactory" ref="sessionFactory" />
+	</bean>
+	<bean id="transportDao" class="com.urt.persistence.impl.transport.TransportDaoHibernate" depends-on="dao">
+		<property name="sessionFactory" ref="sessionFactory" />
+	</bean>
+	<bean id="staffDao" class="com.urt.persistence.impl.staff.StaffDaoHibernate" depends-on="dao">
+		<property name="sessionFactory" ref="sessionFactory" />
+	</bean>		
+	<bean id="roleDao" class="com.urt.persistence.impl.user.RoleDaoHibernate" depends-on="dao">
+		<property name="sessionFactory" ref="sessionFactory" />
+	</bean>
+	<bean id="calendarDao" class="com.urt.persistence.impl.calendar.CalendarDaoHibernate" depends-on="dao">
+		<property name="sessionFactory" ref="sessionFactory" />
+	</bean>	
+	<bean id="adminDao" class="com.urt.persistence.impl.admin.AdminDaoHibernate" depends-on="dao">
+		<property name="sessionFactory" ref="sessionFactory" />
+	</bean>
+	<bean id="libraryDao" class="com.urt.persistence.impl.library.LibraryDaoHibernate" depends-on="dao">
+		<property name="sessionFactory" ref="sessionFactory" />
+	</bean>
+	<bean id="hostelDao" class="com.urt.persistence.impl.hostel.HostelDaoHibernate" depends-on="dao">
+		<property name="sessionFactory" ref="sessionFactory" />
+	</bean>
+	<bean id="govtReportDao" class="com.urt.persistence.impl.govt.GovtReportDaoHibernate" depends-on="dao">
+		<property name="sessionFactory" ref="sessionFactory" />
+	</bean>	
+	<bean id="parentDao" class="com.urt.persistence.impl.parent.ParentDaoHibernate" depends-on="dao">
+		<property name="sessionFactory" ref="sessionFactory" />
+	</bean>
+	<bean id="accountDao" class="com.urt.persistence.impl.account.AccountDaoHibernate" depends-on="dao">
+		<property name="sessionFactory" ref="sessionFactory" />
+	</bean>	
+	<bean id="sportsDao" class="com.urt.persistence.impl.sports.SportsDaoHibernate" depends-on="dao">
+		<property name="sessionFactory" ref="sessionFactory" />
+	</bean>
+</beans>

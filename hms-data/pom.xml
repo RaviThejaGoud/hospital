@@ -1,0 +1,92 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <parent>
+    <groupId>com</groupId>
+    <artifactId>hms</artifactId>
+    <version>0.0.1-SNAPSHOT</version>
+    <!-- <relativePath>../hms</relativePath> -->
+  </parent>
+  <artifactId>hms-data</artifactId>
+  <name>hms Data Connectors</name>
+  
+   <build>
+   		<sourceDirectory>src/main/java</sourceDirectory>
+   		<resources>
+            <resource>
+                <directory>src/main/resources</directory>
+                <filtering>true</filtering>
+                <excludes>
+                    <exclude>packaged/*.properties</exclude>
+                </excludes>
+            </resource>
+            <resource>
+                <directory>src/main/resources</directory>
+                <filtering>false</filtering>
+                <includes>
+                    <include>packaged/*.properties</include>
+                </includes>
+            </resource>
+            <resource>
+                <directory>src/main/java</directory>
+                <includes>
+                    <include>**/*.xml</include>
+                </includes>
+            </resource>
+        </resources>
+   
+    <plugins>
+	    <plugin>
+			  <groupId>org.apache.maven.plugins</groupId>
+			  <artifactId>maven-compiler-plugin</artifactId>
+			  <version>2.4</version>
+			  <configuration>
+			    <source>${maven.compiler.source}</source>
+			    <target>${maven.compiler.target}</target>
+			    <encoding>${project.build.sourceEncoding}</encoding>
+			  </configuration>
+		</plugin>
+     </plugins>
+  </build>
+  <dependencies>
+  	<!-- SM Dependencies -->
+  		 <dependency>
+            <groupId>${project.groupId}</groupId>
+            <artifactId>hms-common</artifactId>
+            <version>${project.version}</version>
+            <scope>compile</scope>
+        </dependency>
+  	 	<dependency>
+            <groupId>${project.groupId}</groupId>
+            <artifactId>hms-bom</artifactId>
+            <version>${project.version}</version>
+            <scope>compile</scope>
+        </dependency>
+    	<dependency>
+	      <groupId>org.springframework</groupId>
+	      <artifactId>spring-tx</artifactId>
+	      <version>${spring.version}</version>
+	    </dependency>
+	     <dependency>
+	      <groupId>org.springframework</groupId>
+	      <artifactId>spring-orm</artifactId>
+	      <version>${spring.version}</version>
+	    </dependency>
+	    <!-- Upgrade version of EhCache used -->
+        <dependency>
+            <groupId>net.sf.ehcache</groupId>
+            <artifactId>ehcache-core</artifactId>
+            <version>${ehcache.version}</version>
+        </dependency>
+        <dependency>
+			<groupId>mysql</groupId>
+			<artifactId>mysql-connector-java</artifactId>
+			<version>5.1.33</version>
+		</dependency>
+		<dependency>
+			<groupId>org.javassist</groupId>
+			<artifactId>javassist</artifactId>
+			<version>3.20.0-GA</version>
+		</dependency>
+				
+    </dependencies>
+</project>

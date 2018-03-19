@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<fields templateEngineKind="Velocity" >
+        <description><![CDATA[]]></description>
+        <!--  <field name="student.studId" list="false" imageName="" syntaxKind="">
+                <description><![CDATA[]]></description>
+        </field> -->
+        
+        <!--  <field name="student.imagePath" list="false" imageName="logo" syntaxKind="">
+                <description><![CDATA[]]></description>
+        </field>
+        <field name="student.imageName" list="false" imageName="logo" syntaxKind="">
+                <description><![CDATA[]]></description>
+        </field> -->
+        <!-- <field name="student.logo" list="false" imageName="logo" syntaxKind="">
+                <description><![CDATA[]]></description>
+        </field>
+         -->
+        
+         <field name="student.todayDateDOB" list="false" imageName="" syntaxKind="">
+                <description><![CDATA[]]></description>
+        </field>
+         <field name="student.classNameAndSection" list="false" imageName="" syntaxKind="">
+                <description><![CDATA[]]></description>
+        </field>
+        
+         <field name="student.DateOfBirthStr" list="false" imageName="" syntaxKind="">
+                <description><![CDATA[]]></description>
+        </field>
+         <field name="student.typeOfExam" list="false" imageName="" syntaxKind="">
+                <description><![CDATA[]]></description>
+        </field>
+        
+        <field name="student.addressLine1" list="false" imageName="" syntaxKind="">
+                <description><![CDATA[]]></description>
+        </field>
+        <field name="student.custCity" list="false" imageName="" syntaxKind="">
+                <description><![CDATA[]]></description>
+        </field>
+        
+        <field name="student.custStreetName" list="false" imageName="" syntaxKind="">
+                <description><![CDATA[]]></description>
+        </field>
+         <field name="examDates.examType" list="false" imageName="" syntaxKind="">
+                <description><![CDATA[]]></description>
+        </field>
+         <field name="examDates.subTypeName" list="false" imageName="" syntaxKind="">
+                <description><![CDATA[]]></description>
+        </field>
+         <field name="student.firstName" list="false" imageName="" syntaxKind="">
+                <description><![CDATA[]]></description>
+        </field>
+        <field name="student.rollNumber" list="false" imageName="" syntaxKind="">
+                <description><![CDATA[]]></description>
+        </field>
+        <field name="student.organization" list="false" imageName="" syntaxKind="">
+                <description><![CDATA[]]></description>
+        </field>
+        <field name="student.className" list="false" imageName="" syntaxKind="">
+                <description><![CDATA[]]></description>
+        </field>
+        <field name="student.organizationCustAddressLineCityAndPostalCode" list="false" imageName="" syntaxKind="">
+                <description><![CDATA[]]></description>
+        </field>
+        <field name="student.startDate" list="false" imageName="" syntaxKind="">
+                <description><![CDATA[]]></description>
+        </field>
+        <field name="student.fatherName" list="false" imageName="" syntaxKind="">
+                <description><![CDATA[]]></description>
+        </field>
+        <field name="student.motherName" list="false" imageName="" syntaxKind="">
+                <description><![CDATA[]]></description>
+        </field>
+        <field name="student.registerNumber" list="false" imageName="" syntaxKind="">
+                <description><![CDATA[]]></description>
+        </field>
+        <field name="student.classAndSection" list="false" imageName="" syntaxKind="">
+                <description><![CDATA[]]></description>
+        </field>
+        <field name="student.regNumber" list="false" imageName="" syntaxKind="">
+                <description><![CDATA[]]></description>
+        </field>
+        
+        <field name="examDates.examDateStr" list="true" imageName="" syntaxKind="">
+                <description><![CDATA[]]></description>
+        </field>
+        <field name="student.examDateAndTime" list="true" imageName="" syntaxKind="">
+                <description><![CDATA[]]></description>
+        </field>
+        <field name="student.admissionNumber" list="true" imageName="" syntaxKind="">
+                <description><![CDATA[]]></description>
+        </field>
+        <field name="examDates.name" list="true" imageName="" syntaxKind="">
+                <description><![CDATA[]]></description>
+        </field>
+        <field name="examDates.nameAndSubTypeName" list="true" imageName="" syntaxKind="">
+                <description><![CDATA[]]></description>
+        </field>
+         <field name="examDates.examDateAndTimeStr" list="true" imageName="" syntaxKind="">
+                <description><![CDATA[]]></description>
+        </field>
+        <field name="examDates.examStartTime" list="true" imageName="" syntaxKind="">
+                <description><![CDATA[]]></description>
+        </field>
+        <field name="examDates.startDateStr" list="true" imageName="" syntaxKind="">
+                <description><![CDATA[]]></description>
+        </field>
+         <field name="examDates.examDateAndTime" list="true" imageName="" syntaxKind="">
+                <description><![CDATA[]]></description>
+        </field>
+        
+        
+</fields>
